@@ -68,17 +68,20 @@ public class CocinitaSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     ListaIngredientes returns ListaIngredientes
 	 *
 	 * Constraint:
-	 *     (tipo=TipoVariable name=ID)
+	 *     (ascii=ASCII tipo=TipoVariable name=ID)
 	 * </pre>
 	 */
 	protected void sequence_ListaIngredientes(ISerializationContext context, ListaIngredientes semanticObject) {
 		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, CocinitaPackage.Literals.LISTA_INGREDIENTES__ASCII) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CocinitaPackage.Literals.LISTA_INGREDIENTES__ASCII));
 			if (transientValues.isValueTransient(semanticObject, CocinitaPackage.Literals.LISTA_INGREDIENTES__TIPO) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CocinitaPackage.Literals.LISTA_INGREDIENTES__TIPO));
 			if (transientValues.isValueTransient(semanticObject, CocinitaPackage.Literals.LISTA_INGREDIENTES__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CocinitaPackage.Literals.LISTA_INGREDIENTES__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getListaIngredientesAccess().getAsciiASCIITerminalRuleCall_0_0(), semanticObject.getAscii());
 		feeder.accept(grammarAccess.getListaIngredientesAccess().getTipoTipoVariableParserRuleCall_1_0(), semanticObject.getTipo());
 		feeder.accept(grammarAccess.getListaIngredientesAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
@@ -91,7 +94,7 @@ public class CocinitaSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     TipoVariable returns TipoVariable
 	 *
 	 * Constraint:
-	 *     (INT='[-o]' | String='[cU]' | Double='[-O]')
+	 *     (INT='[-o]' | String='[cU]')
 	 * </pre>
 	 */
 	protected void sequence_TipoVariable(ISerializationContext context, TipoVariable semanticObject) {

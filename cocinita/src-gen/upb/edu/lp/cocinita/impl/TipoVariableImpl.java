@@ -23,7 +23,6 @@ import upb.edu.lp.cocinita.TipoVariable;
  * <ul>
  *   <li>{@link upb.edu.lp.cocinita.impl.TipoVariableImpl#getINT <em>INT</em>}</li>
  *   <li>{@link upb.edu.lp.cocinita.impl.TipoVariableImpl#getString <em>String</em>}</li>
- *   <li>{@link upb.edu.lp.cocinita.impl.TipoVariableImpl#getDouble <em>Double</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,26 +68,6 @@ public class TipoVariableImpl extends MinimalEObjectImpl.Container implements Ti
    * @ordered
    */
   protected String string = STRING_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getDouble() <em>Double</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDouble()
-   * @generated
-   * @ordered
-   */
-  protected static final String DOUBLE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getDouble() <em>Double</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDouble()
-   * @generated
-   * @ordered
-   */
-  protected String double_ = DOUBLE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -167,31 +146,6 @@ public class TipoVariableImpl extends MinimalEObjectImpl.Container implements Ti
    * @generated
    */
   @Override
-  public String getDouble()
-  {
-    return double_;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setDouble(String newDouble)
-  {
-    String oldDouble = double_;
-    double_ = newDouble;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CocinitaPackage.TIPO_VARIABLE__DOUBLE, oldDouble, double_));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
@@ -200,8 +154,6 @@ public class TipoVariableImpl extends MinimalEObjectImpl.Container implements Ti
         return getINT();
       case CocinitaPackage.TIPO_VARIABLE__STRING:
         return getString();
-      case CocinitaPackage.TIPO_VARIABLE__DOUBLE:
-        return getDouble();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -221,9 +173,6 @@ public class TipoVariableImpl extends MinimalEObjectImpl.Container implements Ti
         return;
       case CocinitaPackage.TIPO_VARIABLE__STRING:
         setString((String)newValue);
-        return;
-      case CocinitaPackage.TIPO_VARIABLE__DOUBLE:
-        setDouble((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -245,9 +194,6 @@ public class TipoVariableImpl extends MinimalEObjectImpl.Container implements Ti
       case CocinitaPackage.TIPO_VARIABLE__STRING:
         setString(STRING_EDEFAULT);
         return;
-      case CocinitaPackage.TIPO_VARIABLE__DOUBLE:
-        setDouble(DOUBLE_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -266,8 +212,6 @@ public class TipoVariableImpl extends MinimalEObjectImpl.Container implements Ti
         return INT_EDEFAULT == null ? int_ != null : !INT_EDEFAULT.equals(int_);
       case CocinitaPackage.TIPO_VARIABLE__STRING:
         return STRING_EDEFAULT == null ? string != null : !STRING_EDEFAULT.equals(string);
-      case CocinitaPackage.TIPO_VARIABLE__DOUBLE:
-        return DOUBLE_EDEFAULT == null ? double_ != null : !DOUBLE_EDEFAULT.equals(double_);
     }
     return super.eIsSet(featureID);
   }
@@ -287,8 +231,6 @@ public class TipoVariableImpl extends MinimalEObjectImpl.Container implements Ti
     result.append(int_);
     result.append(", String: ");
     result.append(string);
-    result.append(", Double: ");
-    result.append(double_);
     result.append(')');
     return result.toString();
   }

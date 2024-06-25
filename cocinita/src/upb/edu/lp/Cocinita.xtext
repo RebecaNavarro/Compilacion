@@ -5,13 +5,14 @@ generate cocinita "http://www.edu.upb/lp/Cocinita"
 Cocina:
 	'[RECIPE]' name = ID
 	'Ingredientes:'
-	Ingrediente += ListaIngredientes* 
+	Ingrediente += ListaIngredientes*
+	
 	'Procedimiento:'
 	
 ;
 
 ListaIngredientes:
-    ASCII tipo=TipoVariable name=ID
+    ascii=ASCII tipo=TipoVariable name=ID
 ;
 
 TipoVariable:
@@ -24,8 +25,4 @@ terminal ASCII:
 
 terminal ID:
     ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '0'..'9' | '_')*
-;
-
-OperacionesAritmeticas:
-	
 ;

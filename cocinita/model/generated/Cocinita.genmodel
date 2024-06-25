@@ -11,13 +11,13 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cocinita.ecore#//Cocina/Ingrediente"/>
     </genClasses>
     <genClasses ecoreClass="Cocinita.ecore#//ListaIngredientes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//ListaIngredientes/ascii"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cocinita.ecore#//ListaIngredientes/tipo"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//ListaIngredientes/name"/>
     </genClasses>
     <genClasses ecoreClass="Cocinita.ecore#//TipoVariable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//TipoVariable/INT"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//TipoVariable/String"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//TipoVariable/Double"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

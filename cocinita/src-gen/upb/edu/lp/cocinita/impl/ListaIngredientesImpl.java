@@ -24,6 +24,7 @@ import upb.edu.lp.cocinita.TipoVariable;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link upb.edu.lp.cocinita.impl.ListaIngredientesImpl#getAscii <em>Ascii</em>}</li>
  *   <li>{@link upb.edu.lp.cocinita.impl.ListaIngredientesImpl#getTipo <em>Tipo</em>}</li>
  *   <li>{@link upb.edu.lp.cocinita.impl.ListaIngredientesImpl#getName <em>Name</em>}</li>
  * </ul>
@@ -32,6 +33,26 @@ import upb.edu.lp.cocinita.TipoVariable;
  */
 public class ListaIngredientesImpl extends MinimalEObjectImpl.Container implements ListaIngredientes
 {
+  /**
+   * The default value of the '{@link #getAscii() <em>Ascii</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAscii()
+   * @generated
+   * @ordered
+   */
+  protected static final String ASCII_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getAscii() <em>Ascii</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAscii()
+   * @generated
+   * @ordered
+   */
+  protected String ascii = ASCII_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getTipo() <em>Tipo</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -81,6 +102,31 @@ public class ListaIngredientesImpl extends MinimalEObjectImpl.Container implemen
   protected EClass eStaticClass()
   {
     return CocinitaPackage.Literals.LISTA_INGREDIENTES;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getAscii()
+  {
+    return ascii;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setAscii(String newAscii)
+  {
+    String oldAscii = ascii;
+    ascii = newAscii;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CocinitaPackage.LISTA_INGREDIENTES__ASCII, oldAscii, ascii));
   }
 
   /**
@@ -184,6 +230,8 @@ public class ListaIngredientesImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
+      case CocinitaPackage.LISTA_INGREDIENTES__ASCII:
+        return getAscii();
       case CocinitaPackage.LISTA_INGREDIENTES__TIPO:
         return getTipo();
       case CocinitaPackage.LISTA_INGREDIENTES__NAME:
@@ -202,6 +250,9 @@ public class ListaIngredientesImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
+      case CocinitaPackage.LISTA_INGREDIENTES__ASCII:
+        setAscii((String)newValue);
+        return;
       case CocinitaPackage.LISTA_INGREDIENTES__TIPO:
         setTipo((TipoVariable)newValue);
         return;
@@ -222,6 +273,9 @@ public class ListaIngredientesImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
+      case CocinitaPackage.LISTA_INGREDIENTES__ASCII:
+        setAscii(ASCII_EDEFAULT);
+        return;
       case CocinitaPackage.LISTA_INGREDIENTES__TIPO:
         setTipo((TipoVariable)null);
         return;
@@ -242,6 +296,8 @@ public class ListaIngredientesImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
+      case CocinitaPackage.LISTA_INGREDIENTES__ASCII:
+        return ASCII_EDEFAULT == null ? ascii != null : !ASCII_EDEFAULT.equals(ascii);
       case CocinitaPackage.LISTA_INGREDIENTES__TIPO:
         return tipo != null;
       case CocinitaPackage.LISTA_INGREDIENTES__NAME:
@@ -261,7 +317,9 @@ public class ListaIngredientesImpl extends MinimalEObjectImpl.Container implemen
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
+    result.append(" (ascii: ");
+    result.append(ascii);
+    result.append(", name: ");
     result.append(name);
     result.append(')');
     return result.toString();

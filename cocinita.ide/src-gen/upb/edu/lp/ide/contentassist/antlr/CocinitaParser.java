@@ -36,11 +36,11 @@ public class CocinitaParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getListaIngredientesAccess().getGroup(), "rule__ListaIngredientes__Group__0");
 			builder.put(grammarAccess.getCocinaAccess().getNameAssignment_1(), "rule__Cocina__NameAssignment_1");
 			builder.put(grammarAccess.getCocinaAccess().getIngredienteAssignment_3(), "rule__Cocina__IngredienteAssignment_3");
+			builder.put(grammarAccess.getListaIngredientesAccess().getAsciiAssignment_0(), "rule__ListaIngredientes__AsciiAssignment_0");
 			builder.put(grammarAccess.getListaIngredientesAccess().getTipoAssignment_1(), "rule__ListaIngredientes__TipoAssignment_1");
 			builder.put(grammarAccess.getListaIngredientesAccess().getNameAssignment_2(), "rule__ListaIngredientes__NameAssignment_2");
 			builder.put(grammarAccess.getTipoVariableAccess().getINTAssignment_0(), "rule__TipoVariable__INTAssignment_0");
 			builder.put(grammarAccess.getTipoVariableAccess().getStringAssignment_1(), "rule__TipoVariable__StringAssignment_1");
-			builder.put(grammarAccess.getTipoVariableAccess().getDoubleAssignment_2(), "rule__TipoVariable__DoubleAssignment_2");
 		}
 	}
 	

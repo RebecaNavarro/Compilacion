@@ -105,13 +105,22 @@ public interface CocinitaPackage extends EPackage
   int LISTA_INGREDIENTES = 1;
 
   /**
+   * The feature id for the '<em><b>Ascii</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LISTA_INGREDIENTES__ASCII = 0;
+
+  /**
    * The feature id for the '<em><b>Tipo</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LISTA_INGREDIENTES__TIPO = 0;
+  int LISTA_INGREDIENTES__TIPO = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -120,7 +129,7 @@ public interface CocinitaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LISTA_INGREDIENTES__NAME = 1;
+  int LISTA_INGREDIENTES__NAME = 2;
 
   /**
    * The number of structural features of the '<em>Lista Ingredientes</em>' class.
@@ -129,7 +138,7 @@ public interface CocinitaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LISTA_INGREDIENTES_FEATURE_COUNT = 2;
+  int LISTA_INGREDIENTES_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link upb.edu.lp.cocinita.impl.TipoVariableImpl <em>Tipo Variable</em>}' class.
@@ -160,22 +169,13 @@ public interface CocinitaPackage extends EPackage
   int TIPO_VARIABLE__STRING = 1;
 
   /**
-   * The feature id for the '<em><b>Double</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TIPO_VARIABLE__DOUBLE = 2;
-
-  /**
    * The number of structural features of the '<em>Tipo Variable</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TIPO_VARIABLE_FEATURE_COUNT = 3;
+  int TIPO_VARIABLE_FEATURE_COUNT = 2;
 
 
   /**
@@ -219,6 +219,17 @@ public interface CocinitaPackage extends EPackage
    * @generated
    */
   EClass getListaIngredientes();
+
+  /**
+   * Returns the meta object for the attribute '{@link upb.edu.lp.cocinita.ListaIngredientes#getAscii <em>Ascii</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Ascii</em>'.
+   * @see upb.edu.lp.cocinita.ListaIngredientes#getAscii()
+   * @see #getListaIngredientes()
+   * @generated
+   */
+  EAttribute getListaIngredientes_Ascii();
 
   /**
    * Returns the meta object for the containment reference '{@link upb.edu.lp.cocinita.ListaIngredientes#getTipo <em>Tipo</em>}'.
@@ -273,17 +284,6 @@ public interface CocinitaPackage extends EPackage
    * @generated
    */
   EAttribute getTipoVariable_String();
-
-  /**
-   * Returns the meta object for the attribute '{@link upb.edu.lp.cocinita.TipoVariable#getDouble <em>Double</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Double</em>'.
-   * @see upb.edu.lp.cocinita.TipoVariable#getDouble()
-   * @see #getTipoVariable()
-   * @generated
-   */
-  EAttribute getTipoVariable_Double();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -345,6 +345,14 @@ public interface CocinitaPackage extends EPackage
     EClass LISTA_INGREDIENTES = eINSTANCE.getListaIngredientes();
 
     /**
+     * The meta object literal for the '<em><b>Ascii</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LISTA_INGREDIENTES__ASCII = eINSTANCE.getListaIngredientes_Ascii();
+
+    /**
      * The meta object literal for the '<em><b>Tipo</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -385,14 +393,6 @@ public interface CocinitaPackage extends EPackage
      * @generated
      */
     EAttribute TIPO_VARIABLE__STRING = eINSTANCE.getTipoVariable_String();
-
-    /**
-     * The meta object literal for the '<em><b>Double</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TIPO_VARIABLE__DOUBLE = eINSTANCE.getTipoVariable_Double();
 
   }
 

@@ -140,12 +140,6 @@ rule__TipoVariable__Alternatives
 		(rule__TipoVariable__StringAssignment_1)
 		{ after(grammarAccess.getTipoVariableAccess().getStringAssignment_1()); }
 	)
-	|
-	(
-		{ before(grammarAccess.getTipoVariableAccess().getDoubleAssignment_2()); }
-		(rule__TipoVariable__DoubleAssignment_2)
-		{ after(grammarAccess.getTipoVariableAccess().getDoubleAssignment_2()); }
-	)
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -304,9 +298,9 @@ rule__ListaIngredientes__Group__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getListaIngredientesAccess().getASCIITerminalRuleCall_0()); }
-	RULE_ASCII
-	{ after(grammarAccess.getListaIngredientesAccess().getASCIITerminalRuleCall_0()); }
+	{ before(grammarAccess.getListaIngredientesAccess().getAsciiAssignment_0()); }
+	(rule__ListaIngredientes__AsciiAssignment_0)
+	{ after(grammarAccess.getListaIngredientesAccess().getAsciiAssignment_0()); }
 )
 ;
 finally {
@@ -397,6 +391,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__ListaIngredientes__AsciiAssignment_0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getListaIngredientesAccess().getAsciiASCIITerminalRuleCall_0_0()); }
+		RULE_ASCII
+		{ after(grammarAccess.getListaIngredientesAccess().getAsciiASCIITerminalRuleCall_0_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__ListaIngredientes__TipoAssignment_1
 	@init {
 		int stackSize = keepStackSize();
@@ -459,25 +468,6 @@ rule__TipoVariable__StringAssignment_1
 			{ after(grammarAccess.getTipoVariableAccess().getStringCUKeyword_1_0()); }
 		)
 		{ after(grammarAccess.getTipoVariableAccess().getStringCUKeyword_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__TipoVariable__DoubleAssignment_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getTipoVariableAccess().getDoubleOKeyword_2_0()); }
-		(
-			{ before(grammarAccess.getTipoVariableAccess().getDoubleOKeyword_2_0()); }
-			'[-O]'
-			{ after(grammarAccess.getTipoVariableAccess().getDoubleOKeyword_2_0()); }
-		)
-		{ after(grammarAccess.getTipoVariableAccess().getDoubleOKeyword_2_0()); }
 	)
 ;
 finally {

@@ -144,10 +144,24 @@ ruleListaIngredientes returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		this_ASCII_0=RULE_ASCII
-		{
-			newLeafNode(this_ASCII_0, grammarAccess.getListaIngredientesAccess().getASCIITerminalRuleCall_0());
-		}
+		(
+			(
+				lv_ascii_0_0=RULE_ASCII
+				{
+					newLeafNode(lv_ascii_0_0, grammarAccess.getListaIngredientesAccess().getAsciiASCIITerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getListaIngredientesRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"ascii",
+						lv_ascii_0_0,
+						"upb.edu.lp.Cocinita.ASCII");
+				}
+			)
+		)
 		(
 			(
 				{
@@ -230,21 +244,6 @@ ruleTipoVariable returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getTipoVariableRule());
 					}
 					setWithLastConsumed($current, "String", lv_String_1_0, "[cU]");
-				}
-			)
-		)
-		    |
-		(
-			(
-				lv_Double_2_0='[-O]'
-				{
-					newLeafNode(lv_Double_2_0, grammarAccess.getTipoVariableAccess().getDoubleOKeyword_2_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getTipoVariableRule());
-					}
-					setWithLastConsumed($current, "Double", lv_Double_2_0, "[-O]");
 				}
 			)
 		)

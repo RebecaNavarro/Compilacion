@@ -3,6 +3,10 @@
  */
 package upb.edu.lp.validation;
 
+import org.eclipse.xtext.validation.Check;
+
+import upb.edu.lp.cocinita.CocinitaPackage;
+import upb.edu.lp.cocinita.ListaIngredientes;
 
 /**
  * This class contains custom validation rules. 
@@ -21,5 +25,23 @@ public class CocinitaValidator extends AbstractCocinitaValidator {
 //					INVALID_NAME);
 //		}
 //	}
+	@Check
+    public void checkASCII(ListaIngredientes ingrediente) {
+		if (ingrediente.getAscii() != null) {
+            try {
+                int asciiValue = Integer.parseInt(ingrediente.getAscii());
+                if (asciiValue < 33 || asciiValue > 126) {
+                    error("ASCII value must be between 33 and 126", 
+                          CocinitaPackage.Literals.LISTA_INGREDIENTES__ASCII, 
+                          "invalid-ascii-value");
+                }
+            } catch (NumberFormatException e) {
+                error("Invalid ASCII value", 
+                      CocinitaPackage.Literals.LISTA_INGREDIENTES__ASCII, 
+                      "invalid-ascii-value");
+            }
+        }
+    }
+	
 	
 }

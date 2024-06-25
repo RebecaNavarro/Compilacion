@@ -71,22 +71,26 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	public class ListaIngredientesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "upb.edu.lp.Cocinita.ListaIngredientes");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cASCIITerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cAsciiAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cAsciiASCIITerminalRuleCall_0_0 = (RuleCall)cAsciiAssignment_0.eContents().get(0);
 		private final Assignment cTipoAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cTipoTipoVariableParserRuleCall_1_0 = (RuleCall)cTipoAssignment_1.eContents().get(0);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		
 		//ListaIngredientes:
-		//    ASCII tipo=TipoVariable name=ID
+		//    ascii=ASCII tipo=TipoVariable name=ID
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//ASCII tipo=TipoVariable name=ID
+		//ascii=ASCII tipo=TipoVariable name=ID
 		public Group getGroup() { return cGroup; }
 		
+		//ascii=ASCII
+		public Assignment getAsciiAssignment_0() { return cAsciiAssignment_0; }
+		
 		//ASCII
-		public RuleCall getASCIITerminalRuleCall_0() { return cASCIITerminalRuleCall_0; }
+		public RuleCall getAsciiASCIITerminalRuleCall_0_0() { return cAsciiASCIITerminalRuleCall_0_0; }
 		
 		//tipo=TipoVariable
 		public Assignment getTipoAssignment_1() { return cTipoAssignment_1; }
@@ -107,15 +111,13 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cINTOKeyword_0_0 = (Keyword)cINTAssignment_0.eContents().get(0);
 		private final Assignment cStringAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final Keyword cStringCUKeyword_1_0 = (Keyword)cStringAssignment_1.eContents().get(0);
-		private final Assignment cDoubleAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final Keyword cDoubleOKeyword_2_0 = (Keyword)cDoubleAssignment_2.eContents().get(0);
 		
 		//TipoVariable:
-		//    INT ='[-o]' | String='[cU]' | Double='[-O]'
+		//    INT ='[-o]' | String='[cU]'
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//INT ='[-o]' | String='[cU]' | Double='[-O]'
+		//INT ='[-o]' | String='[cU]'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//INT ='[-o]'
@@ -129,12 +131,6 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//'[cU]'
 		public Keyword getStringCUKeyword_1_0() { return cStringCUKeyword_1_0; }
-		
-		//Double='[-O]'
-		public Assignment getDoubleAssignment_2() { return cDoubleAssignment_2; }
-		
-		//'[-O]'
-		public Keyword getDoubleOKeyword_2_0() { return cDoubleOKeyword_2_0; }
 	}
 	
 	
@@ -202,7 +198,7 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//ListaIngredientes:
-	//    ASCII tipo=TipoVariable name=ID
+	//    ascii=ASCII tipo=TipoVariable name=ID
 	//;
 	public ListaIngredientesElements getListaIngredientesAccess() {
 		return pListaIngredientes;
@@ -213,7 +209,7 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//TipoVariable:
-	//    INT ='[-o]' | String='[cU]' | Double='[-O]'
+	//    INT ='[-o]' | String='[cU]'
 	//;
 	public TipoVariableElements getTipoVariableAccess() {
 		return pTipoVariable;

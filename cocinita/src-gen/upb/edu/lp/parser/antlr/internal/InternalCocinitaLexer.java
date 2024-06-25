@@ -20,7 +20,6 @@ public class InternalCocinitaLexer extends Lexer {
     public static final int RULE_ASCII=5;
     public static final int T__15=15;
     public static final int T__16=16;
-    public static final int T__17=17;
     public static final int RULE_INT=6;
     public static final int RULE_ML_COMMENT=8;
     public static final int T__12=12;
@@ -146,36 +145,15 @@ public class InternalCocinitaLexer extends Lexer {
     }
     // $ANTLR end "T__16"
 
-    // $ANTLR start "T__17"
-    public final void mT__17() throws RecognitionException {
-        try {
-            int _type = T__17;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:16:7: ( '[-O]' )
-            // InternalCocinita.g:16:9: '[-O]'
-            {
-            match("[-O]"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__17"
-
     // $ANTLR start "RULE_ASCII"
     public final void mRULE_ASCII() throws RecognitionException {
         try {
             int _type = RULE_ASCII;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:254:12: ( ( '0' .. '9' )+ )
-            // InternalCocinita.g:254:14: ( '0' .. '9' )+
+            // InternalCocinita.g:253:12: ( ( '0' .. '9' )+ )
+            // InternalCocinita.g:253:14: ( '0' .. '9' )+
             {
-            // InternalCocinita.g:254:14: ( '0' .. '9' )+
+            // InternalCocinita.g:253:14: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -189,7 +167,7 @@ public class InternalCocinitaLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalCocinita.g:254:15: '0' .. '9'
+            	    // InternalCocinita.g:253:15: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -221,8 +199,8 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:256:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // InternalCocinita.g:256:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // InternalCocinita.g:255:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // InternalCocinita.g:255:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -233,7 +211,7 @@ public class InternalCocinitaLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalCocinita.g:256:35: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // InternalCocinita.g:255:35: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop2:
             do {
                 int alt2=2;
@@ -282,10 +260,10 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:258:10: ( ( '0' .. '9' )+ )
-            // InternalCocinita.g:258:12: ( '0' .. '9' )+
+            // InternalCocinita.g:257:10: ( ( '0' .. '9' )+ )
+            // InternalCocinita.g:257:12: ( '0' .. '9' )+
             {
-            // InternalCocinita.g:258:12: ( '0' .. '9' )+
+            // InternalCocinita.g:257:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -299,7 +277,7 @@ public class InternalCocinitaLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalCocinita.g:258:13: '0' .. '9'
+            	    // InternalCocinita.g:257:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -331,10 +309,10 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:260:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalCocinita.g:260:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalCocinita.g:259:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalCocinita.g:259:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalCocinita.g:260:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalCocinita.g:259:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -352,10 +330,10 @@ public class InternalCocinitaLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalCocinita.g:260:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalCocinita.g:259:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalCocinita.g:260:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalCocinita.g:259:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -371,7 +349,7 @@ public class InternalCocinitaLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalCocinita.g:260:21: '\\\\' .
+                    	    // InternalCocinita.g:259:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -379,7 +357,7 @@ public class InternalCocinitaLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalCocinita.g:260:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalCocinita.g:259:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -404,10 +382,10 @@ public class InternalCocinitaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalCocinita.g:260:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalCocinita.g:259:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalCocinita.g:260:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalCocinita.g:259:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -423,7 +401,7 @@ public class InternalCocinitaLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalCocinita.g:260:54: '\\\\' .
+                    	    // InternalCocinita.g:259:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -431,7 +409,7 @@ public class InternalCocinitaLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalCocinita.g:260:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalCocinita.g:259:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -474,12 +452,12 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:262:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalCocinita.g:262:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalCocinita.g:261:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalCocinita.g:261:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalCocinita.g:262:24: ( options {greedy=false; } : . )*
+            // InternalCocinita.g:261:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -504,7 +482,7 @@ public class InternalCocinitaLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalCocinita.g:262:52: .
+            	    // InternalCocinita.g:261:52: .
             	    {
             	    matchAny(); 
 
@@ -534,12 +512,12 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:264:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalCocinita.g:264:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalCocinita.g:263:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalCocinita.g:263:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalCocinita.g:264:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalCocinita.g:263:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -552,7 +530,7 @@ public class InternalCocinitaLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalCocinita.g:264:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalCocinita.g:263:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -572,7 +550,7 @@ public class InternalCocinitaLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalCocinita.g:264:40: ( ( '\\r' )? '\\n' )?
+            // InternalCocinita.g:263:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -581,9 +559,9 @@ public class InternalCocinitaLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalCocinita.g:264:41: ( '\\r' )? '\\n'
+                    // InternalCocinita.g:263:41: ( '\\r' )? '\\n'
                     {
-                    // InternalCocinita.g:264:41: ( '\\r' )?
+                    // InternalCocinita.g:263:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -592,7 +570,7 @@ public class InternalCocinitaLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalCocinita.g:264:41: '\\r'
+                            // InternalCocinita.g:263:41: '\\r'
                             {
                             match('\r'); 
 
@@ -624,10 +602,10 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:266:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalCocinita.g:266:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalCocinita.g:265:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalCocinita.g:265:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalCocinita.g:266:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalCocinita.g:265:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -681,8 +659,8 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:268:16: ( . )
-            // InternalCocinita.g:268:18: .
+            // InternalCocinita.g:267:16: ( . )
+            // InternalCocinita.g:267:18: .
             {
             matchAny(); 
 
@@ -697,8 +675,8 @@ public class InternalCocinitaLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // InternalCocinita.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | RULE_ASCII | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=14;
+        // InternalCocinita.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | RULE_ASCII | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=13;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -737,63 +715,56 @@ public class InternalCocinitaLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // InternalCocinita.g:1:40: T__17
-                {
-                mT__17(); 
-
-                }
-                break;
-            case 7 :
-                // InternalCocinita.g:1:46: RULE_ASCII
+                // InternalCocinita.g:1:40: RULE_ASCII
                 {
                 mRULE_ASCII(); 
 
                 }
                 break;
-            case 8 :
-                // InternalCocinita.g:1:57: RULE_ID
+            case 7 :
+                // InternalCocinita.g:1:51: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 9 :
-                // InternalCocinita.g:1:65: RULE_INT
+            case 8 :
+                // InternalCocinita.g:1:59: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 10 :
-                // InternalCocinita.g:1:74: RULE_STRING
+            case 9 :
+                // InternalCocinita.g:1:68: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 11 :
-                // InternalCocinita.g:1:86: RULE_ML_COMMENT
+            case 10 :
+                // InternalCocinita.g:1:80: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 12 :
-                // InternalCocinita.g:1:102: RULE_SL_COMMENT
+            case 11 :
+                // InternalCocinita.g:1:96: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 13 :
-                // InternalCocinita.g:1:118: RULE_WS
+            case 12 :
+                // InternalCocinita.g:1:112: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 14 :
-                // InternalCocinita.g:1:126: RULE_ANY_OTHER
+            case 13 :
+                // InternalCocinita.g:1:120: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -807,17 +778,17 @@ public class InternalCocinitaLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\12\2\17\1\21\1\uffff\3\12\5\uffff\1\17\1\uffff\1\17\1\uffff\1\21\6\uffff\24\17\1\uffff\1\17\1\uffff";
+        "\1\uffff\1\12\2\17\1\21\1\uffff\3\12\5\uffff\1\17\1\uffff\1\17\1\uffff\1\21\4\uffff\24\17\1\uffff\1\17\1\uffff";
     static final String DFA12_eofS =
-        "\60\uffff";
+        "\56\uffff";
     static final String DFA12_minS =
-        "\1\0\1\55\1\156\1\162\1\60\1\uffff\2\0\1\52\3\uffff\1\117\1\uffff\1\147\1\uffff\1\157\1\uffff\1\60\6\uffff\1\162\1\143\2\145\2\144\2\151\1\145\1\155\1\156\1\151\1\164\2\145\1\156\1\163\1\164\1\72\1\157\1\uffff\1\72\1\uffff";
+        "\1\0\1\55\1\156\1\162\1\60\1\uffff\2\0\1\52\5\uffff\1\147\1\uffff\1\157\1\uffff\1\60\4\uffff\1\162\1\143\2\145\2\144\2\151\1\145\1\155\1\156\1\151\1\164\2\145\1\156\1\163\1\164\1\72\1\157\1\uffff\1\72\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\143\1\156\1\162\1\71\1\uffff\2\uffff\1\57\3\uffff\1\157\1\uffff\1\147\1\uffff\1\157\1\uffff\1\71\6\uffff\1\162\1\143\2\145\2\144\2\151\1\145\1\155\1\156\1\151\1\164\2\145\1\156\1\163\1\164\1\72\1\157\1\uffff\1\72\1\uffff";
+        "\1\uffff\1\143\1\156\1\162\1\71\1\uffff\2\uffff\1\57\5\uffff\1\147\1\uffff\1\157\1\uffff\1\71\4\uffff\1\162\1\143\2\145\2\144\2\151\1\145\1\155\1\156\1\151\1\164\2\145\1\156\1\163\1\164\1\72\1\157\1\uffff\1\72\1\uffff";
     static final String DFA12_acceptS =
-        "\5\uffff\1\10\3\uffff\1\15\1\16\1\1\1\uffff\1\5\1\uffff\1\10\1\uffff\1\7\1\uffff\1\12\1\13\1\14\1\15\1\4\1\6\24\uffff\1\2\1\uffff\1\3";
+        "\5\uffff\1\7\3\uffff\1\14\1\15\1\1\1\4\1\5\1\uffff\1\7\1\uffff\1\6\1\uffff\1\11\1\12\1\13\1\14\24\uffff\1\2\1\uffff\1\3";
     static final String DFA12_specialS =
-        "\1\0\5\uffff\1\1\1\2\50\uffff}>";
+        "\1\1\5\uffff\1\2\1\0\46\uffff}>";
     static final String[] DFA12_transitionS = {
             "\11\12\2\11\2\12\1\11\22\12\1\11\1\12\1\6\4\12\1\7\7\12\1\10\12\4\7\12\10\5\1\2\6\5\1\3\12\5\1\1\3\12\1\5\1\12\32\5\uff85\12",
             "\1\14\44\uffff\1\13\20\uffff\1\15",
@@ -831,19 +802,19 @@ public class InternalCocinitaLexer extends Lexer {
             "",
             "",
             "",
-            "\1\30\37\uffff\1\27",
             "",
-            "\1\31",
             "",
-            "\1\32",
+            "\1\27",
+            "",
+            "\1\30",
             "",
             "\12\22",
             "",
             "",
             "",
             "",
-            "",
-            "",
+            "\1\31",
+            "\1\32",
             "\1\33",
             "\1\34",
             "\1\35",
@@ -862,10 +833,8 @@ public class InternalCocinitaLexer extends Lexer {
             "\1\52",
             "\1\53",
             "\1\54",
-            "\1\55",
-            "\1\56",
             "",
-            "\1\57",
+            "\1\55",
             ""
     };
 
@@ -899,13 +868,23 @@ public class InternalCocinitaLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | RULE_ASCII | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | RULE_ASCII | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA12_7 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_7>='\u0000' && LA12_7<='\uFFFF')) ) {s = 19;}
+
+                        else s = 10;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -931,21 +910,11 @@ public class InternalCocinitaLexer extends Lexer {
 
                         if ( s>=0 ) return s;
                         break;
-                    case 1 : 
+                    case 2 : 
                         int LA12_6 = input.LA(1);
 
                         s = -1;
                         if ( ((LA12_6>='\u0000' && LA12_6<='\uFFFF')) ) {s = 19;}
-
-                        else s = 10;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA12_7 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_7>='\u0000' && LA12_7<='\uFFFF')) ) {s = 19;}
 
                         else s = 10;
 

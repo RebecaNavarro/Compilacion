@@ -22,17 +22,16 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalCocinitaParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ASCII", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'[RECIPE]'", "'Ingredientes:'", "'Procedimiento:'", "'[-o]'", "'[cU]'", "'[-O]'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_ASCII", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'[RECIPE]'", "'Ingredientes:'", "'Procedimiento:'", "'[-o]'", "'[cU]'"
     };
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=4;
     public static final int RULE_WS=10;
     public static final int RULE_STRING=7;
     public static final int RULE_ANY_OTHER=11;
     public static final int RULE_SL_COMMENT=9;
-    public static final int RULE_ASCII=4;
+    public static final int RULE_ASCII=5;
     public static final int T__15=15;
     public static final int T__16=16;
-    public static final int T__17=17;
     public static final int RULE_INT=6;
     public static final int RULE_ML_COMMENT=8;
     public static final int T__12=12;
@@ -307,37 +306,28 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TipoVariable__Alternatives"
-    // InternalCocinita.g:127:1: rule__TipoVariable__Alternatives : ( ( ( rule__TipoVariable__INTAssignment_0 ) ) | ( ( rule__TipoVariable__StringAssignment_1 ) ) | ( ( rule__TipoVariable__DoubleAssignment_2 ) ) );
+    // InternalCocinita.g:127:1: rule__TipoVariable__Alternatives : ( ( ( rule__TipoVariable__INTAssignment_0 ) ) | ( ( rule__TipoVariable__StringAssignment_1 ) ) );
     public final void rule__TipoVariable__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:131:1: ( ( ( rule__TipoVariable__INTAssignment_0 ) ) | ( ( rule__TipoVariable__StringAssignment_1 ) ) | ( ( rule__TipoVariable__DoubleAssignment_2 ) ) )
-            int alt1=3;
-            switch ( input.LA(1) ) {
-            case 15:
-                {
+            // InternalCocinita.g:131:1: ( ( ( rule__TipoVariable__INTAssignment_0 ) ) | ( ( rule__TipoVariable__StringAssignment_1 ) ) )
+            int alt1=2;
+            int LA1_0 = input.LA(1);
+
+            if ( (LA1_0==15) ) {
                 alt1=1;
-                }
-                break;
-            case 16:
-                {
+            }
+            else if ( (LA1_0==16) ) {
                 alt1=2;
-                }
-                break;
-            case 17:
-                {
-                alt1=3;
-                }
-                break;
-            default:
+            }
+            else {
                 NoViableAltException nvae =
                     new NoViableAltException("", 1, 0, input);
 
                 throw nvae;
             }
-
             switch (alt1) {
                 case 1 :
                     // InternalCocinita.g:132:2: ( ( rule__TipoVariable__INTAssignment_0 ) )
@@ -389,31 +379,6 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
                     }
                     break;
-                case 3 :
-                    // InternalCocinita.g:144:2: ( ( rule__TipoVariable__DoubleAssignment_2 ) )
-                    {
-                    // InternalCocinita.g:144:2: ( ( rule__TipoVariable__DoubleAssignment_2 ) )
-                    // InternalCocinita.g:145:3: ( rule__TipoVariable__DoubleAssignment_2 )
-                    {
-                     before(grammarAccess.getTipoVariableAccess().getDoubleAssignment_2()); 
-                    // InternalCocinita.g:146:3: ( rule__TipoVariable__DoubleAssignment_2 )
-                    // InternalCocinita.g:146:4: rule__TipoVariable__DoubleAssignment_2
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__TipoVariable__DoubleAssignment_2();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getTipoVariableAccess().getDoubleAssignment_2()); 
-
-                    }
-
-
-                    }
-                    break;
 
             }
         }
@@ -432,14 +397,14 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Cocina__Group__0"
-    // InternalCocinita.g:154:1: rule__Cocina__Group__0 : rule__Cocina__Group__0__Impl rule__Cocina__Group__1 ;
+    // InternalCocinita.g:148:1: rule__Cocina__Group__0 : rule__Cocina__Group__0__Impl rule__Cocina__Group__1 ;
     public final void rule__Cocina__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:158:1: ( rule__Cocina__Group__0__Impl rule__Cocina__Group__1 )
-            // InternalCocinita.g:159:2: rule__Cocina__Group__0__Impl rule__Cocina__Group__1
+            // InternalCocinita.g:152:1: ( rule__Cocina__Group__0__Impl rule__Cocina__Group__1 )
+            // InternalCocinita.g:153:2: rule__Cocina__Group__0__Impl rule__Cocina__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__Cocina__Group__0__Impl();
@@ -470,17 +435,17 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Cocina__Group__0__Impl"
-    // InternalCocinita.g:166:1: rule__Cocina__Group__0__Impl : ( '[RECIPE]' ) ;
+    // InternalCocinita.g:160:1: rule__Cocina__Group__0__Impl : ( '[RECIPE]' ) ;
     public final void rule__Cocina__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:170:1: ( ( '[RECIPE]' ) )
-            // InternalCocinita.g:171:1: ( '[RECIPE]' )
+            // InternalCocinita.g:164:1: ( ( '[RECIPE]' ) )
+            // InternalCocinita.g:165:1: ( '[RECIPE]' )
             {
-            // InternalCocinita.g:171:1: ( '[RECIPE]' )
-            // InternalCocinita.g:172:2: '[RECIPE]'
+            // InternalCocinita.g:165:1: ( '[RECIPE]' )
+            // InternalCocinita.g:166:2: '[RECIPE]'
             {
              before(grammarAccess.getCocinaAccess().getRECIPEKeyword_0()); 
             match(input,12,FOLLOW_2); 
@@ -507,14 +472,14 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Cocina__Group__1"
-    // InternalCocinita.g:181:1: rule__Cocina__Group__1 : rule__Cocina__Group__1__Impl rule__Cocina__Group__2 ;
+    // InternalCocinita.g:175:1: rule__Cocina__Group__1 : rule__Cocina__Group__1__Impl rule__Cocina__Group__2 ;
     public final void rule__Cocina__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:185:1: ( rule__Cocina__Group__1__Impl rule__Cocina__Group__2 )
-            // InternalCocinita.g:186:2: rule__Cocina__Group__1__Impl rule__Cocina__Group__2
+            // InternalCocinita.g:179:1: ( rule__Cocina__Group__1__Impl rule__Cocina__Group__2 )
+            // InternalCocinita.g:180:2: rule__Cocina__Group__1__Impl rule__Cocina__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__Cocina__Group__1__Impl();
@@ -545,21 +510,21 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Cocina__Group__1__Impl"
-    // InternalCocinita.g:193:1: rule__Cocina__Group__1__Impl : ( ( rule__Cocina__NameAssignment_1 ) ) ;
+    // InternalCocinita.g:187:1: rule__Cocina__Group__1__Impl : ( ( rule__Cocina__NameAssignment_1 ) ) ;
     public final void rule__Cocina__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:197:1: ( ( ( rule__Cocina__NameAssignment_1 ) ) )
-            // InternalCocinita.g:198:1: ( ( rule__Cocina__NameAssignment_1 ) )
+            // InternalCocinita.g:191:1: ( ( ( rule__Cocina__NameAssignment_1 ) ) )
+            // InternalCocinita.g:192:1: ( ( rule__Cocina__NameAssignment_1 ) )
             {
-            // InternalCocinita.g:198:1: ( ( rule__Cocina__NameAssignment_1 ) )
-            // InternalCocinita.g:199:2: ( rule__Cocina__NameAssignment_1 )
+            // InternalCocinita.g:192:1: ( ( rule__Cocina__NameAssignment_1 ) )
+            // InternalCocinita.g:193:2: ( rule__Cocina__NameAssignment_1 )
             {
              before(grammarAccess.getCocinaAccess().getNameAssignment_1()); 
-            // InternalCocinita.g:200:2: ( rule__Cocina__NameAssignment_1 )
-            // InternalCocinita.g:200:3: rule__Cocina__NameAssignment_1
+            // InternalCocinita.g:194:2: ( rule__Cocina__NameAssignment_1 )
+            // InternalCocinita.g:194:3: rule__Cocina__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Cocina__NameAssignment_1();
@@ -592,14 +557,14 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Cocina__Group__2"
-    // InternalCocinita.g:208:1: rule__Cocina__Group__2 : rule__Cocina__Group__2__Impl rule__Cocina__Group__3 ;
+    // InternalCocinita.g:202:1: rule__Cocina__Group__2 : rule__Cocina__Group__2__Impl rule__Cocina__Group__3 ;
     public final void rule__Cocina__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:212:1: ( rule__Cocina__Group__2__Impl rule__Cocina__Group__3 )
-            // InternalCocinita.g:213:2: rule__Cocina__Group__2__Impl rule__Cocina__Group__3
+            // InternalCocinita.g:206:1: ( rule__Cocina__Group__2__Impl rule__Cocina__Group__3 )
+            // InternalCocinita.g:207:2: rule__Cocina__Group__2__Impl rule__Cocina__Group__3
             {
             pushFollow(FOLLOW_5);
             rule__Cocina__Group__2__Impl();
@@ -630,17 +595,17 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Cocina__Group__2__Impl"
-    // InternalCocinita.g:220:1: rule__Cocina__Group__2__Impl : ( 'Ingredientes:' ) ;
+    // InternalCocinita.g:214:1: rule__Cocina__Group__2__Impl : ( 'Ingredientes:' ) ;
     public final void rule__Cocina__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:224:1: ( ( 'Ingredientes:' ) )
-            // InternalCocinita.g:225:1: ( 'Ingredientes:' )
+            // InternalCocinita.g:218:1: ( ( 'Ingredientes:' ) )
+            // InternalCocinita.g:219:1: ( 'Ingredientes:' )
             {
-            // InternalCocinita.g:225:1: ( 'Ingredientes:' )
-            // InternalCocinita.g:226:2: 'Ingredientes:'
+            // InternalCocinita.g:219:1: ( 'Ingredientes:' )
+            // InternalCocinita.g:220:2: 'Ingredientes:'
             {
              before(grammarAccess.getCocinaAccess().getIngredientesKeyword_2()); 
             match(input,13,FOLLOW_2); 
@@ -667,14 +632,14 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Cocina__Group__3"
-    // InternalCocinita.g:235:1: rule__Cocina__Group__3 : rule__Cocina__Group__3__Impl rule__Cocina__Group__4 ;
+    // InternalCocinita.g:229:1: rule__Cocina__Group__3 : rule__Cocina__Group__3__Impl rule__Cocina__Group__4 ;
     public final void rule__Cocina__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:239:1: ( rule__Cocina__Group__3__Impl rule__Cocina__Group__4 )
-            // InternalCocinita.g:240:2: rule__Cocina__Group__3__Impl rule__Cocina__Group__4
+            // InternalCocinita.g:233:1: ( rule__Cocina__Group__3__Impl rule__Cocina__Group__4 )
+            // InternalCocinita.g:234:2: rule__Cocina__Group__3__Impl rule__Cocina__Group__4
             {
             pushFollow(FOLLOW_5);
             rule__Cocina__Group__3__Impl();
@@ -705,20 +670,20 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Cocina__Group__3__Impl"
-    // InternalCocinita.g:247:1: rule__Cocina__Group__3__Impl : ( ( rule__Cocina__IngredienteAssignment_3 )* ) ;
+    // InternalCocinita.g:241:1: rule__Cocina__Group__3__Impl : ( ( rule__Cocina__IngredienteAssignment_3 )* ) ;
     public final void rule__Cocina__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:251:1: ( ( ( rule__Cocina__IngredienteAssignment_3 )* ) )
-            // InternalCocinita.g:252:1: ( ( rule__Cocina__IngredienteAssignment_3 )* )
+            // InternalCocinita.g:245:1: ( ( ( rule__Cocina__IngredienteAssignment_3 )* ) )
+            // InternalCocinita.g:246:1: ( ( rule__Cocina__IngredienteAssignment_3 )* )
             {
-            // InternalCocinita.g:252:1: ( ( rule__Cocina__IngredienteAssignment_3 )* )
-            // InternalCocinita.g:253:2: ( rule__Cocina__IngredienteAssignment_3 )*
+            // InternalCocinita.g:246:1: ( ( rule__Cocina__IngredienteAssignment_3 )* )
+            // InternalCocinita.g:247:2: ( rule__Cocina__IngredienteAssignment_3 )*
             {
              before(grammarAccess.getCocinaAccess().getIngredienteAssignment_3()); 
-            // InternalCocinita.g:254:2: ( rule__Cocina__IngredienteAssignment_3 )*
+            // InternalCocinita.g:248:2: ( rule__Cocina__IngredienteAssignment_3 )*
             loop2:
             do {
                 int alt2=2;
@@ -731,7 +696,7 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalCocinita.g:254:3: rule__Cocina__IngredienteAssignment_3
+            	    // InternalCocinita.g:248:3: rule__Cocina__IngredienteAssignment_3
             	    {
             	    pushFollow(FOLLOW_6);
             	    rule__Cocina__IngredienteAssignment_3();
@@ -770,14 +735,14 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Cocina__Group__4"
-    // InternalCocinita.g:262:1: rule__Cocina__Group__4 : rule__Cocina__Group__4__Impl ;
+    // InternalCocinita.g:256:1: rule__Cocina__Group__4 : rule__Cocina__Group__4__Impl ;
     public final void rule__Cocina__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:266:1: ( rule__Cocina__Group__4__Impl )
-            // InternalCocinita.g:267:2: rule__Cocina__Group__4__Impl
+            // InternalCocinita.g:260:1: ( rule__Cocina__Group__4__Impl )
+            // InternalCocinita.g:261:2: rule__Cocina__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Cocina__Group__4__Impl();
@@ -803,17 +768,17 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Cocina__Group__4__Impl"
-    // InternalCocinita.g:273:1: rule__Cocina__Group__4__Impl : ( 'Procedimiento:' ) ;
+    // InternalCocinita.g:267:1: rule__Cocina__Group__4__Impl : ( 'Procedimiento:' ) ;
     public final void rule__Cocina__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:277:1: ( ( 'Procedimiento:' ) )
-            // InternalCocinita.g:278:1: ( 'Procedimiento:' )
+            // InternalCocinita.g:271:1: ( ( 'Procedimiento:' ) )
+            // InternalCocinita.g:272:1: ( 'Procedimiento:' )
             {
-            // InternalCocinita.g:278:1: ( 'Procedimiento:' )
-            // InternalCocinita.g:279:2: 'Procedimiento:'
+            // InternalCocinita.g:272:1: ( 'Procedimiento:' )
+            // InternalCocinita.g:273:2: 'Procedimiento:'
             {
              before(grammarAccess.getCocinaAccess().getProcedimientoKeyword_4()); 
             match(input,14,FOLLOW_2); 
@@ -840,14 +805,14 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ListaIngredientes__Group__0"
-    // InternalCocinita.g:289:1: rule__ListaIngredientes__Group__0 : rule__ListaIngredientes__Group__0__Impl rule__ListaIngredientes__Group__1 ;
+    // InternalCocinita.g:283:1: rule__ListaIngredientes__Group__0 : rule__ListaIngredientes__Group__0__Impl rule__ListaIngredientes__Group__1 ;
     public final void rule__ListaIngredientes__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:293:1: ( rule__ListaIngredientes__Group__0__Impl rule__ListaIngredientes__Group__1 )
-            // InternalCocinita.g:294:2: rule__ListaIngredientes__Group__0__Impl rule__ListaIngredientes__Group__1
+            // InternalCocinita.g:287:1: ( rule__ListaIngredientes__Group__0__Impl rule__ListaIngredientes__Group__1 )
+            // InternalCocinita.g:288:2: rule__ListaIngredientes__Group__0__Impl rule__ListaIngredientes__Group__1
             {
             pushFollow(FOLLOW_7);
             rule__ListaIngredientes__Group__0__Impl();
@@ -878,21 +843,31 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ListaIngredientes__Group__0__Impl"
-    // InternalCocinita.g:301:1: rule__ListaIngredientes__Group__0__Impl : ( RULE_ASCII ) ;
+    // InternalCocinita.g:295:1: rule__ListaIngredientes__Group__0__Impl : ( ( rule__ListaIngredientes__AsciiAssignment_0 ) ) ;
     public final void rule__ListaIngredientes__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:305:1: ( ( RULE_ASCII ) )
-            // InternalCocinita.g:306:1: ( RULE_ASCII )
+            // InternalCocinita.g:299:1: ( ( ( rule__ListaIngredientes__AsciiAssignment_0 ) ) )
+            // InternalCocinita.g:300:1: ( ( rule__ListaIngredientes__AsciiAssignment_0 ) )
             {
-            // InternalCocinita.g:306:1: ( RULE_ASCII )
-            // InternalCocinita.g:307:2: RULE_ASCII
+            // InternalCocinita.g:300:1: ( ( rule__ListaIngredientes__AsciiAssignment_0 ) )
+            // InternalCocinita.g:301:2: ( rule__ListaIngredientes__AsciiAssignment_0 )
             {
-             before(grammarAccess.getListaIngredientesAccess().getASCIITerminalRuleCall_0()); 
-            match(input,RULE_ASCII,FOLLOW_2); 
-             after(grammarAccess.getListaIngredientesAccess().getASCIITerminalRuleCall_0()); 
+             before(grammarAccess.getListaIngredientesAccess().getAsciiAssignment_0()); 
+            // InternalCocinita.g:302:2: ( rule__ListaIngredientes__AsciiAssignment_0 )
+            // InternalCocinita.g:302:3: rule__ListaIngredientes__AsciiAssignment_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__ListaIngredientes__AsciiAssignment_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getListaIngredientesAccess().getAsciiAssignment_0()); 
 
             }
 
@@ -915,14 +890,14 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ListaIngredientes__Group__1"
-    // InternalCocinita.g:316:1: rule__ListaIngredientes__Group__1 : rule__ListaIngredientes__Group__1__Impl rule__ListaIngredientes__Group__2 ;
+    // InternalCocinita.g:310:1: rule__ListaIngredientes__Group__1 : rule__ListaIngredientes__Group__1__Impl rule__ListaIngredientes__Group__2 ;
     public final void rule__ListaIngredientes__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:320:1: ( rule__ListaIngredientes__Group__1__Impl rule__ListaIngredientes__Group__2 )
-            // InternalCocinita.g:321:2: rule__ListaIngredientes__Group__1__Impl rule__ListaIngredientes__Group__2
+            // InternalCocinita.g:314:1: ( rule__ListaIngredientes__Group__1__Impl rule__ListaIngredientes__Group__2 )
+            // InternalCocinita.g:315:2: rule__ListaIngredientes__Group__1__Impl rule__ListaIngredientes__Group__2
             {
             pushFollow(FOLLOW_3);
             rule__ListaIngredientes__Group__1__Impl();
@@ -953,21 +928,21 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ListaIngredientes__Group__1__Impl"
-    // InternalCocinita.g:328:1: rule__ListaIngredientes__Group__1__Impl : ( ( rule__ListaIngredientes__TipoAssignment_1 ) ) ;
+    // InternalCocinita.g:322:1: rule__ListaIngredientes__Group__1__Impl : ( ( rule__ListaIngredientes__TipoAssignment_1 ) ) ;
     public final void rule__ListaIngredientes__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:332:1: ( ( ( rule__ListaIngredientes__TipoAssignment_1 ) ) )
-            // InternalCocinita.g:333:1: ( ( rule__ListaIngredientes__TipoAssignment_1 ) )
+            // InternalCocinita.g:326:1: ( ( ( rule__ListaIngredientes__TipoAssignment_1 ) ) )
+            // InternalCocinita.g:327:1: ( ( rule__ListaIngredientes__TipoAssignment_1 ) )
             {
-            // InternalCocinita.g:333:1: ( ( rule__ListaIngredientes__TipoAssignment_1 ) )
-            // InternalCocinita.g:334:2: ( rule__ListaIngredientes__TipoAssignment_1 )
+            // InternalCocinita.g:327:1: ( ( rule__ListaIngredientes__TipoAssignment_1 ) )
+            // InternalCocinita.g:328:2: ( rule__ListaIngredientes__TipoAssignment_1 )
             {
              before(grammarAccess.getListaIngredientesAccess().getTipoAssignment_1()); 
-            // InternalCocinita.g:335:2: ( rule__ListaIngredientes__TipoAssignment_1 )
-            // InternalCocinita.g:335:3: rule__ListaIngredientes__TipoAssignment_1
+            // InternalCocinita.g:329:2: ( rule__ListaIngredientes__TipoAssignment_1 )
+            // InternalCocinita.g:329:3: rule__ListaIngredientes__TipoAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__ListaIngredientes__TipoAssignment_1();
@@ -1000,14 +975,14 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ListaIngredientes__Group__2"
-    // InternalCocinita.g:343:1: rule__ListaIngredientes__Group__2 : rule__ListaIngredientes__Group__2__Impl ;
+    // InternalCocinita.g:337:1: rule__ListaIngredientes__Group__2 : rule__ListaIngredientes__Group__2__Impl ;
     public final void rule__ListaIngredientes__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:347:1: ( rule__ListaIngredientes__Group__2__Impl )
-            // InternalCocinita.g:348:2: rule__ListaIngredientes__Group__2__Impl
+            // InternalCocinita.g:341:1: ( rule__ListaIngredientes__Group__2__Impl )
+            // InternalCocinita.g:342:2: rule__ListaIngredientes__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ListaIngredientes__Group__2__Impl();
@@ -1033,21 +1008,21 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ListaIngredientes__Group__2__Impl"
-    // InternalCocinita.g:354:1: rule__ListaIngredientes__Group__2__Impl : ( ( rule__ListaIngredientes__NameAssignment_2 ) ) ;
+    // InternalCocinita.g:348:1: rule__ListaIngredientes__Group__2__Impl : ( ( rule__ListaIngredientes__NameAssignment_2 ) ) ;
     public final void rule__ListaIngredientes__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:358:1: ( ( ( rule__ListaIngredientes__NameAssignment_2 ) ) )
-            // InternalCocinita.g:359:1: ( ( rule__ListaIngredientes__NameAssignment_2 ) )
+            // InternalCocinita.g:352:1: ( ( ( rule__ListaIngredientes__NameAssignment_2 ) ) )
+            // InternalCocinita.g:353:1: ( ( rule__ListaIngredientes__NameAssignment_2 ) )
             {
-            // InternalCocinita.g:359:1: ( ( rule__ListaIngredientes__NameAssignment_2 ) )
-            // InternalCocinita.g:360:2: ( rule__ListaIngredientes__NameAssignment_2 )
+            // InternalCocinita.g:353:1: ( ( rule__ListaIngredientes__NameAssignment_2 ) )
+            // InternalCocinita.g:354:2: ( rule__ListaIngredientes__NameAssignment_2 )
             {
              before(grammarAccess.getListaIngredientesAccess().getNameAssignment_2()); 
-            // InternalCocinita.g:361:2: ( rule__ListaIngredientes__NameAssignment_2 )
-            // InternalCocinita.g:361:3: rule__ListaIngredientes__NameAssignment_2
+            // InternalCocinita.g:355:2: ( rule__ListaIngredientes__NameAssignment_2 )
+            // InternalCocinita.g:355:3: rule__ListaIngredientes__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__ListaIngredientes__NameAssignment_2();
@@ -1080,17 +1055,17 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Cocina__NameAssignment_1"
-    // InternalCocinita.g:370:1: rule__Cocina__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalCocinita.g:364:1: rule__Cocina__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Cocina__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:374:1: ( ( RULE_ID ) )
-            // InternalCocinita.g:375:2: ( RULE_ID )
+            // InternalCocinita.g:368:1: ( ( RULE_ID ) )
+            // InternalCocinita.g:369:2: ( RULE_ID )
             {
-            // InternalCocinita.g:375:2: ( RULE_ID )
-            // InternalCocinita.g:376:3: RULE_ID
+            // InternalCocinita.g:369:2: ( RULE_ID )
+            // InternalCocinita.g:370:3: RULE_ID
             {
              before(grammarAccess.getCocinaAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -1117,17 +1092,17 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Cocina__IngredienteAssignment_3"
-    // InternalCocinita.g:385:1: rule__Cocina__IngredienteAssignment_3 : ( ruleListaIngredientes ) ;
+    // InternalCocinita.g:379:1: rule__Cocina__IngredienteAssignment_3 : ( ruleListaIngredientes ) ;
     public final void rule__Cocina__IngredienteAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:389:1: ( ( ruleListaIngredientes ) )
-            // InternalCocinita.g:390:2: ( ruleListaIngredientes )
+            // InternalCocinita.g:383:1: ( ( ruleListaIngredientes ) )
+            // InternalCocinita.g:384:2: ( ruleListaIngredientes )
             {
-            // InternalCocinita.g:390:2: ( ruleListaIngredientes )
-            // InternalCocinita.g:391:3: ruleListaIngredientes
+            // InternalCocinita.g:384:2: ( ruleListaIngredientes )
+            // InternalCocinita.g:385:3: ruleListaIngredientes
             {
              before(grammarAccess.getCocinaAccess().getIngredienteListaIngredientesParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -1157,18 +1132,55 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Cocina__IngredienteAssignment_3"
 
 
+    // $ANTLR start "rule__ListaIngredientes__AsciiAssignment_0"
+    // InternalCocinita.g:394:1: rule__ListaIngredientes__AsciiAssignment_0 : ( RULE_ASCII ) ;
+    public final void rule__ListaIngredientes__AsciiAssignment_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalCocinita.g:398:1: ( ( RULE_ASCII ) )
+            // InternalCocinita.g:399:2: ( RULE_ASCII )
+            {
+            // InternalCocinita.g:399:2: ( RULE_ASCII )
+            // InternalCocinita.g:400:3: RULE_ASCII
+            {
+             before(grammarAccess.getListaIngredientesAccess().getAsciiASCIITerminalRuleCall_0_0()); 
+            match(input,RULE_ASCII,FOLLOW_2); 
+             after(grammarAccess.getListaIngredientesAccess().getAsciiASCIITerminalRuleCall_0_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaIngredientes__AsciiAssignment_0"
+
+
     // $ANTLR start "rule__ListaIngredientes__TipoAssignment_1"
-    // InternalCocinita.g:400:1: rule__ListaIngredientes__TipoAssignment_1 : ( ruleTipoVariable ) ;
+    // InternalCocinita.g:409:1: rule__ListaIngredientes__TipoAssignment_1 : ( ruleTipoVariable ) ;
     public final void rule__ListaIngredientes__TipoAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:404:1: ( ( ruleTipoVariable ) )
-            // InternalCocinita.g:405:2: ( ruleTipoVariable )
+            // InternalCocinita.g:413:1: ( ( ruleTipoVariable ) )
+            // InternalCocinita.g:414:2: ( ruleTipoVariable )
             {
-            // InternalCocinita.g:405:2: ( ruleTipoVariable )
-            // InternalCocinita.g:406:3: ruleTipoVariable
+            // InternalCocinita.g:414:2: ( ruleTipoVariable )
+            // InternalCocinita.g:415:3: ruleTipoVariable
             {
              before(grammarAccess.getListaIngredientesAccess().getTipoTipoVariableParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -1199,17 +1211,17 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ListaIngredientes__NameAssignment_2"
-    // InternalCocinita.g:415:1: rule__ListaIngredientes__NameAssignment_2 : ( RULE_ID ) ;
+    // InternalCocinita.g:424:1: rule__ListaIngredientes__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__ListaIngredientes__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:419:1: ( ( RULE_ID ) )
-            // InternalCocinita.g:420:2: ( RULE_ID )
+            // InternalCocinita.g:428:1: ( ( RULE_ID ) )
+            // InternalCocinita.g:429:2: ( RULE_ID )
             {
-            // InternalCocinita.g:420:2: ( RULE_ID )
-            // InternalCocinita.g:421:3: RULE_ID
+            // InternalCocinita.g:429:2: ( RULE_ID )
+            // InternalCocinita.g:430:3: RULE_ID
             {
              before(grammarAccess.getListaIngredientesAccess().getNameIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -1236,21 +1248,21 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TipoVariable__INTAssignment_0"
-    // InternalCocinita.g:430:1: rule__TipoVariable__INTAssignment_0 : ( ( '[-o]' ) ) ;
+    // InternalCocinita.g:439:1: rule__TipoVariable__INTAssignment_0 : ( ( '[-o]' ) ) ;
     public final void rule__TipoVariable__INTAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:434:1: ( ( ( '[-o]' ) ) )
-            // InternalCocinita.g:435:2: ( ( '[-o]' ) )
+            // InternalCocinita.g:443:1: ( ( ( '[-o]' ) ) )
+            // InternalCocinita.g:444:2: ( ( '[-o]' ) )
             {
-            // InternalCocinita.g:435:2: ( ( '[-o]' ) )
-            // InternalCocinita.g:436:3: ( '[-o]' )
+            // InternalCocinita.g:444:2: ( ( '[-o]' ) )
+            // InternalCocinita.g:445:3: ( '[-o]' )
             {
              before(grammarAccess.getTipoVariableAccess().getINTOKeyword_0_0()); 
-            // InternalCocinita.g:437:3: ( '[-o]' )
-            // InternalCocinita.g:438:4: '[-o]'
+            // InternalCocinita.g:446:3: ( '[-o]' )
+            // InternalCocinita.g:447:4: '[-o]'
             {
              before(grammarAccess.getTipoVariableAccess().getINTOKeyword_0_0()); 
             match(input,15,FOLLOW_2); 
@@ -1281,21 +1293,21 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TipoVariable__StringAssignment_1"
-    // InternalCocinita.g:449:1: rule__TipoVariable__StringAssignment_1 : ( ( '[cU]' ) ) ;
+    // InternalCocinita.g:458:1: rule__TipoVariable__StringAssignment_1 : ( ( '[cU]' ) ) ;
     public final void rule__TipoVariable__StringAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCocinita.g:453:1: ( ( ( '[cU]' ) ) )
-            // InternalCocinita.g:454:2: ( ( '[cU]' ) )
+            // InternalCocinita.g:462:1: ( ( ( '[cU]' ) ) )
+            // InternalCocinita.g:463:2: ( ( '[cU]' ) )
             {
-            // InternalCocinita.g:454:2: ( ( '[cU]' ) )
-            // InternalCocinita.g:455:3: ( '[cU]' )
+            // InternalCocinita.g:463:2: ( ( '[cU]' ) )
+            // InternalCocinita.g:464:3: ( '[cU]' )
             {
              before(grammarAccess.getTipoVariableAccess().getStringCUKeyword_1_0()); 
-            // InternalCocinita.g:456:3: ( '[cU]' )
-            // InternalCocinita.g:457:4: '[cU]'
+            // InternalCocinita.g:465:3: ( '[cU]' )
+            // InternalCocinita.g:466:4: '[cU]'
             {
              before(grammarAccess.getTipoVariableAccess().getStringCUKeyword_1_0()); 
             match(input,16,FOLLOW_2); 
@@ -1324,51 +1336,6 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
     }
     // $ANTLR end "rule__TipoVariable__StringAssignment_1"
 
-
-    // $ANTLR start "rule__TipoVariable__DoubleAssignment_2"
-    // InternalCocinita.g:468:1: rule__TipoVariable__DoubleAssignment_2 : ( ( '[-O]' ) ) ;
-    public final void rule__TipoVariable__DoubleAssignment_2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalCocinita.g:472:1: ( ( ( '[-O]' ) ) )
-            // InternalCocinita.g:473:2: ( ( '[-O]' ) )
-            {
-            // InternalCocinita.g:473:2: ( ( '[-O]' ) )
-            // InternalCocinita.g:474:3: ( '[-O]' )
-            {
-             before(grammarAccess.getTipoVariableAccess().getDoubleOKeyword_2_0()); 
-            // InternalCocinita.g:475:3: ( '[-O]' )
-            // InternalCocinita.g:476:4: '[-O]'
-            {
-             before(grammarAccess.getTipoVariableAccess().getDoubleOKeyword_2_0()); 
-            match(input,17,FOLLOW_2); 
-             after(grammarAccess.getTipoVariableAccess().getDoubleOKeyword_2_0()); 
-
-            }
-
-             after(grammarAccess.getTipoVariableAccess().getDoubleOKeyword_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoVariable__DoubleAssignment_2"
-
     // Delegated rules
 
 
@@ -1376,10 +1343,10 @@ public class InternalCocinitaParser extends AbstractInternalContentAssistParser 
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000004010L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000038000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000004020L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000018000L});
 
 }

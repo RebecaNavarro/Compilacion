@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link upb.edu.lp.cocinita.TipoVariable#getINT <em>INT</em>}</li>
  *   <li>{@link upb.edu.lp.cocinita.TipoVariable#getString <em>String</em>}</li>
- *   <li>{@link upb.edu.lp.cocinita.TipoVariable#getDouble <em>Double</em>}</li>
  * </ul>
  *
  * @see upb.edu.lp.cocinita.CocinitaPackage#getTipoVariable()
@@ -68,27 +67,5 @@ public interface TipoVariable extends EObject
    * @generated
    */
   void setString(String value);
-
-  /**
-   * Returns the value of the '<em><b>Double</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Double</em>' attribute.
-   * @see #setDouble(String)
-   * @see upb.edu.lp.cocinita.CocinitaPackage#getTipoVariable_Double()
-   * @model
-   * @generated
-   */
-  String getDouble();
-
-  /**
-   * Sets the value of the '{@link upb.edu.lp.cocinita.TipoVariable#getDouble <em>Double</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Double</em>' attribute.
-   * @see #getDouble()
-   * @generated
-   */
-  void setDouble(String value);
 
 } // TipoVariable

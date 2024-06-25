@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link upb.edu.lp.cocinita.ListaIngredientes#getAscii <em>Ascii</em>}</li>
  *   <li>{@link upb.edu.lp.cocinita.ListaIngredientes#getTipo <em>Tipo</em>}</li>
  *   <li>{@link upb.edu.lp.cocinita.ListaIngredientes#getName <em>Name</em>}</li>
  * </ul>
@@ -24,6 +25,28 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ListaIngredientes extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Ascii</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Ascii</em>' attribute.
+   * @see #setAscii(String)
+   * @see upb.edu.lp.cocinita.CocinitaPackage#getListaIngredientes_Ascii()
+   * @model
+   * @generated
+   */
+  String getAscii();
+
+  /**
+   * Sets the value of the '{@link upb.edu.lp.cocinita.ListaIngredientes#getAscii <em>Ascii</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ascii</em>' attribute.
+   * @see #getAscii()
+   * @generated
+   */
+  void setAscii(String value);
+
   /**
    * Returns the value of the '<em><b>Tipo</b></em>' containment reference.
    * <!-- begin-user-doc -->

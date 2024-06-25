@@ -2,8 +2,30 @@ grammar upb.edu.lp.Cocinita with org.eclipse.xtext.common.Terminals
 
 generate cocinita "http://www.edu.upb/lp/Cocinita"
 
-Model:
-	greetings+=Greeting*;
+Cocina:
+	'[RECIPE]' name = ID
+	'Ingredientes:'
+	Ingrediente += ListaIngredientes* 
+	'Procedimiento:'
 	
-Greeting:
-	'Hello' name=ID '!';
+;
+
+ListaIngredientes:
+    ASCII tipo=TipoVariable name=ID
+;
+
+TipoVariable:
+    INT ='[-o]' | String='[cU]' 
+;
+
+terminal ASCII:
+    ('0'..'9')+
+;
+
+terminal ID:
+    ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '0'..'9' | '_')*
+;
+
+OperacionesAritmeticas:
+	
+;

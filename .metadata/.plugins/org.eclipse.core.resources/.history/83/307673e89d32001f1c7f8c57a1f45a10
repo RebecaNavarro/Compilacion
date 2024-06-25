@@ -1,0 +1,9 @@
+grammar upb.edu.lp.Cocinita with org.eclipse.xtext.common.Terminals
+
+generate cocinita "http://www.edu.upb/lp/Cocinita"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

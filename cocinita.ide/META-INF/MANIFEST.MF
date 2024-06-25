@@ -8,5 +8,8 @@ Bundle-SymbolicName: cocinita.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: cocinita,
  org.eclipse.xtext.ide,
- org.eclipse.xtext.xbase.ide
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: upb.edu.lp.ide.contentassist.antlr,
+ upb.edu.lp.ide.contentassist.antlr.internal

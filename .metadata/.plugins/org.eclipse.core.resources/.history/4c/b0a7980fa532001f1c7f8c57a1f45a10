@@ -1,0 +1,31 @@
+grammar upb.edu.lp.Cocinita with org.eclipse.xtext.common.Terminals
+
+generate cocinita "http://www.edu.upb/lp/Cocinita"
+
+Cocina:
+	'[RECIPE]' name = ID
+	'Ingredientes:'
+	Ingrediente += ListaIngredientes*
+	'Procedimiento:'
+	
+;
+
+ListaIngredientes:
+    ASCII tipo=TipoVariable name=ID
+;
+
+TipoVariable:
+    INT ='[-o]' | String='[cU]' | Double='[-O]'
+;
+
+terminal ASCII:
+    ('0'..'9')+
+;
+
+terminal ID:
+    ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '0'..'9' | '_')*
+;
+
+//IntExpression:
+//	
+//;

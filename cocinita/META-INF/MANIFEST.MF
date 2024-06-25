@@ -8,5 +8,21 @@ Bundle-SymbolicName: cocinita; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.xbase,
- org.eclipse.equinox.common;bundle-version="3.16.0"
+ org.eclipse.equinox.common;bundle-version="3.16.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.35.0",
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: upb.edu.lp,
+ upb.edu.lp.parser.antlr,
+ upb.edu.lp.validation,
+ upb.edu.lp.cocinita.impl,
+ upb.edu.lp.services,
+ upb.edu.lp.serializer,
+ upb.edu.lp.cocinita.util,
+ upb.edu.lp.cocinita,
+ upb.edu.lp.parser.antlr.internal,
+ upb.edu.lp.scoping,
+ upb.edu.lp.generator
+Import-Package: org.apache.log4j

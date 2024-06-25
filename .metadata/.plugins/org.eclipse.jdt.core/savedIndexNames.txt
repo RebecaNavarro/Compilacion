@@ -1,12 +1,8 @@
 INDEX VERSION 1.134+C:\Users\BECA\Documents\UPB\Eclipse\.metadata\.plugins\org.eclipse.jdt.core
-1638485317.index
-2796472563.index
-2298745527.index
 100907270.index
 3812720810.index
 3372214321.index
 2949776811.index
-515384769.index
 3196876331.index
 365232755.index
 1376853340.index
@@ -19,7 +15,6 @@ INDEX VERSION 1.134+C:\Users\BECA\Documents\UPB\Eclipse\.metadata\.plugins\org.e
 1865797976.index
 1127625832.index
 3033325850.index
-779876401.index
 3407700928.index
 2842695041.index
 3680042955.index
@@ -31,7 +26,6 @@ INDEX VERSION 1.134+C:\Users\BECA\Documents\UPB\Eclipse\.metadata\.plugins\org.e
 2744892462.index
 3053055595.index
 1365128295.index
-613348547.index
 3718215703.index
 1095651630.index
 3756923759.index
@@ -39,7 +33,6 @@ INDEX VERSION 1.134+C:\Users\BECA\Documents\UPB\Eclipse\.metadata\.plugins\org.e
 586848824.index
 1009454932.index
 369642946.index
-3943309538.index
 3440096154.index
 2873206306.index
 2792289121.index
@@ -72,7 +65,6 @@ INDEX VERSION 1.134+C:\Users\BECA\Documents\UPB\Eclipse\.metadata\.plugins\org.e
 1815391965.index
 3117926274.index
 1391828498.index
-3703213792.index
 2963123661.index
 2892340751.index
 1015521085.index
@@ -82,7 +74,6 @@ INDEX VERSION 1.134+C:\Users\BECA\Documents\UPB\Eclipse\.metadata\.plugins\org.e
 3944800600.index
 1278265807.index
 2932909642.index
-3390371315.index
 3305575647.index
 2018007264.index
 2303571731.index
@@ -96,11 +87,9 @@ INDEX VERSION 1.134+C:\Users\BECA\Documents\UPB\Eclipse\.metadata\.plugins\org.e
 3159143351.index
 1370718258.index
 172476974.index
-1644448239.index
 3747252549.index
 1796281416.index
 723794888.index
-3047732429.index
 1218761905.index
 1404770872.index
 2778316025.index

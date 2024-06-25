@@ -1,0 +1,5 @@
+#Mon Jun 24 22:29:37 BOT 2024
+__DEFAULT__=false
+expression=comment
+org.eclipse.help.ui.localSearch.master=true
+org.eclipse.sdk.Eclipse.master=true

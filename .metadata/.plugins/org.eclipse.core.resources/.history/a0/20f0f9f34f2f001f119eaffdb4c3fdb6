@@ -1,0 +1,9 @@
+grammar upb.edu.lp.MiniLengCom with org.eclipse.xtext.common.Terminals
+
+generate miniLengCom "http://www.edu.upb/lp/MiniLengCom"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

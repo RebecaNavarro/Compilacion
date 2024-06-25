@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: cocinita.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: cocinita.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: cocinita.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: cocinita,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-17

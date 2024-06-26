@@ -16,8 +16,7 @@ import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequence
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import upb.edu.lp.cocinita.Cocina;
 import upb.edu.lp.cocinita.CocinitaPackage;
-import upb.edu.lp.cocinita.ListaIngredientes;
-import upb.edu.lp.cocinita.TipoVariable;
+import upb.edu.lp.cocinita.Ingrediente;
 import upb.edu.lp.services.CocinitaGrammarAccess;
 
 @SuppressWarnings("all")
@@ -37,11 +36,8 @@ public class CocinitaSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case CocinitaPackage.COCINA:
 				sequence_Cocina(context, (Cocina) semanticObject); 
 				return; 
-			case CocinitaPackage.LISTA_INGREDIENTES:
-				sequence_ListaIngredientes(context, (ListaIngredientes) semanticObject); 
-				return; 
-			case CocinitaPackage.TIPO_VARIABLE:
-				sequence_TipoVariable(context, (TipoVariable) semanticObject); 
+			case CocinitaPackage.INGREDIENTE:
+				sequence_Ingrediente(context, (Ingrediente) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -54,7 +50,7 @@ public class CocinitaSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Cocina returns Cocina
 	 *
 	 * Constraint:
-	 *     (name=ID Ingrediente+=ListaIngredientes*)
+	 *     (name=ID ListaIngredientes+=Ingrediente*)
 	 * </pre>
 	 */
 	protected void sequence_Cocina(ISerializationContext context, Cocina semanticObject) {
@@ -65,37 +61,26 @@ public class CocinitaSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     ListaIngredientes returns ListaIngredientes
+	 *     Ingrediente returns Ingrediente
 	 *
 	 * Constraint:
-	 *     (tipo=TipoVariable name=ID)
+	 *     (ascii=INT tipo=TipoVariable name=ID)
 	 * </pre>
 	 */
-	protected void sequence_ListaIngredientes(ISerializationContext context, ListaIngredientes semanticObject) {
+	protected void sequence_Ingrediente(ISerializationContext context, Ingrediente semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, CocinitaPackage.Literals.LISTA_INGREDIENTES__TIPO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CocinitaPackage.Literals.LISTA_INGREDIENTES__TIPO));
-			if (transientValues.isValueTransient(semanticObject, CocinitaPackage.Literals.LISTA_INGREDIENTES__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CocinitaPackage.Literals.LISTA_INGREDIENTES__NAME));
+			if (transientValues.isValueTransient(semanticObject, CocinitaPackage.Literals.INGREDIENTE__ASCII) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CocinitaPackage.Literals.INGREDIENTE__ASCII));
+			if (transientValues.isValueTransient(semanticObject, CocinitaPackage.Literals.INGREDIENTE__TIPO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CocinitaPackage.Literals.INGREDIENTE__TIPO));
+			if (transientValues.isValueTransient(semanticObject, CocinitaPackage.Literals.INGREDIENTE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CocinitaPackage.Literals.INGREDIENTE__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getListaIngredientesAccess().getTipoTipoVariableParserRuleCall_1_0(), semanticObject.getTipo());
-		feeder.accept(grammarAccess.getListaIngredientesAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getIngredienteAccess().getAsciiINTTerminalRuleCall_0_0(), semanticObject.getAscii());
+		feeder.accept(grammarAccess.getIngredienteAccess().getTipoTipoVariableParserRuleCall_1_0(), semanticObject.getTipo());
+		feeder.accept(grammarAccess.getIngredienteAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     TipoVariable returns TipoVariable
-	 *
-	 * Constraint:
-	 *     (INT='[-o]' | String='[cU]' | Double='[-O]')
-	 * </pre>
-	 */
-	protected void sequence_TipoVariable(ISerializationContext context, TipoVariable semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

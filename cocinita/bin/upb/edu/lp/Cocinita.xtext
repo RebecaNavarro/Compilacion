@@ -5,27 +5,27 @@ generate cocinita "http://www.edu.upb/lp/Cocinita"
 Cocina:
 	'[RECIPE]' name = ID
 	'Ingredientes:'
-	Ingrediente += ListaIngredientes* 
-	'Procedimiento:'
+	ListaIngredientes += Ingrediente*
 	
+	'Procedimiento:'
+	ListaInstrucciones += Instruccion*
 ;
 
-ListaIngredientes:
-    ASCII tipo=TipoVariable name=ID
+Ingrediente:
+    ascii=INT tipo=TipoVariable name=ID '.'
 ;
 
 TipoVariable:
-    INT ='[-o]' | String='[cU]' 
+    '[-o]' | '[cU]' | '[-O]'
 ;
 
-terminal ASCII:
-    ('0'..'9')+
+Instruccion:
+	Batir | Licuar | MeterAlHorno | MeterAlRefrigerador
 ;
 
-terminal ID:
-    ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '0'..'9' | '_')*
-;
+Batir:;
 
-//OperacionesAritmeticas:
-//	
-//;
+Separar:;
+
+MeterAlHorno:;
+

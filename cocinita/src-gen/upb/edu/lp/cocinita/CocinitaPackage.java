@@ -77,13 +77,13 @@ public interface CocinitaPackage extends EPackage
   int COCINA__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Ingrediente</b></em>' containment reference list.
+   * The feature id for the '<em><b>Lista Ingredientes</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COCINA__INGREDIENTE = 1;
+  int COCINA__LISTA_INGREDIENTES = 1;
 
   /**
    * The number of structural features of the '<em>Cocina</em>' class.
@@ -95,23 +95,32 @@ public interface CocinitaPackage extends EPackage
   int COCINA_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link upb.edu.lp.cocinita.impl.ListaIngredientesImpl <em>Lista Ingredientes</em>}' class.
+   * The meta object id for the '{@link upb.edu.lp.cocinita.impl.IngredienteImpl <em>Ingrediente</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see upb.edu.lp.cocinita.impl.ListaIngredientesImpl
-   * @see upb.edu.lp.cocinita.impl.CocinitaPackageImpl#getListaIngredientes()
+   * @see upb.edu.lp.cocinita.impl.IngredienteImpl
+   * @see upb.edu.lp.cocinita.impl.CocinitaPackageImpl#getIngrediente()
    * @generated
    */
-  int LISTA_INGREDIENTES = 1;
+  int INGREDIENTE = 1;
 
   /**
-   * The feature id for the '<em><b>Tipo</b></em>' containment reference.
+   * The feature id for the '<em><b>Ascii</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LISTA_INGREDIENTES__TIPO = 0;
+  int INGREDIENTE__ASCII = 0;
+
+  /**
+   * The feature id for the '<em><b>Tipo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INGREDIENTE__TIPO = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -120,62 +129,16 @@ public interface CocinitaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LISTA_INGREDIENTES__NAME = 1;
+  int INGREDIENTE__NAME = 2;
 
   /**
-   * The number of structural features of the '<em>Lista Ingredientes</em>' class.
+   * The number of structural features of the '<em>Ingrediente</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LISTA_INGREDIENTES_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link upb.edu.lp.cocinita.impl.TipoVariableImpl <em>Tipo Variable</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see upb.edu.lp.cocinita.impl.TipoVariableImpl
-   * @see upb.edu.lp.cocinita.impl.CocinitaPackageImpl#getTipoVariable()
-   * @generated
-   */
-  int TIPO_VARIABLE = 2;
-
-  /**
-   * The feature id for the '<em><b>INT</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TIPO_VARIABLE__INT = 0;
-
-  /**
-   * The feature id for the '<em><b>String</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TIPO_VARIABLE__STRING = 1;
-
-  /**
-   * The feature id for the '<em><b>Double</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TIPO_VARIABLE__DOUBLE = 2;
-
-  /**
-   * The number of structural features of the '<em>Tipo Variable</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TIPO_VARIABLE_FEATURE_COUNT = 3;
+  int INGREDIENTE_FEATURE_COUNT = 3;
 
 
   /**
@@ -200,90 +163,58 @@ public interface CocinitaPackage extends EPackage
   EAttribute getCocina_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link upb.edu.lp.cocinita.Cocina#getIngrediente <em>Ingrediente</em>}'.
+   * Returns the meta object for the containment reference list '{@link upb.edu.lp.cocinita.Cocina#getListaIngredientes <em>Lista Ingredientes</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ingrediente</em>'.
-   * @see upb.edu.lp.cocinita.Cocina#getIngrediente()
+   * @return the meta object for the containment reference list '<em>Lista Ingredientes</em>'.
+   * @see upb.edu.lp.cocinita.Cocina#getListaIngredientes()
    * @see #getCocina()
    * @generated
    */
-  EReference getCocina_Ingrediente();
+  EReference getCocina_ListaIngredientes();
 
   /**
-   * Returns the meta object for class '{@link upb.edu.lp.cocinita.ListaIngredientes <em>Lista Ingredientes</em>}'.
+   * Returns the meta object for class '{@link upb.edu.lp.cocinita.Ingrediente <em>Ingrediente</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Lista Ingredientes</em>'.
-   * @see upb.edu.lp.cocinita.ListaIngredientes
+   * @return the meta object for class '<em>Ingrediente</em>'.
+   * @see upb.edu.lp.cocinita.Ingrediente
    * @generated
    */
-  EClass getListaIngredientes();
+  EClass getIngrediente();
 
   /**
-   * Returns the meta object for the containment reference '{@link upb.edu.lp.cocinita.ListaIngredientes#getTipo <em>Tipo</em>}'.
+   * Returns the meta object for the attribute '{@link upb.edu.lp.cocinita.Ingrediente#getAscii <em>Ascii</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tipo</em>'.
-   * @see upb.edu.lp.cocinita.ListaIngredientes#getTipo()
-   * @see #getListaIngredientes()
+   * @return the meta object for the attribute '<em>Ascii</em>'.
+   * @see upb.edu.lp.cocinita.Ingrediente#getAscii()
+   * @see #getIngrediente()
    * @generated
    */
-  EReference getListaIngredientes_Tipo();
+  EAttribute getIngrediente_Ascii();
 
   /**
-   * Returns the meta object for the attribute '{@link upb.edu.lp.cocinita.ListaIngredientes#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link upb.edu.lp.cocinita.Ingrediente#getTipo <em>Tipo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tipo</em>'.
+   * @see upb.edu.lp.cocinita.Ingrediente#getTipo()
+   * @see #getIngrediente()
+   * @generated
+   */
+  EAttribute getIngrediente_Tipo();
+
+  /**
+   * Returns the meta object for the attribute '{@link upb.edu.lp.cocinita.Ingrediente#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see upb.edu.lp.cocinita.ListaIngredientes#getName()
-   * @see #getListaIngredientes()
+   * @see upb.edu.lp.cocinita.Ingrediente#getName()
+   * @see #getIngrediente()
    * @generated
    */
-  EAttribute getListaIngredientes_Name();
-
-  /**
-   * Returns the meta object for class '{@link upb.edu.lp.cocinita.TipoVariable <em>Tipo Variable</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Tipo Variable</em>'.
-   * @see upb.edu.lp.cocinita.TipoVariable
-   * @generated
-   */
-  EClass getTipoVariable();
-
-  /**
-   * Returns the meta object for the attribute '{@link upb.edu.lp.cocinita.TipoVariable#getINT <em>INT</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>INT</em>'.
-   * @see upb.edu.lp.cocinita.TipoVariable#getINT()
-   * @see #getTipoVariable()
-   * @generated
-   */
-  EAttribute getTipoVariable_INT();
-
-  /**
-   * Returns the meta object for the attribute '{@link upb.edu.lp.cocinita.TipoVariable#getString <em>String</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>String</em>'.
-   * @see upb.edu.lp.cocinita.TipoVariable#getString()
-   * @see #getTipoVariable()
-   * @generated
-   */
-  EAttribute getTipoVariable_String();
-
-  /**
-   * Returns the meta object for the attribute '{@link upb.edu.lp.cocinita.TipoVariable#getDouble <em>Double</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Double</em>'.
-   * @see upb.edu.lp.cocinita.TipoVariable#getDouble()
-   * @see #getTipoVariable()
-   * @generated
-   */
-  EAttribute getTipoVariable_Double();
+  EAttribute getIngrediente_Name();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -327,30 +258,38 @@ public interface CocinitaPackage extends EPackage
     EAttribute COCINA__NAME = eINSTANCE.getCocina_Name();
 
     /**
-     * The meta object literal for the '<em><b>Ingrediente</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Lista Ingredientes</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COCINA__INGREDIENTE = eINSTANCE.getCocina_Ingrediente();
+    EReference COCINA__LISTA_INGREDIENTES = eINSTANCE.getCocina_ListaIngredientes();
 
     /**
-     * The meta object literal for the '{@link upb.edu.lp.cocinita.impl.ListaIngredientesImpl <em>Lista Ingredientes</em>}' class.
+     * The meta object literal for the '{@link upb.edu.lp.cocinita.impl.IngredienteImpl <em>Ingrediente</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see upb.edu.lp.cocinita.impl.ListaIngredientesImpl
-     * @see upb.edu.lp.cocinita.impl.CocinitaPackageImpl#getListaIngredientes()
+     * @see upb.edu.lp.cocinita.impl.IngredienteImpl
+     * @see upb.edu.lp.cocinita.impl.CocinitaPackageImpl#getIngrediente()
      * @generated
      */
-    EClass LISTA_INGREDIENTES = eINSTANCE.getListaIngredientes();
+    EClass INGREDIENTE = eINSTANCE.getIngrediente();
 
     /**
-     * The meta object literal for the '<em><b>Tipo</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Ascii</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LISTA_INGREDIENTES__TIPO = eINSTANCE.getListaIngredientes_Tipo();
+    EAttribute INGREDIENTE__ASCII = eINSTANCE.getIngrediente_Ascii();
+
+    /**
+     * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INGREDIENTE__TIPO = eINSTANCE.getIngrediente_Tipo();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -358,41 +297,7 @@ public interface CocinitaPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute LISTA_INGREDIENTES__NAME = eINSTANCE.getListaIngredientes_Name();
-
-    /**
-     * The meta object literal for the '{@link upb.edu.lp.cocinita.impl.TipoVariableImpl <em>Tipo Variable</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see upb.edu.lp.cocinita.impl.TipoVariableImpl
-     * @see upb.edu.lp.cocinita.impl.CocinitaPackageImpl#getTipoVariable()
-     * @generated
-     */
-    EClass TIPO_VARIABLE = eINSTANCE.getTipoVariable();
-
-    /**
-     * The meta object literal for the '<em><b>INT</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TIPO_VARIABLE__INT = eINSTANCE.getTipoVariable_INT();
-
-    /**
-     * The meta object literal for the '<em><b>String</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TIPO_VARIABLE__STRING = eINSTANCE.getTipoVariable_String();
-
-    /**
-     * The meta object literal for the '<em><b>Double</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TIPO_VARIABLE__DOUBLE = eINSTANCE.getTipoVariable_Double();
+    EAttribute INGREDIENTE__NAME = eINSTANCE.getIngrediente_Name();
 
   }
 

@@ -81,14 +81,9 @@ public class CocinitaAdapterFactory extends AdapterFactoryImpl
         return createCocinaAdapter();
       }
       @Override
-      public Adapter caseListaIngredientes(ListaIngredientes object)
+      public Adapter caseIngrediente(Ingrediente object)
       {
-        return createListaIngredientesAdapter();
-      }
-      @Override
-      public Adapter caseTipoVariable(TipoVariable object)
-      {
-        return createTipoVariableAdapter();
+        return createIngredienteAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -128,31 +123,16 @@ public class CocinitaAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link upb.edu.lp.cocinita.ListaIngredientes <em>Lista Ingredientes</em>}'.
+   * Creates a new adapter for an object of class '{@link upb.edu.lp.cocinita.Ingrediente <em>Ingrediente</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see upb.edu.lp.cocinita.ListaIngredientes
+   * @see upb.edu.lp.cocinita.Ingrediente
    * @generated
    */
-  public Adapter createListaIngredientesAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link upb.edu.lp.cocinita.TipoVariable <em>Tipo Variable</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see upb.edu.lp.cocinita.TipoVariable
-   * @generated
-   */
-  public Adapter createTipoVariableAdapter()
+  public Adapter createIngredienteAdapter()
   {
     return null;
   }

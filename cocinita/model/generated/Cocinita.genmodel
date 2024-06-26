@@ -8,16 +8,12 @@
       fileExtensions="cocinita" ecorePackage="Cocinita.ecore#/">
     <genClasses ecoreClass="Cocinita.ecore#//Cocina">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//Cocina/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cocinita.ecore#//Cocina/Ingrediente"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cocinita.ecore#//Cocina/ListaIngredientes"/>
     </genClasses>
-    <genClasses ecoreClass="Cocinita.ecore#//ListaIngredientes">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cocinita.ecore#//ListaIngredientes/tipo"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//ListaIngredientes/name"/>
-    </genClasses>
-    <genClasses ecoreClass="Cocinita.ecore#//TipoVariable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//TipoVariable/INT"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//TipoVariable/String"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//TipoVariable/Double"/>
+    <genClasses ecoreClass="Cocinita.ecore#//Ingrediente">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//Ingrediente/ascii"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//Ingrediente/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//Ingrediente/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

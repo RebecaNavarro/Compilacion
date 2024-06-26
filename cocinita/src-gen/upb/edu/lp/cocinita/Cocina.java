@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link upb.edu.lp.cocinita.Cocina#getName <em>Name</em>}</li>
- *   <li>{@link upb.edu.lp.cocinita.Cocina#getIngrediente <em>Ingrediente</em>}</li>
+ *   <li>{@link upb.edu.lp.cocinita.Cocina#getListaIngredientes <em>Lista Ingredientes</em>}</li>
  * </ul>
  *
  * @see upb.edu.lp.cocinita.CocinitaPackage#getCocina()
@@ -49,15 +49,15 @@ public interface Cocina extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Ingrediente</b></em>' containment reference list.
-   * The list contents are of type {@link upb.edu.lp.cocinita.ListaIngredientes}.
+   * Returns the value of the '<em><b>Lista Ingredientes</b></em>' containment reference list.
+   * The list contents are of type {@link upb.edu.lp.cocinita.Ingrediente}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ingrediente</em>' containment reference list.
-   * @see upb.edu.lp.cocinita.CocinitaPackage#getCocina_Ingrediente()
+   * @return the value of the '<em>Lista Ingredientes</em>' containment reference list.
+   * @see upb.edu.lp.cocinita.CocinitaPackage#getCocina_ListaIngredientes()
    * @model containment="true"
    * @generated
    */
-  EList<ListaIngredientes> getIngrediente();
+  EList<Ingrediente> getListaIngredientes();
 
 } // Cocina

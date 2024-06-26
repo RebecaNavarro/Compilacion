@@ -94,7 +94,7 @@ ruleCocina returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_1_0,
-						"upb.edu.lp.Cocinita.ID");
+						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
@@ -105,18 +105,18 @@ ruleCocina returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getCocinaAccess().getIngredienteListaIngredientesParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getCocinaAccess().getListaIngredientesIngredienteParserRuleCall_3_0());
 				}
-				lv_Ingrediente_3_0=ruleListaIngredientes
+				lv_ListaIngredientes_3_0=ruleIngrediente
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCocinaRule());
 					}
 					add(
 						$current,
-						"Ingrediente",
-						lv_Ingrediente_3_0,
-						"upb.edu.lp.Cocinita.ListaIngredientes");
+						"ListaIngredientes",
+						lv_ListaIngredientes_3_0,
+						"upb.edu.lp.Cocinita.Ingrediente");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -128,15 +128,15 @@ ruleCocina returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleListaIngredientes
-entryRuleListaIngredientes returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getListaIngredientesRule()); }
-	iv_ruleListaIngredientes=ruleListaIngredientes
-	{ $current=$iv_ruleListaIngredientes.current; }
+// Entry rule entryRuleIngrediente
+entryRuleIngrediente returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getIngredienteRule()); }
+	iv_ruleIngrediente=ruleIngrediente
+	{ $current=$iv_ruleIngrediente.current; }
 	EOF;
 
-// Rule ListaIngredientes
-ruleListaIngredientes returns [EObject current=null]
+// Rule Ingrediente
+ruleIngrediente returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -144,19 +144,33 @@ ruleListaIngredientes returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		this_ASCII_0=RULE_ASCII
-		{
-			newLeafNode(this_ASCII_0, grammarAccess.getListaIngredientesAccess().getASCIITerminalRuleCall_0());
-		}
+		(
+			(
+				lv_ascii_0_0=RULE_INT
+				{
+					newLeafNode(lv_ascii_0_0, grammarAccess.getIngredienteAccess().getAsciiINTTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getIngredienteRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"ascii",
+						lv_ascii_0_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getListaIngredientesAccess().getTipoTipoVariableParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getIngredienteAccess().getTipoTipoVariableParserRuleCall_1_0());
 				}
 				lv_tipo_1_0=ruleTipoVariable
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getListaIngredientesRule());
+						$current = createModelElementForParent(grammarAccess.getIngredienteRule());
 					}
 					set(
 						$current,
@@ -171,17 +185,17 @@ ruleListaIngredientes returns [EObject current=null]
 			(
 				lv_name_2_0=RULE_ID
 				{
-					newLeafNode(lv_name_2_0, grammarAccess.getListaIngredientesAccess().getNameIDTerminalRuleCall_2_0());
+					newLeafNode(lv_name_2_0, grammarAccess.getIngredienteAccess().getNameIDTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getListaIngredientesRule());
+						$current = createModelElement(grammarAccess.getIngredienteRule());
 					}
 					setWithLastConsumed(
 						$current,
 						"name",
 						lv_name_2_0,
-						"upb.edu.lp.Cocinita.ID");
+						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
@@ -189,14 +203,14 @@ ruleListaIngredientes returns [EObject current=null]
 ;
 
 // Entry rule entryRuleTipoVariable
-entryRuleTipoVariable returns [EObject current=null]:
+entryRuleTipoVariable returns [String current=null]:
 	{ newCompositeNode(grammarAccess.getTipoVariableRule()); }
 	iv_ruleTipoVariable=ruleTipoVariable
-	{ $current=$iv_ruleTipoVariable.current; }
+	{ $current=$iv_ruleTipoVariable.current.getText(); }
 	EOF;
 
 // Rule TipoVariable
-ruleTipoVariable returns [EObject current=null]
+ruleTipoVariable returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
 	enterRule();
 }
@@ -204,56 +218,27 @@ ruleTipoVariable returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			(
-				lv_INT_0_0='[-o]'
-				{
-					newLeafNode(lv_INT_0_0, grammarAccess.getTipoVariableAccess().getINTOKeyword_0_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getTipoVariableRule());
-					}
-					setWithLastConsumed($current, "INT", lv_INT_0_0, "[-o]");
-				}
-			)
-		)
+		kw='[-o]'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getTipoVariableAccess().getOKeyword_0());
+		}
 		    |
-		(
-			(
-				lv_String_1_0='[cU]'
-				{
-					newLeafNode(lv_String_1_0, grammarAccess.getTipoVariableAccess().getStringCUKeyword_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getTipoVariableRule());
-					}
-					setWithLastConsumed($current, "String", lv_String_1_0, "[cU]");
-				}
-			)
-		)
+		kw='[cU]'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getTipoVariableAccess().getCUKeyword_1());
+		}
 		    |
-		(
-			(
-				lv_Double_2_0='[-O]'
-				{
-					newLeafNode(lv_Double_2_0, grammarAccess.getTipoVariableAccess().getDoubleOKeyword_2_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getTipoVariableRule());
-					}
-					setWithLastConsumed($current, "Double", lv_Double_2_0, "[-O]");
-				}
-			)
-		)
+		kw='[-O]'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getTipoVariableAccess().getOKeyword_2());
+		}
 	)
 ;
 
-RULE_ASCII : ('0'..'9')+;
-
-RULE_ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
+RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 RULE_INT : ('0'..'9')+;
 

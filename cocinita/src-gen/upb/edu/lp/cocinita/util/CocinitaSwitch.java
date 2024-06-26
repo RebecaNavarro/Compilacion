@@ -80,17 +80,10 @@ public class CocinitaSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CocinitaPackage.LISTA_INGREDIENTES:
+      case CocinitaPackage.INGREDIENTE:
       {
-        ListaIngredientes listaIngredientes = (ListaIngredientes)theEObject;
-        T result = caseListaIngredientes(listaIngredientes);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CocinitaPackage.TIPO_VARIABLE:
-      {
-        TipoVariable tipoVariable = (TipoVariable)theEObject;
-        T result = caseTipoVariable(tipoVariable);
+        Ingrediente ingrediente = (Ingrediente)theEObject;
+        T result = caseIngrediente(ingrediente);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -115,33 +108,17 @@ public class CocinitaSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Lista Ingredientes</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Ingrediente</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Lista Ingredientes</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Ingrediente</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseListaIngredientes(ListaIngredientes object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Tipo Variable</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Tipo Variable</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTipoVariable(TipoVariable object)
+  public T caseIngrediente(Ingrediente object)
   {
     return null;
   }

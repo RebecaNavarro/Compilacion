@@ -3,23 +3,49 @@
  */
 package upb.edu.lp.validation;
 
+import org.eclipse.xtext.validation.Check;
+
+import upb.edu.lp.cocinita.CocinitaPackage;
+import upb.edu.lp.cocinita.Ingrediente;
 
 /**
- * This class contains custom validation rules. 
+ * This class contains custom validation rules.
  *
- * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
+ * See
+ * https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
 public class CocinitaValidator extends AbstractCocinitaValidator {
 	
-//	public static final String INVALID_NAME = "invalidName";
-//
-//	@Check
-//	public void checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.getName().charAt(0))) {
-//			warning("Name should start with a capital",
-//					CocinitaPackage.Literals.GREETING__NAME,
-//					INVALID_NAME);
-//		}
-//	}
-	
+	@Check
+	public void checkASCII(Ingrediente ingrediente) {
+
+		try {
+			int asciiValue = ingrediente.getAscii();
+			if (asciiValue < 33 || asciiValue > 126) {
+				error("ASCII value must be between 33 and 126", CocinitaPackage.Literals.INGREDIENTE__ASCII,
+						"invalid-ascii-value");
+			}
+		} catch (NumberFormatException e) {
+			error("Invalid ASCII value", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
+		}
+
+	}
+
+	@Check
+	public void verificarTipoDato(Ingrediente ingrediente) {
+		try {
+			int asciiValue = ingrediente.getAscii();
+			String tipoDato = ingrediente.getTipo();
+			if ((asciiValue < 48 || asciiValue > 57) && tipoDato.equals("[-o]")) {
+				error("ASCII value is String", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");				
+			} else if ((asciiValue == 48 || asciiValue == 49) && tipoDato.equals("[cU]")) {
+				error("ASCII value is Boolean or Int", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
+			}
+		} catch (NumberFormatException e) {
+			error("ASCII value is INT", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
+		}
+
+	}
+
+
 }

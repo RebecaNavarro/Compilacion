@@ -33,22 +33,13 @@ public interface CocinitaFactory extends EFactory
   Cocina createCocina();
 
   /**
-   * Returns a new object of class '<em>Lista Ingredientes</em>'.
+   * Returns a new object of class '<em>Ingrediente</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Lista Ingredientes</em>'.
+   * @return a new object of class '<em>Ingrediente</em>'.
    * @generated
    */
-  ListaIngredientes createListaIngredientes();
-
-  /**
-   * Returns a new object of class '<em>Tipo Variable</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Tipo Variable</em>'.
-   * @generated
-   */
-  TipoVariable createTipoVariable();
+  Ingrediente createIngrediente();
 
   /**
    * Returns the package supported by this factory.

@@ -13,8 +13,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import upb.edu.lp.cocinita.Cocina;
 import upb.edu.lp.cocinita.CocinitaFactory;
 import upb.edu.lp.cocinita.CocinitaPackage;
-import upb.edu.lp.cocinita.ListaIngredientes;
-import upb.edu.lp.cocinita.TipoVariable;
+import upb.edu.lp.cocinita.Ingrediente;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,14 +35,7 @@ public class CocinitaPackageImpl extends EPackageImpl implements CocinitaPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass listaIngredientesEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass tipoVariableEClass = null;
+  private EClass ingredienteEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -135,7 +127,7 @@ public class CocinitaPackageImpl extends EPackageImpl implements CocinitaPackage
    * @generated
    */
   @Override
-  public EReference getCocina_Ingrediente()
+  public EReference getCocina_ListaIngredientes()
   {
     return (EReference)cocinaEClass.getEStructuralFeatures().get(1);
   }
@@ -146,9 +138,9 @@ public class CocinitaPackageImpl extends EPackageImpl implements CocinitaPackage
    * @generated
    */
   @Override
-  public EClass getListaIngredientes()
+  public EClass getIngrediente()
   {
-    return listaIngredientesEClass;
+    return ingredienteEClass;
   }
 
   /**
@@ -157,9 +149,9 @@ public class CocinitaPackageImpl extends EPackageImpl implements CocinitaPackage
    * @generated
    */
   @Override
-  public EReference getListaIngredientes_Tipo()
+  public EAttribute getIngrediente_Ascii()
   {
-    return (EReference)listaIngredientesEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)ingredienteEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -168,9 +160,9 @@ public class CocinitaPackageImpl extends EPackageImpl implements CocinitaPackage
    * @generated
    */
   @Override
-  public EAttribute getListaIngredientes_Name()
+  public EAttribute getIngrediente_Tipo()
   {
-    return (EAttribute)listaIngredientesEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)ingredienteEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -179,42 +171,9 @@ public class CocinitaPackageImpl extends EPackageImpl implements CocinitaPackage
    * @generated
    */
   @Override
-  public EClass getTipoVariable()
+  public EAttribute getIngrediente_Name()
   {
-    return tipoVariableEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getTipoVariable_INT()
-  {
-    return (EAttribute)tipoVariableEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getTipoVariable_String()
-  {
-    return (EAttribute)tipoVariableEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getTipoVariable_Double()
-  {
-    return (EAttribute)tipoVariableEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)ingredienteEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -250,16 +209,12 @@ public class CocinitaPackageImpl extends EPackageImpl implements CocinitaPackage
     // Create classes and their features
     cocinaEClass = createEClass(COCINA);
     createEAttribute(cocinaEClass, COCINA__NAME);
-    createEReference(cocinaEClass, COCINA__INGREDIENTE);
+    createEReference(cocinaEClass, COCINA__LISTA_INGREDIENTES);
 
-    listaIngredientesEClass = createEClass(LISTA_INGREDIENTES);
-    createEReference(listaIngredientesEClass, LISTA_INGREDIENTES__TIPO);
-    createEAttribute(listaIngredientesEClass, LISTA_INGREDIENTES__NAME);
-
-    tipoVariableEClass = createEClass(TIPO_VARIABLE);
-    createEAttribute(tipoVariableEClass, TIPO_VARIABLE__INT);
-    createEAttribute(tipoVariableEClass, TIPO_VARIABLE__STRING);
-    createEAttribute(tipoVariableEClass, TIPO_VARIABLE__DOUBLE);
+    ingredienteEClass = createEClass(INGREDIENTE);
+    createEAttribute(ingredienteEClass, INGREDIENTE__ASCII);
+    createEAttribute(ingredienteEClass, INGREDIENTE__TIPO);
+    createEAttribute(ingredienteEClass, INGREDIENTE__NAME);
   }
 
   /**
@@ -295,16 +250,12 @@ public class CocinitaPackageImpl extends EPackageImpl implements CocinitaPackage
     // Initialize classes and features; add operations and parameters
     initEClass(cocinaEClass, Cocina.class, "Cocina", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCocina_Name(), ecorePackage.getEString(), "name", null, 0, 1, Cocina.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCocina_Ingrediente(), this.getListaIngredientes(), null, "Ingrediente", null, 0, -1, Cocina.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCocina_ListaIngredientes(), this.getIngrediente(), null, "ListaIngredientes", null, 0, -1, Cocina.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(listaIngredientesEClass, ListaIngredientes.class, "ListaIngredientes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getListaIngredientes_Tipo(), this.getTipoVariable(), null, "tipo", null, 0, 1, ListaIngredientes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getListaIngredientes_Name(), ecorePackage.getEString(), "name", null, 0, 1, ListaIngredientes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(tipoVariableEClass, TipoVariable.class, "TipoVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTipoVariable_INT(), ecorePackage.getEString(), "INT", null, 0, 1, TipoVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTipoVariable_String(), ecorePackage.getEString(), "String", null, 0, 1, TipoVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTipoVariable_Double(), ecorePackage.getEString(), "Double", null, 0, 1, TipoVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(ingredienteEClass, Ingrediente.class, "Ingrediente", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIngrediente_Ascii(), ecorePackage.getEInt(), "ascii", null, 0, 1, Ingrediente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getIngrediente_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, Ingrediente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getIngrediente_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ingrediente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

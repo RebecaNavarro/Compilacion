@@ -21,19 +21,18 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalCocinitaParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_ASCII", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'[RECIPE]'", "'Ingredientes:'", "'Procedimiento:'", "'[-o]'", "'[cU]'", "'[-O]'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'[RECIPE]'", "'Ingredientes:'", "'Procedimiento:'", "'[-o]'", "'[cU]'", "'[-O]'"
     };
     public static final int RULE_ID=4;
-    public static final int RULE_WS=10;
-    public static final int RULE_STRING=7;
-    public static final int RULE_ANY_OTHER=11;
-    public static final int RULE_SL_COMMENT=9;
-    public static final int RULE_ASCII=5;
+    public static final int RULE_WS=9;
+    public static final int RULE_STRING=6;
+    public static final int RULE_ANY_OTHER=10;
+    public static final int RULE_SL_COMMENT=8;
     public static final int T__15=15;
     public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int RULE_INT=6;
-    public static final int RULE_ML_COMMENT=8;
+    public static final int RULE_INT=5;
+    public static final int T__11=11;
+    public static final int RULE_ML_COMMENT=7;
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
@@ -115,7 +114,7 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCocina"
-    // InternalCocinita.g:71:1: ruleCocina returns [EObject current=null] : (otherlv_0= '[RECIPE]' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'Ingredientes:' ( (lv_Ingrediente_3_0= ruleListaIngredientes ) )* otherlv_4= 'Procedimiento:' ) ;
+    // InternalCocinita.g:71:1: ruleCocina returns [EObject current=null] : (otherlv_0= '[RECIPE]' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'Ingredientes:' ( (lv_ListaIngredientes_3_0= ruleIngrediente ) )* otherlv_4= 'Procedimiento:' ) ;
     public final EObject ruleCocina() throws RecognitionException {
         EObject current = null;
 
@@ -123,20 +122,20 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
         Token lv_name_1_0=null;
         Token otherlv_2=null;
         Token otherlv_4=null;
-        EObject lv_Ingrediente_3_0 = null;
+        EObject lv_ListaIngredientes_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalCocinita.g:77:2: ( (otherlv_0= '[RECIPE]' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'Ingredientes:' ( (lv_Ingrediente_3_0= ruleListaIngredientes ) )* otherlv_4= 'Procedimiento:' ) )
-            // InternalCocinita.g:78:2: (otherlv_0= '[RECIPE]' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'Ingredientes:' ( (lv_Ingrediente_3_0= ruleListaIngredientes ) )* otherlv_4= 'Procedimiento:' )
+            // InternalCocinita.g:77:2: ( (otherlv_0= '[RECIPE]' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'Ingredientes:' ( (lv_ListaIngredientes_3_0= ruleIngrediente ) )* otherlv_4= 'Procedimiento:' ) )
+            // InternalCocinita.g:78:2: (otherlv_0= '[RECIPE]' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'Ingredientes:' ( (lv_ListaIngredientes_3_0= ruleIngrediente ) )* otherlv_4= 'Procedimiento:' )
             {
-            // InternalCocinita.g:78:2: (otherlv_0= '[RECIPE]' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'Ingredientes:' ( (lv_Ingrediente_3_0= ruleListaIngredientes ) )* otherlv_4= 'Procedimiento:' )
-            // InternalCocinita.g:79:3: otherlv_0= '[RECIPE]' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'Ingredientes:' ( (lv_Ingrediente_3_0= ruleListaIngredientes ) )* otherlv_4= 'Procedimiento:'
+            // InternalCocinita.g:78:2: (otherlv_0= '[RECIPE]' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'Ingredientes:' ( (lv_ListaIngredientes_3_0= ruleIngrediente ) )* otherlv_4= 'Procedimiento:' )
+            // InternalCocinita.g:79:3: otherlv_0= '[RECIPE]' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'Ingredientes:' ( (lv_ListaIngredientes_3_0= ruleIngrediente ) )* otherlv_4= 'Procedimiento:'
             {
-            otherlv_0=(Token)match(input,12,FOLLOW_3); 
+            otherlv_0=(Token)match(input,11,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getCocinaAccess().getRECIPEKeyword_0());
             		
@@ -158,7 +157,7 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_1_0,
-            						"upb.edu.lp.Cocinita.ID");
+            						"org.eclipse.xtext.common.Terminals.ID");
             				
 
             }
@@ -166,33 +165,33 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,13,FOLLOW_5); 
+            otherlv_2=(Token)match(input,12,FOLLOW_5); 
 
             			newLeafNode(otherlv_2, grammarAccess.getCocinaAccess().getIngredientesKeyword_2());
             		
-            // InternalCocinita.g:105:3: ( (lv_Ingrediente_3_0= ruleListaIngredientes ) )*
+            // InternalCocinita.g:105:3: ( (lv_ListaIngredientes_3_0= ruleIngrediente ) )*
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==RULE_ASCII) ) {
+                if ( (LA1_0==RULE_INT) ) {
                     alt1=1;
                 }
 
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalCocinita.g:106:4: (lv_Ingrediente_3_0= ruleListaIngredientes )
+            	    // InternalCocinita.g:106:4: (lv_ListaIngredientes_3_0= ruleIngrediente )
             	    {
-            	    // InternalCocinita.g:106:4: (lv_Ingrediente_3_0= ruleListaIngredientes )
-            	    // InternalCocinita.g:107:5: lv_Ingrediente_3_0= ruleListaIngredientes
+            	    // InternalCocinita.g:106:4: (lv_ListaIngredientes_3_0= ruleIngrediente )
+            	    // InternalCocinita.g:107:5: lv_ListaIngredientes_3_0= ruleIngrediente
             	    {
 
-            	    					newCompositeNode(grammarAccess.getCocinaAccess().getIngredienteListaIngredientesParserRuleCall_3_0());
+            	    					newCompositeNode(grammarAccess.getCocinaAccess().getListaIngredientesIngredienteParserRuleCall_3_0());
             	    				
             	    pushFollow(FOLLOW_5);
-            	    lv_Ingrediente_3_0=ruleListaIngredientes();
+            	    lv_ListaIngredientes_3_0=ruleIngrediente();
 
             	    state._fsp--;
 
@@ -202,9 +201,9 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
             	    					}
             	    					add(
             	    						current,
-            	    						"Ingrediente",
-            	    						lv_Ingrediente_3_0,
-            	    						"upb.edu.lp.Cocinita.ListaIngredientes");
+            	    						"ListaIngredientes",
+            	    						lv_ListaIngredientes_3_0,
+            	    						"upb.edu.lp.Cocinita.Ingrediente");
             	    					afterParserOrEnumRuleCall();
             	    				
 
@@ -219,7 +218,7 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,14,FOLLOW_2); 
+            otherlv_4=(Token)match(input,13,FOLLOW_2); 
 
             			newLeafNode(otherlv_4, grammarAccess.getCocinaAccess().getProcedimientoKeyword_4());
             		
@@ -245,25 +244,25 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleCocina"
 
 
-    // $ANTLR start "entryRuleListaIngredientes"
-    // InternalCocinita.g:132:1: entryRuleListaIngredientes returns [EObject current=null] : iv_ruleListaIngredientes= ruleListaIngredientes EOF ;
-    public final EObject entryRuleListaIngredientes() throws RecognitionException {
+    // $ANTLR start "entryRuleIngrediente"
+    // InternalCocinita.g:132:1: entryRuleIngrediente returns [EObject current=null] : iv_ruleIngrediente= ruleIngrediente EOF ;
+    public final EObject entryRuleIngrediente() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleListaIngredientes = null;
+        EObject iv_ruleIngrediente = null;
 
 
         try {
-            // InternalCocinita.g:132:58: (iv_ruleListaIngredientes= ruleListaIngredientes EOF )
-            // InternalCocinita.g:133:2: iv_ruleListaIngredientes= ruleListaIngredientes EOF
+            // InternalCocinita.g:132:52: (iv_ruleIngrediente= ruleIngrediente EOF )
+            // InternalCocinita.g:133:2: iv_ruleIngrediente= ruleIngrediente EOF
             {
-             newCompositeNode(grammarAccess.getListaIngredientesRule()); 
+             newCompositeNode(grammarAccess.getIngredienteRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleListaIngredientes=ruleListaIngredientes();
+            iv_ruleIngrediente=ruleIngrediente();
 
             state._fsp--;
 
-             current =iv_ruleListaIngredientes; 
+             current =iv_ruleIngrediente; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -278,41 +277,63 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleListaIngredientes"
+    // $ANTLR end "entryRuleIngrediente"
 
 
-    // $ANTLR start "ruleListaIngredientes"
-    // InternalCocinita.g:139:1: ruleListaIngredientes returns [EObject current=null] : (this_ASCII_0= RULE_ASCII ( (lv_tipo_1_0= ruleTipoVariable ) ) ( (lv_name_2_0= RULE_ID ) ) ) ;
-    public final EObject ruleListaIngredientes() throws RecognitionException {
+    // $ANTLR start "ruleIngrediente"
+    // InternalCocinita.g:139:1: ruleIngrediente returns [EObject current=null] : ( ( (lv_ascii_0_0= RULE_INT ) ) ( (lv_tipo_1_0= ruleTipoVariable ) ) ( (lv_name_2_0= RULE_ID ) ) ) ;
+    public final EObject ruleIngrediente() throws RecognitionException {
         EObject current = null;
 
-        Token this_ASCII_0=null;
+        Token lv_ascii_0_0=null;
         Token lv_name_2_0=null;
-        EObject lv_tipo_1_0 = null;
+        AntlrDatatypeRuleToken lv_tipo_1_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalCocinita.g:145:2: ( (this_ASCII_0= RULE_ASCII ( (lv_tipo_1_0= ruleTipoVariable ) ) ( (lv_name_2_0= RULE_ID ) ) ) )
-            // InternalCocinita.g:146:2: (this_ASCII_0= RULE_ASCII ( (lv_tipo_1_0= ruleTipoVariable ) ) ( (lv_name_2_0= RULE_ID ) ) )
+            // InternalCocinita.g:145:2: ( ( ( (lv_ascii_0_0= RULE_INT ) ) ( (lv_tipo_1_0= ruleTipoVariable ) ) ( (lv_name_2_0= RULE_ID ) ) ) )
+            // InternalCocinita.g:146:2: ( ( (lv_ascii_0_0= RULE_INT ) ) ( (lv_tipo_1_0= ruleTipoVariable ) ) ( (lv_name_2_0= RULE_ID ) ) )
             {
-            // InternalCocinita.g:146:2: (this_ASCII_0= RULE_ASCII ( (lv_tipo_1_0= ruleTipoVariable ) ) ( (lv_name_2_0= RULE_ID ) ) )
-            // InternalCocinita.g:147:3: this_ASCII_0= RULE_ASCII ( (lv_tipo_1_0= ruleTipoVariable ) ) ( (lv_name_2_0= RULE_ID ) )
+            // InternalCocinita.g:146:2: ( ( (lv_ascii_0_0= RULE_INT ) ) ( (lv_tipo_1_0= ruleTipoVariable ) ) ( (lv_name_2_0= RULE_ID ) ) )
+            // InternalCocinita.g:147:3: ( (lv_ascii_0_0= RULE_INT ) ) ( (lv_tipo_1_0= ruleTipoVariable ) ) ( (lv_name_2_0= RULE_ID ) )
             {
-            this_ASCII_0=(Token)match(input,RULE_ASCII,FOLLOW_6); 
+            // InternalCocinita.g:147:3: ( (lv_ascii_0_0= RULE_INT ) )
+            // InternalCocinita.g:148:4: (lv_ascii_0_0= RULE_INT )
+            {
+            // InternalCocinita.g:148:4: (lv_ascii_0_0= RULE_INT )
+            // InternalCocinita.g:149:5: lv_ascii_0_0= RULE_INT
+            {
+            lv_ascii_0_0=(Token)match(input,RULE_INT,FOLLOW_6); 
 
-            			newLeafNode(this_ASCII_0, grammarAccess.getListaIngredientesAccess().getASCIITerminalRuleCall_0());
-            		
-            // InternalCocinita.g:151:3: ( (lv_tipo_1_0= ruleTipoVariable ) )
-            // InternalCocinita.g:152:4: (lv_tipo_1_0= ruleTipoVariable )
+            					newLeafNode(lv_ascii_0_0, grammarAccess.getIngredienteAccess().getAsciiINTTerminalRuleCall_0_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getIngredienteRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"ascii",
+            						lv_ascii_0_0,
+            						"org.eclipse.xtext.common.Terminals.INT");
+            				
+
+            }
+
+
+            }
+
+            // InternalCocinita.g:165:3: ( (lv_tipo_1_0= ruleTipoVariable ) )
+            // InternalCocinita.g:166:4: (lv_tipo_1_0= ruleTipoVariable )
             {
-            // InternalCocinita.g:152:4: (lv_tipo_1_0= ruleTipoVariable )
-            // InternalCocinita.g:153:5: lv_tipo_1_0= ruleTipoVariable
+            // InternalCocinita.g:166:4: (lv_tipo_1_0= ruleTipoVariable )
+            // InternalCocinita.g:167:5: lv_tipo_1_0= ruleTipoVariable
             {
 
-            					newCompositeNode(grammarAccess.getListaIngredientesAccess().getTipoTipoVariableParserRuleCall_1_0());
+            					newCompositeNode(grammarAccess.getIngredienteAccess().getTipoTipoVariableParserRuleCall_1_0());
             				
             pushFollow(FOLLOW_3);
             lv_tipo_1_0=ruleTipoVariable();
@@ -321,7 +342,7 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
 
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getListaIngredientesRule());
+            						current = createModelElementForParent(grammarAccess.getIngredienteRule());
             					}
             					set(
             						current,
@@ -336,25 +357,25 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCocinita.g:170:3: ( (lv_name_2_0= RULE_ID ) )
-            // InternalCocinita.g:171:4: (lv_name_2_0= RULE_ID )
+            // InternalCocinita.g:184:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalCocinita.g:185:4: (lv_name_2_0= RULE_ID )
             {
-            // InternalCocinita.g:171:4: (lv_name_2_0= RULE_ID )
-            // InternalCocinita.g:172:5: lv_name_2_0= RULE_ID
+            // InternalCocinita.g:185:4: (lv_name_2_0= RULE_ID )
+            // InternalCocinita.g:186:5: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
-            					newLeafNode(lv_name_2_0, grammarAccess.getListaIngredientesAccess().getNameIDTerminalRuleCall_2_0());
+            					newLeafNode(lv_name_2_0, grammarAccess.getIngredienteAccess().getNameIDTerminalRuleCall_2_0());
             				
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getListaIngredientesRule());
+            						current = createModelElement(grammarAccess.getIngredienteRule());
             					}
             					setWithLastConsumed(
             						current,
             						"name",
             						lv_name_2_0,
-            						"upb.edu.lp.Cocinita.ID");
+            						"org.eclipse.xtext.common.Terminals.ID");
             				
 
             }
@@ -381,20 +402,20 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleListaIngredientes"
+    // $ANTLR end "ruleIngrediente"
 
 
     // $ANTLR start "entryRuleTipoVariable"
-    // InternalCocinita.g:192:1: entryRuleTipoVariable returns [EObject current=null] : iv_ruleTipoVariable= ruleTipoVariable EOF ;
-    public final EObject entryRuleTipoVariable() throws RecognitionException {
-        EObject current = null;
+    // InternalCocinita.g:206:1: entryRuleTipoVariable returns [String current=null] : iv_ruleTipoVariable= ruleTipoVariable EOF ;
+    public final String entryRuleTipoVariable() throws RecognitionException {
+        String current = null;
 
-        EObject iv_ruleTipoVariable = null;
+        AntlrDatatypeRuleToken iv_ruleTipoVariable = null;
 
 
         try {
-            // InternalCocinita.g:192:53: (iv_ruleTipoVariable= ruleTipoVariable EOF )
-            // InternalCocinita.g:193:2: iv_ruleTipoVariable= ruleTipoVariable EOF
+            // InternalCocinita.g:206:52: (iv_ruleTipoVariable= ruleTipoVariable EOF )
+            // InternalCocinita.g:207:2: iv_ruleTipoVariable= ruleTipoVariable EOF
             {
              newCompositeNode(grammarAccess.getTipoVariableRule()); 
             pushFollow(FOLLOW_1);
@@ -402,7 +423,7 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
 
             state._fsp--;
 
-             current =iv_ruleTipoVariable; 
+             current =iv_ruleTipoVariable.getText(); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -421,35 +442,33 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTipoVariable"
-    // InternalCocinita.g:199:1: ruleTipoVariable returns [EObject current=null] : ( ( (lv_INT_0_0= '[-o]' ) ) | ( (lv_String_1_0= '[cU]' ) ) | ( (lv_Double_2_0= '[-O]' ) ) ) ;
-    public final EObject ruleTipoVariable() throws RecognitionException {
-        EObject current = null;
+    // InternalCocinita.g:213:1: ruleTipoVariable returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '[-o]' | kw= '[cU]' | kw= '[-O]' ) ;
+    public final AntlrDatatypeRuleToken ruleTipoVariable() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
-        Token lv_INT_0_0=null;
-        Token lv_String_1_0=null;
-        Token lv_Double_2_0=null;
+        Token kw=null;
 
 
         	enterRule();
 
         try {
-            // InternalCocinita.g:205:2: ( ( ( (lv_INT_0_0= '[-o]' ) ) | ( (lv_String_1_0= '[cU]' ) ) | ( (lv_Double_2_0= '[-O]' ) ) ) )
-            // InternalCocinita.g:206:2: ( ( (lv_INT_0_0= '[-o]' ) ) | ( (lv_String_1_0= '[cU]' ) ) | ( (lv_Double_2_0= '[-O]' ) ) )
+            // InternalCocinita.g:219:2: ( (kw= '[-o]' | kw= '[cU]' | kw= '[-O]' ) )
+            // InternalCocinita.g:220:2: (kw= '[-o]' | kw= '[cU]' | kw= '[-O]' )
             {
-            // InternalCocinita.g:206:2: ( ( (lv_INT_0_0= '[-o]' ) ) | ( (lv_String_1_0= '[cU]' ) ) | ( (lv_Double_2_0= '[-O]' ) ) )
+            // InternalCocinita.g:220:2: (kw= '[-o]' | kw= '[cU]' | kw= '[-O]' )
             int alt2=3;
             switch ( input.LA(1) ) {
-            case 15:
+            case 14:
                 {
                 alt2=1;
                 }
                 break;
-            case 16:
+            case 15:
                 {
                 alt2=2;
                 }
                 break;
-            case 17:
+            case 16:
                 {
                 alt2=3;
                 }
@@ -463,86 +482,35 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
 
             switch (alt2) {
                 case 1 :
-                    // InternalCocinita.g:207:3: ( (lv_INT_0_0= '[-o]' ) )
+                    // InternalCocinita.g:221:3: kw= '[-o]'
                     {
-                    // InternalCocinita.g:207:3: ( (lv_INT_0_0= '[-o]' ) )
-                    // InternalCocinita.g:208:4: (lv_INT_0_0= '[-o]' )
-                    {
-                    // InternalCocinita.g:208:4: (lv_INT_0_0= '[-o]' )
-                    // InternalCocinita.g:209:5: lv_INT_0_0= '[-o]'
-                    {
-                    lv_INT_0_0=(Token)match(input,15,FOLLOW_2); 
+                    kw=(Token)match(input,14,FOLLOW_2); 
 
-                    					newLeafNode(lv_INT_0_0, grammarAccess.getTipoVariableAccess().getINTOKeyword_0_0());
-                    				
-
-                    					if (current==null) {
-                    						current = createModelElement(grammarAccess.getTipoVariableRule());
-                    					}
-                    					setWithLastConsumed(current, "INT", lv_INT_0_0, "[-o]");
-                    				
-
-                    }
-
-
-                    }
-
+                    			current.merge(kw);
+                    			newLeafNode(kw, grammarAccess.getTipoVariableAccess().getOKeyword_0());
+                    		
 
                     }
                     break;
                 case 2 :
-                    // InternalCocinita.g:222:3: ( (lv_String_1_0= '[cU]' ) )
+                    // InternalCocinita.g:227:3: kw= '[cU]'
                     {
-                    // InternalCocinita.g:222:3: ( (lv_String_1_0= '[cU]' ) )
-                    // InternalCocinita.g:223:4: (lv_String_1_0= '[cU]' )
-                    {
-                    // InternalCocinita.g:223:4: (lv_String_1_0= '[cU]' )
-                    // InternalCocinita.g:224:5: lv_String_1_0= '[cU]'
-                    {
-                    lv_String_1_0=(Token)match(input,16,FOLLOW_2); 
+                    kw=(Token)match(input,15,FOLLOW_2); 
 
-                    					newLeafNode(lv_String_1_0, grammarAccess.getTipoVariableAccess().getStringCUKeyword_1_0());
-                    				
-
-                    					if (current==null) {
-                    						current = createModelElement(grammarAccess.getTipoVariableRule());
-                    					}
-                    					setWithLastConsumed(current, "String", lv_String_1_0, "[cU]");
-                    				
-
-                    }
-
-
-                    }
-
+                    			current.merge(kw);
+                    			newLeafNode(kw, grammarAccess.getTipoVariableAccess().getCUKeyword_1());
+                    		
 
                     }
                     break;
                 case 3 :
-                    // InternalCocinita.g:237:3: ( (lv_Double_2_0= '[-O]' ) )
+                    // InternalCocinita.g:233:3: kw= '[-O]'
                     {
-                    // InternalCocinita.g:237:3: ( (lv_Double_2_0= '[-O]' ) )
-                    // InternalCocinita.g:238:4: (lv_Double_2_0= '[-O]' )
-                    {
-                    // InternalCocinita.g:238:4: (lv_Double_2_0= '[-O]' )
-                    // InternalCocinita.g:239:5: lv_Double_2_0= '[-O]'
-                    {
-                    lv_Double_2_0=(Token)match(input,17,FOLLOW_2); 
+                    kw=(Token)match(input,16,FOLLOW_2); 
 
-                    					newLeafNode(lv_Double_2_0, grammarAccess.getTipoVariableAccess().getDoubleOKeyword_2_0());
-                    				
-
-                    					if (current==null) {
-                    						current = createModelElement(grammarAccess.getTipoVariableRule());
-                    					}
-                    					setWithLastConsumed(current, "Double", lv_Double_2_0, "[-O]");
-                    				
-
-                    }
-
-
-                    }
-
+                    			current.merge(kw);
+                    			newLeafNode(kw, grammarAccess.getTipoVariableAccess().getOKeyword_2());
+                    		
 
                     }
                     break;
@@ -575,8 +543,8 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000004020L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000038000L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000002020L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x000000000001C000L});
 
 }

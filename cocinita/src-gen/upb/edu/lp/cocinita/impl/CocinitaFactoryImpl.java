@@ -66,8 +66,7 @@ public class CocinitaFactoryImpl extends EFactoryImpl implements CocinitaFactory
     switch (eClass.getClassifierID())
     {
       case CocinitaPackage.COCINA: return createCocina();
-      case CocinitaPackage.LISTA_INGREDIENTES: return createListaIngredientes();
-      case CocinitaPackage.TIPO_VARIABLE: return createTipoVariable();
+      case CocinitaPackage.INGREDIENTE: return createIngrediente();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -91,22 +90,10 @@ public class CocinitaFactoryImpl extends EFactoryImpl implements CocinitaFactory
    * @generated
    */
   @Override
-  public ListaIngredientes createListaIngredientes()
+  public Ingrediente createIngrediente()
   {
-    ListaIngredientesImpl listaIngredientes = new ListaIngredientesImpl();
-    return listaIngredientes;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public TipoVariable createTipoVariable()
-  {
-    TipoVariableImpl tipoVariable = new TipoVariableImpl();
-    return tipoVariable;
+    IngredienteImpl ingrediente = new IngredienteImpl();
+    return ingrediente;
   }
 
   /**

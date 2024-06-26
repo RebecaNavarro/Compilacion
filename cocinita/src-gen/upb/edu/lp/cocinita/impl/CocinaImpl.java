@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import upb.edu.lp.cocinita.Cocina;
 import upb.edu.lp.cocinita.CocinitaPackage;
-import upb.edu.lp.cocinita.ListaIngredientes;
+import upb.edu.lp.cocinita.Ingrediente;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ import upb.edu.lp.cocinita.ListaIngredientes;
  * </p>
  * <ul>
  *   <li>{@link upb.edu.lp.cocinita.impl.CocinaImpl#getName <em>Name</em>}</li>
- *   <li>{@link upb.edu.lp.cocinita.impl.CocinaImpl#getIngrediente <em>Ingrediente</em>}</li>
+ *   <li>{@link upb.edu.lp.cocinita.impl.CocinaImpl#getListaIngredientes <em>Lista Ingredientes</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,14 +60,14 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getIngrediente() <em>Ingrediente</em>}' containment reference list.
+   * The cached value of the '{@link #getListaIngredientes() <em>Lista Ingredientes</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIngrediente()
+   * @see #getListaIngredientes()
    * @generated
    * @ordered
    */
-  protected EList<ListaIngredientes> ingrediente;
+  protected EList<Ingrediente> listaIngredientes;
 
   /**
    * <!-- begin-user-doc -->
@@ -121,13 +121,13 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
    * @generated
    */
   @Override
-  public EList<ListaIngredientes> getIngrediente()
+  public EList<Ingrediente> getListaIngredientes()
   {
-    if (ingrediente == null)
+    if (listaIngredientes == null)
     {
-      ingrediente = new EObjectContainmentEList<ListaIngredientes>(ListaIngredientes.class, this, CocinitaPackage.COCINA__INGREDIENTE);
+      listaIngredientes = new EObjectContainmentEList<Ingrediente>(Ingrediente.class, this, CocinitaPackage.COCINA__LISTA_INGREDIENTES);
     }
-    return ingrediente;
+    return listaIngredientes;
   }
 
   /**
@@ -140,8 +140,8 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
   {
     switch (featureID)
     {
-      case CocinitaPackage.COCINA__INGREDIENTE:
-        return ((InternalEList<?>)getIngrediente()).basicRemove(otherEnd, msgs);
+      case CocinitaPackage.COCINA__LISTA_INGREDIENTES:
+        return ((InternalEList<?>)getListaIngredientes()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -158,8 +158,8 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
     {
       case CocinitaPackage.COCINA__NAME:
         return getName();
-      case CocinitaPackage.COCINA__INGREDIENTE:
-        return getIngrediente();
+      case CocinitaPackage.COCINA__LISTA_INGREDIENTES:
+        return getListaIngredientes();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -178,9 +178,9 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
       case CocinitaPackage.COCINA__NAME:
         setName((String)newValue);
         return;
-      case CocinitaPackage.COCINA__INGREDIENTE:
-        getIngrediente().clear();
-        getIngrediente().addAll((Collection<? extends ListaIngredientes>)newValue);
+      case CocinitaPackage.COCINA__LISTA_INGREDIENTES:
+        getListaIngredientes().clear();
+        getListaIngredientes().addAll((Collection<? extends Ingrediente>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -199,8 +199,8 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
       case CocinitaPackage.COCINA__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case CocinitaPackage.COCINA__INGREDIENTE:
-        getIngrediente().clear();
+      case CocinitaPackage.COCINA__LISTA_INGREDIENTES:
+        getListaIngredientes().clear();
         return;
     }
     super.eUnset(featureID);
@@ -218,8 +218,8 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
     {
       case CocinitaPackage.COCINA__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case CocinitaPackage.COCINA__INGREDIENTE:
-        return ingrediente != null && !ingrediente.isEmpty();
+      case CocinitaPackage.COCINA__LISTA_INGREDIENTES:
+        return listaIngredientes != null && !listaIngredientes.isEmpty();
     }
     return super.eIsSet(featureID);
   }

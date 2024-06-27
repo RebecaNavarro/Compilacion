@@ -18,6 +18,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link upb.edu.lp.cocinita.Cocina#getName <em>Name</em>}</li>
  *   <li>{@link upb.edu.lp.cocinita.Cocina#getListaIngredientes <em>Lista Ingredientes</em>}</li>
+ *   <li>{@link upb.edu.lp.cocinita.Cocina#getNBowl <em>NBowl</em>}</li>
+ *   <li>{@link upb.edu.lp.cocinita.Cocina#getListaInstrucciones <em>Lista Instrucciones</em>}</li>
+ *   <li>{@link upb.edu.lp.cocinita.Cocina#getBowl <em>Bowl</em>}</li>
  * </ul>
  *
  * @see upb.edu.lp.cocinita.CocinitaPackage#getCocina()
@@ -59,5 +62,61 @@ public interface Cocina extends EObject
    * @generated
    */
   EList<Ingrediente> getListaIngredientes();
+
+  /**
+   * Returns the value of the '<em><b>NBowl</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>NBowl</em>' attribute.
+   * @see #setNBowl(int)
+   * @see upb.edu.lp.cocinita.CocinitaPackage#getCocina_NBowl()
+   * @model
+   * @generated
+   */
+  int getNBowl();
+
+  /**
+   * Sets the value of the '{@link upb.edu.lp.cocinita.Cocina#getNBowl <em>NBowl</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>NBowl</em>' attribute.
+   * @see #getNBowl()
+   * @generated
+   */
+  void setNBowl(int value);
+
+  /**
+   * Returns the value of the '<em><b>Lista Instrucciones</b></em>' containment reference list.
+   * The list contents are of type {@link upb.edu.lp.cocinita.Instruccion}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Lista Instrucciones</em>' containment reference list.
+   * @see upb.edu.lp.cocinita.CocinitaPackage#getCocina_ListaInstrucciones()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Instruccion> getListaInstrucciones();
+
+  /**
+   * Returns the value of the '<em><b>Bowl</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Bowl</em>' containment reference.
+   * @see #setBowl(Bowl)
+   * @see upb.edu.lp.cocinita.CocinitaPackage#getCocina_Bowl()
+   * @model containment="true"
+   * @generated
+   */
+  Bowl getBowl();
+
+  /**
+   * Sets the value of the '{@link upb.edu.lp.cocinita.Cocina#getBowl <em>Bowl</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Bowl</em>' containment reference.
+   * @see #getBowl()
+   * @generated
+   */
+  void setBowl(Bowl value);
 
 } // Cocina

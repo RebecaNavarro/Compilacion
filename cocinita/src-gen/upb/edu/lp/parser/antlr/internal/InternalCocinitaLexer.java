@@ -12,20 +12,33 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalCocinitaLexer extends Lexer {
-    public static final int RULE_ID=4;
-    public static final int RULE_WS=9;
     public static final int RULE_STRING=6;
-    public static final int RULE_ANY_OTHER=10;
     public static final int RULE_SL_COMMENT=8;
+    public static final int T__19=19;
     public static final int T__15=15;
     public static final int T__16=16;
-    public static final int RULE_INT=5;
+    public static final int T__17=17;
+    public static final int T__18=18;
     public static final int T__11=11;
-    public static final int RULE_ML_COMMENT=7;
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
+    public static final int RULE_ID=4;
+    public static final int RULE_WS=9;
+    public static final int RULE_ANY_OTHER=10;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int RULE_INT=5;
+    public static final int T__29=29;
+    public static final int T__22=22;
+    public static final int RULE_ML_COMMENT=7;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -87,10 +100,10 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:13:7: ( 'Procedimiento:' )
-            // InternalCocinita.g:13:9: 'Procedimiento:'
+            // InternalCocinita.g:13:7: ( 'Materiales:' )
+            // InternalCocinita.g:13:9: 'Materiales:'
             {
-            match("Procedimiento:"); 
+            match("Materiales:"); 
 
 
             }
@@ -108,10 +121,10 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:14:7: ( '[-o]' )
-            // InternalCocinita.g:14:9: '[-o]'
+            // InternalCocinita.g:14:7: ( '(_).' )
+            // InternalCocinita.g:14:9: '(_).'
             {
-            match("[-o]"); 
+            match("(_)."); 
 
 
             }
@@ -129,10 +142,10 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:15:7: ( '[cU]' )
-            // InternalCocinita.g:15:9: '[cU]'
+            // InternalCocinita.g:15:7: ( 'Procedimiento:' )
+            // InternalCocinita.g:15:9: 'Procedimiento:'
             {
-            match("[cU]"); 
+            match("Procedimiento:"); 
 
 
             }
@@ -150,10 +163,10 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:16:7: ( '[-O]' )
-            // InternalCocinita.g:16:9: '[-O]'
+            // InternalCocinita.g:16:7: ( 'Servir' )
+            // InternalCocinita.g:16:9: 'Servir'
             {
-            match("[-O]"); 
+            match("Servir"); 
 
 
             }
@@ -166,15 +179,285 @@ public class InternalCocinitaLexer extends Lexer {
     }
     // $ANTLR end "T__16"
 
+    // $ANTLR start "T__17"
+    public final void mT__17() throws RecognitionException {
+        try {
+            int _type = T__17;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalCocinita.g:17:7: ( '.' )
+            // InternalCocinita.g:17:9: '.'
+            {
+            match('.'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__17"
+
+    // $ANTLR start "T__18"
+    public final void mT__18() throws RecognitionException {
+        try {
+            int _type = T__18;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalCocinita.g:18:7: ( '[-o]' )
+            // InternalCocinita.g:18:9: '[-o]'
+            {
+            match("[-o]"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__18"
+
+    // $ANTLR start "T__19"
+    public final void mT__19() throws RecognitionException {
+        try {
+            int _type = T__19;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalCocinita.g:19:7: ( '[cU]' )
+            // InternalCocinita.g:19:9: '[cU]'
+            {
+            match("[cU]"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__19"
+
+    // $ANTLR start "T__20"
+    public final void mT__20() throws RecognitionException {
+        try {
+            int _type = T__20;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalCocinita.g:20:7: ( '[-O]' )
+            // InternalCocinita.g:20:9: '[-O]'
+            {
+            match("[-O]"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__20"
+
+    // $ANTLR start "T__21"
+    public final void mT__21() throws RecognitionException {
+        try {
+            int _type = T__21;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalCocinita.g:21:7: ( '(' )
+            // InternalCocinita.g:21:9: '('
+            {
+            match('('); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__21"
+
+    // $ANTLR start "T__22"
+    public final void mT__22() throws RecognitionException {
+        try {
+            int _type = T__22;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalCocinita.g:22:7: ( ')' )
+            // InternalCocinita.g:22:9: ')'
+            {
+            match(')'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__22"
+
+    // $ANTLR start "T__23"
+    public final void mT__23() throws RecognitionException {
+        try {
+            int _type = T__23;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalCocinita.g:23:7: ( 'Batir' )
+            // InternalCocinita.g:23:9: 'Batir'
+            {
+            match("Batir"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__23"
+
+    // $ANTLR start "T__24"
+    public final void mT__24() throws RecognitionException {
+        try {
+            int _type = T__24;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalCocinita.g:24:7: ( 'en' )
+            // InternalCocinita.g:24:9: 'en'
+            {
+            match("en"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__24"
+
+    // $ANTLR start "T__25"
+    public final void mT__25() throws RecognitionException {
+        try {
+            int _type = T__25;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalCocinita.g:25:7: ( 'el' )
+            // InternalCocinita.g:25:9: 'el'
+            {
+            match("el"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__25"
+
+    // $ANTLR start "T__26"
+    public final void mT__26() throws RecognitionException {
+        try {
+            int _type = T__26;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalCocinita.g:26:7: ( 'Licuar' )
+            // InternalCocinita.g:26:9: 'Licuar'
+            {
+            match("Licuar"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__26"
+
+    // $ANTLR start "T__27"
+    public final void mT__27() throws RecognitionException {
+        try {
+            int _type = T__27;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalCocinita.g:27:7: ( 'Hornear' )
+            // InternalCocinita.g:27:9: 'Hornear'
+            {
+            match("Hornear"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__27"
+
+    // $ANTLR start "T__28"
+    public final void mT__28() throws RecognitionException {
+        try {
+            int _type = T__28;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalCocinita.g:28:7: ( 'Refrigerar' )
+            // InternalCocinita.g:28:9: 'Refrigerar'
+            {
+            match("Refrigerar"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__28"
+
+    // $ANTLR start "T__29"
+    public final void mT__29() throws RecognitionException {
+        try {
+            int _type = T__29;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalCocinita.g:29:7: ( 'Agregar' )
+            // InternalCocinita.g:29:9: 'Agregar'
+            {
+            match("Agregar"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__29"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:241:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalCocinita.g:241:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalCocinita.g:693:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalCocinita.g:693:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalCocinita.g:241:11: ( '^' )?
+            // InternalCocinita.g:693:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -183,7 +466,7 @@ public class InternalCocinitaLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalCocinita.g:241:11: '^'
+                    // InternalCocinita.g:693:11: '^'
                     {
                     match('^'); 
 
@@ -201,7 +484,7 @@ public class InternalCocinitaLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalCocinita.g:241:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalCocinita.g:693:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -250,10 +533,10 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:243:10: ( ( '0' .. '9' )+ )
-            // InternalCocinita.g:243:12: ( '0' .. '9' )+
+            // InternalCocinita.g:695:10: ( ( '0' .. '9' )+ )
+            // InternalCocinita.g:695:12: ( '0' .. '9' )+
             {
-            // InternalCocinita.g:243:12: ( '0' .. '9' )+
+            // InternalCocinita.g:695:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -267,7 +550,7 @@ public class InternalCocinitaLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalCocinita.g:243:13: '0' .. '9'
+            	    // InternalCocinita.g:695:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -299,10 +582,10 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:245:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalCocinita.g:245:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalCocinita.g:697:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalCocinita.g:697:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalCocinita.g:245:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalCocinita.g:697:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -320,10 +603,10 @@ public class InternalCocinitaLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalCocinita.g:245:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalCocinita.g:697:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalCocinita.g:245:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalCocinita.g:697:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -339,7 +622,7 @@ public class InternalCocinitaLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalCocinita.g:245:21: '\\\\' .
+                    	    // InternalCocinita.g:697:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -347,7 +630,7 @@ public class InternalCocinitaLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalCocinita.g:245:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalCocinita.g:697:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -372,10 +655,10 @@ public class InternalCocinitaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalCocinita.g:245:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalCocinita.g:697:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalCocinita.g:245:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalCocinita.g:697:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -391,7 +674,7 @@ public class InternalCocinitaLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalCocinita.g:245:54: '\\\\' .
+                    	    // InternalCocinita.g:697:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -399,7 +682,7 @@ public class InternalCocinitaLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalCocinita.g:245:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalCocinita.g:697:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -442,12 +725,12 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:247:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalCocinita.g:247:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalCocinita.g:699:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalCocinita.g:699:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalCocinita.g:247:24: ( options {greedy=false; } : . )*
+            // InternalCocinita.g:699:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -472,7 +755,7 @@ public class InternalCocinitaLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalCocinita.g:247:52: .
+            	    // InternalCocinita.g:699:52: .
             	    {
             	    matchAny(); 
 
@@ -502,12 +785,12 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:249:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalCocinita.g:249:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalCocinita.g:701:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalCocinita.g:701:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalCocinita.g:249:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalCocinita.g:701:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -520,7 +803,7 @@ public class InternalCocinitaLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalCocinita.g:249:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalCocinita.g:701:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -540,7 +823,7 @@ public class InternalCocinitaLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalCocinita.g:249:40: ( ( '\\r' )? '\\n' )?
+            // InternalCocinita.g:701:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -549,9 +832,9 @@ public class InternalCocinitaLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalCocinita.g:249:41: ( '\\r' )? '\\n'
+                    // InternalCocinita.g:701:41: ( '\\r' )? '\\n'
                     {
-                    // InternalCocinita.g:249:41: ( '\\r' )?
+                    // InternalCocinita.g:701:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -560,7 +843,7 @@ public class InternalCocinitaLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalCocinita.g:249:41: '\\r'
+                            // InternalCocinita.g:701:41: '\\r'
                             {
                             match('\r'); 
 
@@ -592,10 +875,10 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:251:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalCocinita.g:251:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalCocinita.g:703:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalCocinita.g:703:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalCocinita.g:251:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalCocinita.g:703:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -649,8 +932,8 @@ public class InternalCocinitaLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCocinita.g:253:16: ( . )
-            // InternalCocinita.g:253:18: .
+            // InternalCocinita.g:705:16: ( . )
+            // InternalCocinita.g:705:18: .
             {
             matchAny(); 
 
@@ -665,8 +948,8 @@ public class InternalCocinitaLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // InternalCocinita.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=13;
+        // InternalCocinita.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=26;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -712,49 +995,140 @@ public class InternalCocinitaLexer extends Lexer {
                 }
                 break;
             case 7 :
-                // InternalCocinita.g:1:46: RULE_ID
+                // InternalCocinita.g:1:46: T__17
+                {
+                mT__17(); 
+
+                }
+                break;
+            case 8 :
+                // InternalCocinita.g:1:52: T__18
+                {
+                mT__18(); 
+
+                }
+                break;
+            case 9 :
+                // InternalCocinita.g:1:58: T__19
+                {
+                mT__19(); 
+
+                }
+                break;
+            case 10 :
+                // InternalCocinita.g:1:64: T__20
+                {
+                mT__20(); 
+
+                }
+                break;
+            case 11 :
+                // InternalCocinita.g:1:70: T__21
+                {
+                mT__21(); 
+
+                }
+                break;
+            case 12 :
+                // InternalCocinita.g:1:76: T__22
+                {
+                mT__22(); 
+
+                }
+                break;
+            case 13 :
+                // InternalCocinita.g:1:82: T__23
+                {
+                mT__23(); 
+
+                }
+                break;
+            case 14 :
+                // InternalCocinita.g:1:88: T__24
+                {
+                mT__24(); 
+
+                }
+                break;
+            case 15 :
+                // InternalCocinita.g:1:94: T__25
+                {
+                mT__25(); 
+
+                }
+                break;
+            case 16 :
+                // InternalCocinita.g:1:100: T__26
+                {
+                mT__26(); 
+
+                }
+                break;
+            case 17 :
+                // InternalCocinita.g:1:106: T__27
+                {
+                mT__27(); 
+
+                }
+                break;
+            case 18 :
+                // InternalCocinita.g:1:112: T__28
+                {
+                mT__28(); 
+
+                }
+                break;
+            case 19 :
+                // InternalCocinita.g:1:118: T__29
+                {
+                mT__29(); 
+
+                }
+                break;
+            case 20 :
+                // InternalCocinita.g:1:124: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 8 :
-                // InternalCocinita.g:1:54: RULE_INT
+            case 21 :
+                // InternalCocinita.g:1:132: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 9 :
-                // InternalCocinita.g:1:63: RULE_STRING
+            case 22 :
+                // InternalCocinita.g:1:141: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 10 :
-                // InternalCocinita.g:1:75: RULE_ML_COMMENT
+            case 23 :
+                // InternalCocinita.g:1:153: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 11 :
-                // InternalCocinita.g:1:91: RULE_SL_COMMENT
+            case 24 :
+                // InternalCocinita.g:1:169: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 12 :
-                // InternalCocinita.g:1:107: RULE_WS
+            case 25 :
+                // InternalCocinita.g:1:185: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 13 :
-                // InternalCocinita.g:1:115: RULE_ANY_OTHER
+            case 26 :
+                // InternalCocinita.g:1:193: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -768,65 +1142,135 @@ public class InternalCocinitaLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\13\2\20\1\13\2\uffff\3\13\5\uffff\1\20\1\uffff\1\20\7\uffff\24\20\1\uffff\1\20\1\uffff";
+        "\1\uffff\1\26\2\33\1\36\2\33\2\uffff\6\33\1\26\2\uffff\3\26\5\uffff\1\33\1\uffff\1\33\2\uffff\2\33\2\uffff\1\33\1\66\1\67\4\33\7\uffff\5\33\2\uffff\21\33\1\122\7\33\1\132\1\uffff\1\133\6\33\2\uffff\1\142\1\33\1\144\3\33\1\uffff\1\33\1\uffff\7\33\1\160\1\33\1\uffff\1\33\1\uffff\2\33\1\uffff\1\33\1\uffff";
     static final String DFA12_eofS =
-        "\60\uffff";
+        "\166\uffff";
     static final String DFA12_minS =
-        "\1\0\1\55\1\156\1\162\1\101\2\uffff\2\0\1\52\3\uffff\1\117\1\uffff\1\147\1\uffff\1\157\7\uffff\1\162\1\143\2\145\2\144\2\151\1\145\1\155\1\156\1\151\1\164\2\145\1\156\1\163\1\164\1\72\1\157\1\uffff\1\72\1\uffff";
+        "\1\0\1\55\1\156\1\141\1\137\1\162\1\145\2\uffff\1\141\1\154\1\151\1\157\1\145\1\147\1\101\2\uffff\2\0\1\52\3\uffff\1\117\1\uffff\1\147\1\uffff\1\164\2\uffff\1\157\1\162\2\uffff\1\164\2\60\1\143\1\162\1\146\1\162\7\uffff\1\162\1\145\1\143\1\166\1\151\2\uffff\1\165\1\156\1\162\2\145\1\162\1\145\1\151\1\162\1\141\1\145\1\151\1\147\1\144\1\151\1\144\1\162\1\60\1\162\1\141\1\147\1\141\1\151\1\141\1\151\1\60\1\uffff\1\60\1\162\1\145\1\162\1\145\1\154\1\155\2\uffff\1\60\1\162\1\60\1\156\1\145\1\151\1\uffff\1\141\1\uffff\1\164\1\163\1\145\1\162\1\145\1\72\1\156\1\60\1\163\1\uffff\1\164\1\uffff\1\72\1\157\1\uffff\1\72\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\143\1\156\1\162\1\172\2\uffff\2\uffff\1\57\3\uffff\1\157\1\uffff\1\147\1\uffff\1\157\7\uffff\1\162\1\143\2\145\2\144\2\151\1\145\1\155\1\156\1\151\1\164\2\145\1\156\1\163\1\164\1\72\1\157\1\uffff\1\72\1\uffff";
+        "\1\uffff\1\143\1\156\1\141\1\137\1\162\1\145\2\uffff\1\141\1\156\1\151\1\157\1\145\1\147\1\172\2\uffff\2\uffff\1\57\3\uffff\1\157\1\uffff\1\147\1\uffff\1\164\2\uffff\1\157\1\162\2\uffff\1\164\2\172\1\143\1\162\1\146\1\162\7\uffff\1\162\1\145\1\143\1\166\1\151\2\uffff\1\165\1\156\1\162\2\145\1\162\1\145\1\151\1\162\1\141\1\145\1\151\1\147\1\144\1\151\1\144\1\162\1\172\1\162\1\141\1\147\1\141\1\151\1\141\1\151\1\172\1\uffff\1\172\1\162\1\145\1\162\1\145\1\154\1\155\2\uffff\1\172\1\162\1\172\1\156\1\145\1\151\1\uffff\1\141\1\uffff\1\164\1\163\1\145\1\162\1\145\1\72\1\156\1\172\1\163\1\uffff\1\164\1\uffff\1\72\1\157\1\uffff\1\72\1\uffff";
     static final String DFA12_acceptS =
-        "\5\uffff\1\7\1\10\3\uffff\1\14\1\15\1\1\1\uffff\1\5\1\uffff\1\7\1\uffff\1\10\1\11\1\12\1\13\1\14\1\4\1\6\24\uffff\1\2\1\uffff\1\3";
+        "\7\uffff\1\7\1\14\7\uffff\1\24\1\25\3\uffff\1\31\1\32\1\1\1\uffff\1\11\1\uffff\1\24\1\uffff\1\4\1\13\2\uffff\1\7\1\14\7\uffff\1\25\1\26\1\27\1\30\1\31\1\10\1\12\5\uffff\1\16\1\17\32\uffff\1\15\7\uffff\1\6\1\20\6\uffff\1\21\1\uffff\1\23\11\uffff\1\3\1\uffff\1\22\2\uffff\1\2\1\uffff\1\5";
     static final String DFA12_specialS =
-        "\1\0\6\uffff\1\2\1\1\47\uffff}>";
+        "\1\1\21\uffff\1\2\1\0\142\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\13\2\12\2\13\1\12\22\13\1\12\1\13\1\7\4\13\1\10\7\13\1\11\12\6\7\13\10\5\1\2\6\5\1\3\12\5\1\1\2\13\1\4\1\5\1\13\32\5\uff85\13",
-            "\1\15\44\uffff\1\14\20\uffff\1\16",
-            "\1\17",
-            "\1\21",
-            "\32\20\4\uffff\1\20\1\uffff\32\20",
-            "",
-            "",
-            "\0\23",
-            "\0\23",
-            "\1\24\4\uffff\1\25",
-            "",
-            "",
-            "",
-            "\1\30\37\uffff\1\27",
-            "",
-            "\1\31",
-            "",
+            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\22\4\26\1\23\1\4\1\10\4\26\1\7\1\24\12\21\7\26\1\16\1\11\5\20\1\14\1\2\2\20\1\13\1\3\2\20\1\5\1\20\1\15\1\6\7\20\1\1\2\26\1\17\1\20\1\26\4\20\1\12\25\20\uff85\26",
+            "\1\30\44\uffff\1\27\20\uffff\1\31",
             "\1\32",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\33",
             "\1\34",
             "\1\35",
-            "\1\36",
             "\1\37",
             "\1\40",
-            "\1\41",
-            "\1\42",
+            "",
+            "",
             "\1\43",
-            "\1\44",
-            "\1\45",
+            "\1\45\1\uffff\1\44",
             "\1\46",
             "\1\47",
             "\1\50",
             "\1\51",
-            "\1\52",
-            "\1\53",
-            "\1\54",
-            "\1\55",
-            "\1\56",
+            "\32\33\4\uffff\1\33\1\uffff\32\33",
             "",
-            "\1\57",
+            "",
+            "\0\53",
+            "\0\53",
+            "\1\54\4\uffff\1\55",
+            "",
+            "",
+            "",
+            "\1\60\37\uffff\1\57",
+            "",
+            "\1\61",
+            "",
+            "\1\62",
+            "",
+            "",
+            "\1\63",
+            "\1\64",
+            "",
+            "",
+            "\1\65",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\70",
+            "\1\71",
+            "\1\72",
+            "\1\73",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\74",
+            "\1\75",
+            "\1\76",
+            "\1\77",
+            "\1\100",
+            "",
+            "",
+            "\1\101",
+            "\1\102",
+            "\1\103",
+            "\1\104",
+            "\1\105",
+            "\1\106",
+            "\1\107",
+            "\1\110",
+            "\1\111",
+            "\1\112",
+            "\1\113",
+            "\1\114",
+            "\1\115",
+            "\1\116",
+            "\1\117",
+            "\1\120",
+            "\1\121",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\123",
+            "\1\124",
+            "\1\125",
+            "\1\126",
+            "\1\127",
+            "\1\130",
+            "\1\131",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\134",
+            "\1\135",
+            "\1\136",
+            "\1\137",
+            "\1\140",
+            "\1\141",
+            "",
+            "",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\143",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\145",
+            "\1\146",
+            "\1\147",
+            "",
+            "\1\150",
+            "",
+            "\1\151",
+            "\1\152",
+            "\1\153",
+            "\1\154",
+            "\1\155",
+            "\1\156",
+            "\1\157",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\161",
+            "",
+            "\1\162",
+            "",
+            "\1\163",
+            "\1\164",
+            "",
+            "\1\165",
             ""
     };
 
@@ -860,13 +1304,23 @@ public class InternalCocinitaLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA12_19 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_19>='\u0000' && LA12_19<='\uFFFF')) ) {s = 43;}
+
+                        else s = 22;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -874,43 +1328,55 @@ public class InternalCocinitaLexer extends Lexer {
 
                         else if ( (LA12_0=='I') ) {s = 2;}
 
-                        else if ( (LA12_0=='P') ) {s = 3;}
+                        else if ( (LA12_0=='M') ) {s = 3;}
 
-                        else if ( (LA12_0=='^') ) {s = 4;}
+                        else if ( (LA12_0=='(') ) {s = 4;}
 
-                        else if ( ((LA12_0>='A' && LA12_0<='H')||(LA12_0>='J' && LA12_0<='O')||(LA12_0>='Q' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {s = 5;}
+                        else if ( (LA12_0=='P') ) {s = 5;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 6;}
+                        else if ( (LA12_0=='S') ) {s = 6;}
 
-                        else if ( (LA12_0=='\"') ) {s = 7;}
+                        else if ( (LA12_0=='.') ) {s = 7;}
 
-                        else if ( (LA12_0=='\'') ) {s = 8;}
+                        else if ( (LA12_0==')') ) {s = 8;}
 
-                        else if ( (LA12_0=='/') ) {s = 9;}
+                        else if ( (LA12_0=='B') ) {s = 9;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 10;}
+                        else if ( (LA12_0=='e') ) {s = 10;}
 
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='\\' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 11;}
+                        else if ( (LA12_0=='L') ) {s = 11;}
 
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA12_8 = input.LA(1);
+                        else if ( (LA12_0=='H') ) {s = 12;}
 
-                        s = -1;
-                        if ( ((LA12_8>='\u0000' && LA12_8<='\uFFFF')) ) {s = 19;}
+                        else if ( (LA12_0=='R') ) {s = 13;}
 
-                        else s = 11;
+                        else if ( (LA12_0=='A') ) {s = 14;}
+
+                        else if ( (LA12_0=='^') ) {s = 15;}
+
+                        else if ( ((LA12_0>='C' && LA12_0<='G')||(LA12_0>='J' && LA12_0<='K')||(LA12_0>='N' && LA12_0<='O')||LA12_0=='Q'||(LA12_0>='T' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='d')||(LA12_0>='f' && LA12_0<='z')) ) {s = 16;}
+
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 17;}
+
+                        else if ( (LA12_0=='\"') ) {s = 18;}
+
+                        else if ( (LA12_0=='\'') ) {s = 19;}
+
+                        else if ( (LA12_0=='/') ) {s = 20;}
+
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 21;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='*' && LA12_0<='-')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='\\' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 22;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA12_7 = input.LA(1);
+                        int LA12_18 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_7>='\u0000' && LA12_7<='\uFFFF')) ) {s = 19;}
+                        if ( ((LA12_18>='\u0000' && LA12_18<='\uFFFF')) ) {s = 43;}
 
-                        else s = 11;
+                        else s = 22;
 
                         if ( s>=0 ) return s;
                         break;

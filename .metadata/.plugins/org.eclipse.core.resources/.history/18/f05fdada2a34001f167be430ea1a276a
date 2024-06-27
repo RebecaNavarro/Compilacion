@@ -1,0 +1,83 @@
+package upb.edu.lp.generator;
+
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtext.generator.IFileSystemAccess2;
+import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.generator.IGenerator2;
+import upb.edu.lp.cocinita.Cocina;
+import upb.edu.lp.cocinita.Ingrediente;
+import upb.edu.lp.cocinita.Instruccion;
+import upb.edu.lp.cocinita.Bowl;
+
+public class CocinitaGenerator implements IGenerator2 {
+
+    @Override
+    public void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
+        resource.getAllContents().forEachRemaining(e -> {
+            if (e instanceof Cocina) {
+                generateCocina((Cocina) e, fsa);
+            }
+        });
+    }
+
+    private void generateCocina(Cocina cocina, IFileSystemAccess2 fsa) {
+        String fileName = cocina.getName() + ".ts";
+        StringBuilder code = new StringBuilder();
+
+        code.append("class " + cocina.getName() + " {\n");
+
+        // Generar código para ingredientes
+        code.append("\tstatic ingredientes = [\n");
+        cocina.getListaIngredientes().forEach(ingrediente -> {
+            generateIngrediente(ingrediente, code);
+        });
+        code.append("\t];\n");
+
+        // Generar código para procedimiento
+        code.append("\tstatic procedimiento() {\n");
+        cocina.getListaInstrucciones().forEach(instruccion -> {
+            generateInstruccion(instruccion, code);
+        });
+        code.append("\t}\n");
+
+        code.append("}\n");
+
+        fsa.generateFile(fileName, code.toString());
+    }
+
+    private void generateIngrediente(Ingrediente ingrediente, StringBuilder code) {
+        code.append("\t\t{ nombre: '" + ingrediente.getName() + "', tipo: '" + ingrediente.getTipo() + "' },\n");
+    }
+
+    private void generateInstruccion(Instruccion instruccion, StringBuilder code) {
+        switch (instruccion.eClass().getName()) {
+            case "Batir":
+                code.append("\t\tBatir(" + getExpresion(instruccion) + ", " + instruccion.getBowl().getNumero() + ");\n");
+                break;
+            case "Licuar":
+                code.append("\t\tLicuar(" + getExpresion(instruccion) + ", " + instruccion.getBowl().getNumero() + ");\n");
+                break;
+            case "Hornear":
+                code.append("\t\tHornear(" + getExpresion(instruccion) + ", " + instruccion.getBowl().getNumero() + ");\n");
+                break;
+            case "Refrigerar":
+                code.append("\t\tRefrigerar(" + getExpresion(instruccion) + ", " + instruccion.getBowl().getNumero() + ");\n");
+                break;
+            case "Agregar":
+                code.append("\t\tAgregar(" + instruccion.getIngrediente().getName() + ", " + instruccion.getBowl().getNumero() + ");\n");
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown instruction type: " + instruccion.eClass().getName());
+        }
+    }
+
+    private String getExpresion(Instruccion instruccion) {
+        if (instruccion.getIngrediente() != null) {
+            return "'" + instruccion.getIngrediente().getName() + "'";
+        } else if (instruccion.getBowl() != null) {
+            return "'Bowl" + instruccion.getBowl().getNumero() + "'";
+        } else {
+            return "unknown";
+        }
+    }
+}

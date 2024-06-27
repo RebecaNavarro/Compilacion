@@ -3,12 +3,29 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cocinita" nsURI="http://www.edu.upb/lp/Cocinita" nsPrefix="cocinita">
   <eClassifiers xsi:type="ecore:EClass" name="Cocina">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ListaIngredientes" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaIngredientes" upperBound="-1"
         eType="#//Ingrediente" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nBowl" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaInstrucciones" upperBound="-1"
+        eType="#//Instruccion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bowl" eType="#//Bowl" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ingrediente">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ascii" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bowl">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Instruccion">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="#//Expresion"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bowl" eType="#//Bowl" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ingrediente" eType="#//Ingrediente"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expresion">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ingrediente" eType="#//Ingrediente"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bowl" eType="#//Bowl" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

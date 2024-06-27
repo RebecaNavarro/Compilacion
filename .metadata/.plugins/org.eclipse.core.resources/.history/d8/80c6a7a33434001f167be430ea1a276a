@@ -1,0 +1,74 @@
+package upb.edu.lp.generator
+
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.xtext.generator.AbstractGenerator
+import org.eclipse.xtext.generator.IFileSystemAccess2
+import org.eclipse.xtext.generator.IGeneratorContext
+import upb.edu.lp.cocinita.Cocina
+import upb.edu.lp.cocinita.Ingrediente
+import upb.edu.lp.cocinita.Instruccion
+import upb.edu.lp.cocinita.Bowl
+
+class CocinitaGenerator extends AbstractGenerator {
+
+    override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
+        resource.allContents.filter(Cocina).forEach[cocina |
+            val fileName = cocina.name + ".ts"
+            val code = generateCocina(cocina)
+            fsa.generateFile(fileName, code)
+        ]
+    }
+
+    private def generateCocina(Cocina cocina) {
+        val StringBuilder code = new StringBuilder
+        code.append("class " + cocina.name + " {\n")
+        
+        // Generar código para ingredientes
+        code.append("\tstatic ingredientes = [\n")
+        cocina.listaIngredientes.forEach[ingrediente |
+            code.append(generateIngrediente(ingrediente))
+        ]
+        code.append("\t];\n")
+        
+        // Generar código para procedimiento
+        code.append("\tstatic procedimiento() {\n")
+        cocina.listaInstrucciones.forEach[instruccion |
+            code.append(generateInstruccion(instruccion))
+        ]
+        code.append("\t}\n")
+        
+        code.append("}\n")
+        return code.toString
+    }
+
+    private def generateIngrediente(Ingrediente ingrediente) {
+        "\t\t{ nombre: '" + ingrediente.name + "', tipo: '" + ingrediente.tipo + "' },\n"
+    }
+
+    private def generateInstruccion(Instruccion instruccion) {
+        switch instruccion.eClass().name {
+            case "Batir":
+                "\t\tBatir(" + getExpresion(instruccion) + ", " + instruccion.bowl.numero + ");\n"
+            case "Licuar":
+                "\t\tLicuar(" + getExpresion(instruccion) + ", " + instruccion.bowl.numero + ");\n"
+            case "Hornear":
+                "\t\tHornear(" + getExpresion(instruccion) + ", " + instruccion.bowl.numero + ");\n"
+            case "Refrigerar":
+                "\t\tRefrigerar(" + getExpresion(instruccion) + ", " + instruccion.bowl.numero + ");\n"
+            case "Agregar":
+                "\t\tAgregar(" + instruccion.ingrediente.name + ", " + instruccion.bowl.numero + ");\n"
+            default:
+                throw new IllegalArgumentException("Unknown instruction type: " + instruccion.eClass().name)
+        }
+    }
+
+    private def getExpresion(Instruccion instruccion) {
+        if (instruccion.ingrediente != null) {
+            "'" + instruccion.ingrediente.name + "'"
+        } else if (instruccion.bowl != null) {
+            "'Bowl" + instruccion.bowl.numero + "'"
+        } else {
+            "unknown"
+        }
+    }
+}

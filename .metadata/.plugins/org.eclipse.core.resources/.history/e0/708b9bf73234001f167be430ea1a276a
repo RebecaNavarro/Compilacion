@@ -1,0 +1,49 @@
+package upb.edu.lp.validation;
+
+import org.eclipse.xtext.validation.Check;
+import upb.edu.lp.cocinita.Bowl;
+import upb.edu.lp.cocinita.Cocina;
+import upb.edu.lp.cocinita.CocinitaPackage;
+import upb.edu.lp.cocinita.Ingrediente;
+import upb.edu.lp.cocinita.Instruccion;
+
+public class CocinitaValidator extends AbstractCocinitaValidator {
+
+    @Check
+    public void checkASCII(Ingrediente ingrediente) {
+        int asciiValue = ingrediente.getAscii();
+        if (asciiValue < 33 || asciiValue > 126) {
+            error("ASCII value must be between 33 and 126", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
+        }
+    }
+
+    @Check
+    public void verificarTipoDato(Ingrediente ingrediente) {
+        int asciiValue = ingrediente.getAscii();
+        String tipoDato = ingrediente.getTipo();
+        
+        switch (tipoDato) {
+            case "[-o]":
+                if (asciiValue < 48 || asciiValue > 57) {
+                    error("ASCII value must be an integer", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
+                }
+                break;
+            case "[cU]":
+                // No additional checks needed for [cU]
+                break;
+            case "[-O]":
+                // No additional checks needed for [-O]
+                break;
+            default:
+                error("Invalid type variable", CocinitaPackage.Literals.INGREDIENTE__TIPO, "invalid-type-variable");
+                break;
+        }
+    }
+
+    @Check
+    public void checkNumberOfBowl(Instruccion instruccion) {
+        if (instruccion.getBowl() != null && instruccion.getBowl().getNumero() < 1) {
+            error("Bowl number must be greater than 0", CocinitaPackage.Literals.INSTRUCCION__BOWL, "invalid-bowl-number");
+        }
+    }
+}

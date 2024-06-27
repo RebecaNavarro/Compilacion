@@ -86,6 +86,21 @@ public class CocinitaAdapterFactory extends AdapterFactoryImpl
         return createIngredienteAdapter();
       }
       @Override
+      public Adapter caseBowl(Bowl object)
+      {
+        return createBowlAdapter();
+      }
+      @Override
+      public Adapter caseInstruccion(Instruccion object)
+      {
+        return createInstruccionAdapter();
+      }
+      @Override
+      public Adapter caseExpresion(Expresion object)
+      {
+        return createExpresionAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -133,6 +148,51 @@ public class CocinitaAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createIngredienteAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link upb.edu.lp.cocinita.Bowl <em>Bowl</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see upb.edu.lp.cocinita.Bowl
+   * @generated
+   */
+  public Adapter createBowlAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link upb.edu.lp.cocinita.Instruccion <em>Instruccion</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see upb.edu.lp.cocinita.Instruccion
+   * @generated
+   */
+  public Adapter createInstruccionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link upb.edu.lp.cocinita.Expresion <em>Expresion</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see upb.edu.lp.cocinita.Expresion
+   * @generated
+   */
+  public Adapter createExpresionAdapter()
   {
     return null;
   }

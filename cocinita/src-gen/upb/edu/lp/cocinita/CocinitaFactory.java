@@ -42,6 +42,33 @@ public interface CocinitaFactory extends EFactory
   Ingrediente createIngrediente();
 
   /**
+   * Returns a new object of class '<em>Bowl</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bowl</em>'.
+   * @generated
+   */
+  Bowl createBowl();
+
+  /**
+   * Returns a new object of class '<em>Instruccion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Instruccion</em>'.
+   * @generated
+   */
+  Instruccion createInstruccion();
+
+  /**
+   * Returns a new object of class '<em>Expresion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Expresion</em>'.
+   * @generated
+   */
+  Expresion createExpresion();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

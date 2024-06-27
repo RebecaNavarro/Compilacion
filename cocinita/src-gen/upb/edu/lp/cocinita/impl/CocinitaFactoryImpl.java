@@ -67,6 +67,9 @@ public class CocinitaFactoryImpl extends EFactoryImpl implements CocinitaFactory
     {
       case CocinitaPackage.COCINA: return createCocina();
       case CocinitaPackage.INGREDIENTE: return createIngrediente();
+      case CocinitaPackage.BOWL: return createBowl();
+      case CocinitaPackage.INSTRUCCION: return createInstruccion();
+      case CocinitaPackage.EXPRESION: return createExpresion();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -94,6 +97,42 @@ public class CocinitaFactoryImpl extends EFactoryImpl implements CocinitaFactory
   {
     IngredienteImpl ingrediente = new IngredienteImpl();
     return ingrediente;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Bowl createBowl()
+  {
+    BowlImpl bowl = new BowlImpl();
+    return bowl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Instruccion createInstruccion()
+  {
+    InstruccionImpl instruccion = new InstruccionImpl();
+    return instruccion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Expresion createExpresion()
+  {
+    ExpresionImpl expresion = new ExpresionImpl();
+    return expresion;
   }
 
   /**

@@ -87,6 +87,27 @@ public class CocinitaSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case CocinitaPackage.BOWL:
+      {
+        Bowl bowl = (Bowl)theEObject;
+        T result = caseBowl(bowl);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CocinitaPackage.INSTRUCCION:
+      {
+        Instruccion instruccion = (Instruccion)theEObject;
+        T result = caseInstruccion(instruccion);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CocinitaPackage.EXPRESION:
+      {
+        Expresion expresion = (Expresion)theEObject;
+        T result = caseExpresion(expresion);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -119,6 +140,54 @@ public class CocinitaSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseIngrediente(Ingrediente object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Bowl</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Bowl</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBowl(Bowl object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Instruccion</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Instruccion</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInstruccion(Instruccion object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Expresion</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Expresion</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExpresion(Expresion object)
   {
     return null;
   }

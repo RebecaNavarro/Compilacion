@@ -19,9 +19,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import upb.edu.lp.cocinita.Bowl;
 import upb.edu.lp.cocinita.Cocina;
 import upb.edu.lp.cocinita.CocinitaPackage;
 import upb.edu.lp.cocinita.Ingrediente;
+import upb.edu.lp.cocinita.Instruccion;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,6 +35,9 @@ import upb.edu.lp.cocinita.Ingrediente;
  * <ul>
  *   <li>{@link upb.edu.lp.cocinita.impl.CocinaImpl#getName <em>Name</em>}</li>
  *   <li>{@link upb.edu.lp.cocinita.impl.CocinaImpl#getListaIngredientes <em>Lista Ingredientes</em>}</li>
+ *   <li>{@link upb.edu.lp.cocinita.impl.CocinaImpl#getNBowl <em>NBowl</em>}</li>
+ *   <li>{@link upb.edu.lp.cocinita.impl.CocinaImpl#getListaInstrucciones <em>Lista Instrucciones</em>}</li>
+ *   <li>{@link upb.edu.lp.cocinita.impl.CocinaImpl#getBowl <em>Bowl</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,6 +73,46 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
    * @ordered
    */
   protected EList<Ingrediente> listaIngredientes;
+
+  /**
+   * The default value of the '{@link #getNBowl() <em>NBowl</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNBowl()
+   * @generated
+   * @ordered
+   */
+  protected static final int NBOWL_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getNBowl() <em>NBowl</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNBowl()
+   * @generated
+   * @ordered
+   */
+  protected int nBowl = NBOWL_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getListaInstrucciones() <em>Lista Instrucciones</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getListaInstrucciones()
+   * @generated
+   * @ordered
+   */
+  protected EList<Instruccion> listaInstrucciones;
+
+  /**
+   * The cached value of the '{@link #getBowl() <em>Bowl</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBowl()
+   * @generated
+   * @ordered
+   */
+  protected Bowl bowl;
 
   /**
    * <!-- begin-user-doc -->
@@ -136,12 +181,106 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
    * @generated
    */
   @Override
+  public int getNBowl()
+  {
+    return nBowl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setNBowl(int newNBowl)
+  {
+    int oldNBowl = nBowl;
+    nBowl = newNBowl;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CocinitaPackage.COCINA__NBOWL, oldNBowl, nBowl));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<Instruccion> getListaInstrucciones()
+  {
+    if (listaInstrucciones == null)
+    {
+      listaInstrucciones = new EObjectContainmentEList<Instruccion>(Instruccion.class, this, CocinitaPackage.COCINA__LISTA_INSTRUCCIONES);
+    }
+    return listaInstrucciones;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Bowl getBowl()
+  {
+    return bowl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetBowl(Bowl newBowl, NotificationChain msgs)
+  {
+    Bowl oldBowl = bowl;
+    bowl = newBowl;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CocinitaPackage.COCINA__BOWL, oldBowl, newBowl);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setBowl(Bowl newBowl)
+  {
+    if (newBowl != bowl)
+    {
+      NotificationChain msgs = null;
+      if (bowl != null)
+        msgs = ((InternalEObject)bowl).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CocinitaPackage.COCINA__BOWL, null, msgs);
+      if (newBowl != null)
+        msgs = ((InternalEObject)newBowl).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CocinitaPackage.COCINA__BOWL, null, msgs);
+      msgs = basicSetBowl(newBowl, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CocinitaPackage.COCINA__BOWL, newBowl, newBowl));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
       case CocinitaPackage.COCINA__LISTA_INGREDIENTES:
         return ((InternalEList<?>)getListaIngredientes()).basicRemove(otherEnd, msgs);
+      case CocinitaPackage.COCINA__LISTA_INSTRUCCIONES:
+        return ((InternalEList<?>)getListaInstrucciones()).basicRemove(otherEnd, msgs);
+      case CocinitaPackage.COCINA__BOWL:
+        return basicSetBowl(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -160,6 +299,12 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
         return getName();
       case CocinitaPackage.COCINA__LISTA_INGREDIENTES:
         return getListaIngredientes();
+      case CocinitaPackage.COCINA__NBOWL:
+        return getNBowl();
+      case CocinitaPackage.COCINA__LISTA_INSTRUCCIONES:
+        return getListaInstrucciones();
+      case CocinitaPackage.COCINA__BOWL:
+        return getBowl();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -182,6 +327,16 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
         getListaIngredientes().clear();
         getListaIngredientes().addAll((Collection<? extends Ingrediente>)newValue);
         return;
+      case CocinitaPackage.COCINA__NBOWL:
+        setNBowl((Integer)newValue);
+        return;
+      case CocinitaPackage.COCINA__LISTA_INSTRUCCIONES:
+        getListaInstrucciones().clear();
+        getListaInstrucciones().addAll((Collection<? extends Instruccion>)newValue);
+        return;
+      case CocinitaPackage.COCINA__BOWL:
+        setBowl((Bowl)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -202,6 +357,15 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
       case CocinitaPackage.COCINA__LISTA_INGREDIENTES:
         getListaIngredientes().clear();
         return;
+      case CocinitaPackage.COCINA__NBOWL:
+        setNBowl(NBOWL_EDEFAULT);
+        return;
+      case CocinitaPackage.COCINA__LISTA_INSTRUCCIONES:
+        getListaInstrucciones().clear();
+        return;
+      case CocinitaPackage.COCINA__BOWL:
+        setBowl((Bowl)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -220,6 +384,12 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case CocinitaPackage.COCINA__LISTA_INGREDIENTES:
         return listaIngredientes != null && !listaIngredientes.isEmpty();
+      case CocinitaPackage.COCINA__NBOWL:
+        return nBowl != NBOWL_EDEFAULT;
+      case CocinitaPackage.COCINA__LISTA_INSTRUCCIONES:
+        return listaInstrucciones != null && !listaInstrucciones.isEmpty();
+      case CocinitaPackage.COCINA__BOWL:
+        return bowl != null;
     }
     return super.eIsSet(featureID);
   }
@@ -237,6 +407,8 @@ public class CocinaImpl extends MinimalEObjectImpl.Container implements Cocina
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", nBowl: ");
+    result.append(nBowl);
     result.append(')');
     return result.toString();
   }

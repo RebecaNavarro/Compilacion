@@ -8,12 +8,27 @@
       fileExtensions="cocinita" ecorePackage="Cocinita.ecore#/">
     <genClasses ecoreClass="Cocinita.ecore#//Cocina">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//Cocina/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cocinita.ecore#//Cocina/ListaIngredientes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cocinita.ecore#//Cocina/listaIngredientes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//Cocina/nBowl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cocinita.ecore#//Cocina/listaInstrucciones"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cocinita.ecore#//Cocina/bowl"/>
     </genClasses>
     <genClasses ecoreClass="Cocinita.ecore#//Ingrediente">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//Ingrediente/ascii"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//Ingrediente/tipo"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//Ingrediente/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Cocinita.ecore#//Bowl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cocinita.ecore#//Bowl/numero"/>
+    </genClasses>
+    <genClasses ecoreClass="Cocinita.ecore#//Instruccion">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cocinita.ecore#//Instruccion/exp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cocinita.ecore#//Instruccion/bowl"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cocinita.ecore#//Instruccion/ingrediente"/>
+    </genClasses>
+    <genClasses ecoreClass="Cocinita.ecore#//Expresion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cocinita.ecore#//Expresion/ingrediente"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cocinita.ecore#//Expresion/bowl"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

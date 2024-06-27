@@ -5,6 +5,8 @@ package upb.edu.lp.validation;
 
 import org.eclipse.xtext.validation.Check;
 
+import upb.edu.lp.cocinita.Bowl;
+import upb.edu.lp.cocinita.Cocina;
 import upb.edu.lp.cocinita.CocinitaPackage;
 import upb.edu.lp.cocinita.Ingrediente;
 
@@ -33,19 +35,41 @@ public class CocinitaValidator extends AbstractCocinitaValidator {
 
 	@Check
 	public void verificarTipoDato(Ingrediente ingrediente) {
-		try {
-			int asciiValue = ingrediente.getAscii();
-			String tipoDato = ingrediente.getTipo();
-			if ((asciiValue < 48 || asciiValue > 57) && tipoDato.equals("[-o]")) {
-				error("ASCII value is String", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");				
-			} else if ((asciiValue == 48 || asciiValue == 49) && tipoDato.equals("[cU]")) {
-				error("ASCII value is Boolean or Int", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
-			}
-		} catch (NumberFormatException e) {
-			error("ASCII value is INT", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
-		}
+	    try {
+	        int asciiValue = ingrediente.getAscii();
+	        String tipoDato = ingrediente.getTipo();
+	        
+	        // Verificación para el tipo "[-o]" (int)
+	        if ((asciiValue < 48 || asciiValue > 57) && tipoDato.equals("[-o]")) {
+	            error("ASCII value must represent a digit (0-9) for tipo [-o]", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
+	        }
+	        
+	        // Verificación para el tipo "[cU]" (string)
+	        else if ((asciiValue >= 48 && asciiValue <= 57) && tipoDato.equals("[cU]")) {
+	            error("ASCII value cannot represent a digit (0-9) for tipo [cU]", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
+	        }
 
+	        // Verificación para el tipo "[-O]" (boolean)
+	        else if (tipoDato.equals("[-O]")) {
+	            if (asciiValue != 48 && asciiValue != 49) { // '0' or '1' for boolean
+	                error("ASCII value must be 0 or 1 for tipo [-O]", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
+	            }
+	        }
+	    } catch (NumberFormatException e) {
+	        error("Invalid ASCII value", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
+	    }
 	}
 
-
+	@Check
+	public void checkNumberOfBowl(Bowl bowl, Cocina cocina) {
+		try {
+			int bowlValue = bowl.getNumero();
+			int numberOfBowls = cocina.getNBowl();
+			if(bowlValue > numberOfBowls || bowlValue < numberOfBowls) {
+				error("Bowl not defined", CocinitaPackage.Literals.INSTRUCCION__BOWL, "invalid-bowl-value");
+			}
+		}catch (NumberFormatException e) {
+			error("Bowl not defined", CocinitaPackage.Literals.INSTRUCCION__BOWL, "invalid-bowl-value");
+		}
+	} 
 }

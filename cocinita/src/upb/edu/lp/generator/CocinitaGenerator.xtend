@@ -27,12 +27,18 @@ class CocinitaGenerator extends AbstractGenerator {
     private def String generateTypeScriptCode(Cocina cocina) {
         '''
         class «capitalize(cocina.name)» {
-            private stack: number[] = [];
+            //Crear un array con los valores ASCII
+            
+            const asciiArray: { char: string }[] = [];
+                        
+            for (let i = 32; i <= 126; i++) {
+                asciiArray.push({char: String.fromCharCode(i) });
+            }
 
             private ingredients = {
                 «cocina.listaIngredientes.map[ingrediente | 
-                    '''«ingrediente.name»: «ingrediente.ascii»'''
-                ].join(",\n\t\t")»
+                '''«ingrediente.name»: asciiArray[«ingrediente.ascii»-32]'''
+                ].join(",\n")»
             };
 
             public execute() {

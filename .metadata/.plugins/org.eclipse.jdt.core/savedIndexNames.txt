@@ -1,13 +1,10 @@
 INDEX VERSION 1.134+C:\Users\BECA\Documents\UPB\Eclipse\.metadata\.plugins\org.eclipse.jdt.core
-1638485317.index
-2796472563.index
 2298745527.index
 100907270.index
 3812720810.index
 3372214321.index
 2949776811.index
 3196876331.index
-515384769.index
 365232755.index
 4165438711.index
 818413163.index
@@ -22,7 +19,6 @@ INDEX VERSION 1.134+C:\Users\BECA\Documents\UPB\Eclipse\.metadata\.plugins\org.e
 3407700928.index
 3053055595.index
 3285386063.index
-779876401.index
 1365128295.index
 2429920904.index
 862966060.index
@@ -87,7 +83,6 @@ INDEX VERSION 1.134+C:\Users\BECA\Documents\UPB\Eclipse\.metadata\.plugins\org.e
 1370718258.index
 4168323407.index
 971624387.index
-1644448239.index
 3747252549.index
 1090409585.index
 2778316025.index

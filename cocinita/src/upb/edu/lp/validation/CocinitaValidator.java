@@ -23,7 +23,7 @@ public class CocinitaValidator extends AbstractCocinitaValidator {
 
 		try {
 			int asciiValue = ingrediente.getAscii();
-			if (asciiValue < 33 || asciiValue > 126) {
+			if (asciiValue < 32 || asciiValue > 126) {
 				error("ASCII value must be between 33 and 126", CocinitaPackage.Literals.INGREDIENTE__ASCII,
 						"invalid-ascii-value");
 			}
@@ -39,17 +39,14 @@ public class CocinitaValidator extends AbstractCocinitaValidator {
 	        int asciiValue = ingrediente.getAscii();
 	        String tipoDato = ingrediente.getTipo();
 	        
-	        // Verificación para el tipo "[-o]" (int)
-	        if ((asciiValue < 48 || asciiValue > 57) && tipoDato.equals("[-o]")) {
-	            error("ASCII value must represent a digit (0-9) for tipo [-o]", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
+	        if ((asciiValue >= 48 && asciiValue <= 57) && tipoDato.equals("[cU]")) {
+	            error("ASCII value must be String for", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
 	        }
 	        
-	        // Verificación para el tipo "[cU]" (string)
-	        else if ((asciiValue >= 48 && asciiValue <= 57) && tipoDato.equals("[cU]")) {
-	            error("ASCII value cannot represent a digit (0-9) for tipo [cU]", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
+	        else if ((asciiValue < 48 || asciiValue > 57) && tipoDato.equals("[-o]")) {
+	            error("ASCII value must be Int for [-o]", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");
 	        }
 
-	        // Verificación para el tipo "[-O]" (boolean)
 	        else if (tipoDato.equals("[-O]")) {
 	            if (asciiValue != 48 && asciiValue != 49) { // '0' or '1' for boolean
 	                error("ASCII value must be 0 or 1 for tipo [-O]", CocinitaPackage.Literals.INGREDIENTE__ASCII, "invalid-ascii-value");

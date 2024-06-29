@@ -18,14 +18,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="Bowl">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expresion">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ingrediente" eType="#//Ingrediente"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bowl" eType="#//Bowl" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Instruccion">
     <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="#//Expresion"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bowl" eType="#//Bowl" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ingrediente" eType="#//Ingrediente"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Expresion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ingrediente" eType="#//Ingrediente"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="bowl" eType="#//Bowl" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

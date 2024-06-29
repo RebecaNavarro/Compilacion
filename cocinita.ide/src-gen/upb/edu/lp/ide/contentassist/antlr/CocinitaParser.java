@@ -32,8 +32,8 @@ public class CocinitaParser extends AbstractContentAssistParser {
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, CocinitaGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getTipoVariableAccess().getAlternatives(), "rule__TipoVariable__Alternatives");
-			builder.put(grammarAccess.getInstruccionAccess().getAlternatives(), "rule__Instruccion__Alternatives");
 			builder.put(grammarAccess.getExpresionAccess().getAlternatives(), "rule__Expresion__Alternatives");
+			builder.put(grammarAccess.getInstruccionAccess().getAlternatives(), "rule__Instruccion__Alternatives");
 			builder.put(grammarAccess.getCocinaAccess().getGroup(), "rule__Cocina__Group__0");
 			builder.put(grammarAccess.getCocinaAccess().getGroup_9(), "rule__Cocina__Group_9__0");
 			builder.put(grammarAccess.getIngredienteAccess().getGroup(), "rule__Ingrediente__Group__0");
@@ -43,6 +43,8 @@ public class CocinitaParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getInstruccionAccess().getGroup_2(), "rule__Instruccion__Group_2__0");
 			builder.put(grammarAccess.getInstruccionAccess().getGroup_3(), "rule__Instruccion__Group_3__0");
 			builder.put(grammarAccess.getInstruccionAccess().getGroup_4(), "rule__Instruccion__Group_4__0");
+			builder.put(grammarAccess.getInstruccionAccess().getGroup_5(), "rule__Instruccion__Group_5__0");
+			builder.put(grammarAccess.getInstruccionAccess().getGroup_6(), "rule__Instruccion__Group_6__0");
 			builder.put(grammarAccess.getCocinaAccess().getNameAssignment_1(), "rule__Cocina__NameAssignment_1");
 			builder.put(grammarAccess.getCocinaAccess().getListaIngredientesAssignment_3(), "rule__Cocina__ListaIngredientesAssignment_3");
 			builder.put(grammarAccess.getCocinaAccess().getNBowlAssignment_5(), "rule__Cocina__NBowlAssignment_5");
@@ -52,6 +54,8 @@ public class CocinitaParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getIngredienteAccess().getTipoAssignment_1(), "rule__Ingrediente__TipoAssignment_1");
 			builder.put(grammarAccess.getIngredienteAccess().getNameAssignment_2(), "rule__Ingrediente__NameAssignment_2");
 			builder.put(grammarAccess.getBowlAccess().getNumeroAssignment_1(), "rule__Bowl__NumeroAssignment_1");
+			builder.put(grammarAccess.getExpresionAccess().getIngredienteAssignment_0(), "rule__Expresion__IngredienteAssignment_0");
+			builder.put(grammarAccess.getExpresionAccess().getBowlAssignment_1(), "rule__Expresion__BowlAssignment_1");
 			builder.put(grammarAccess.getInstruccionAccess().getExpAssignment_0_1(), "rule__Instruccion__ExpAssignment_0_1");
 			builder.put(grammarAccess.getInstruccionAccess().getBowlAssignment_0_4(), "rule__Instruccion__BowlAssignment_0_4");
 			builder.put(grammarAccess.getInstruccionAccess().getExpAssignment_1_1(), "rule__Instruccion__ExpAssignment_1_1");
@@ -60,10 +64,11 @@ public class CocinitaParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getInstruccionAccess().getBowlAssignment_2_4(), "rule__Instruccion__BowlAssignment_2_4");
 			builder.put(grammarAccess.getInstruccionAccess().getExpAssignment_3_1(), "rule__Instruccion__ExpAssignment_3_1");
 			builder.put(grammarAccess.getInstruccionAccess().getBowlAssignment_3_4(), "rule__Instruccion__BowlAssignment_3_4");
-			builder.put(grammarAccess.getInstruccionAccess().getIngredienteAssignment_4_1(), "rule__Instruccion__IngredienteAssignment_4_1");
+			builder.put(grammarAccess.getInstruccionAccess().getExpAssignment_4_1(), "rule__Instruccion__ExpAssignment_4_1");
 			builder.put(grammarAccess.getInstruccionAccess().getBowlAssignment_4_4(), "rule__Instruccion__BowlAssignment_4_4");
-			builder.put(grammarAccess.getExpresionAccess().getIngredienteAssignment_0(), "rule__Expresion__IngredienteAssignment_0");
-			builder.put(grammarAccess.getExpresionAccess().getBowlAssignment_1(), "rule__Expresion__BowlAssignment_1");
+			builder.put(grammarAccess.getInstruccionAccess().getExpAssignment_5_1(), "rule__Instruccion__ExpAssignment_5_1");
+			builder.put(grammarAccess.getInstruccionAccess().getBowlAssignment_5_4(), "rule__Instruccion__BowlAssignment_5_4");
+			builder.put(grammarAccess.getInstruccionAccess().getBowlAssignment_6_1(), "rule__Instruccion__BowlAssignment_6_1");
 		}
 	}
 	

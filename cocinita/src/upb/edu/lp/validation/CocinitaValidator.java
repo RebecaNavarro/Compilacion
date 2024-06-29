@@ -3,8 +3,11 @@
  */
 package upb.edu.lp.validation;
 
-import org.eclipse.xtext.validation.Check;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
+import org.eclipse.xtext.validation.Check;
 import upb.edu.lp.cocinita.Bowl;
 import upb.edu.lp.cocinita.Cocina;
 import upb.edu.lp.cocinita.CocinitaPackage;
@@ -68,5 +71,24 @@ public class CocinitaValidator extends AbstractCocinitaValidator {
 		}catch (NumberFormatException e) {
 			error("Bowl not defined", CocinitaPackage.Literals.INSTRUCCION__BOWL, "invalid-bowl-value");
 		}
-	} 
+	}
+	
+	@Check
+	public void verificarNombresDuplicados(Cocina cocina) {
+	    try {
+	        List<Ingrediente> ingredientes = cocina.getListaIngredientes();
+	        Set<String> nombres = new HashSet<>();
+	        for (Ingrediente ingrediente : ingredientes) {
+	            String nombre = ingrediente.getName();
+	            if (nombres.contains(nombre)) {
+	                error("Name already exists", ingrediente, CocinitaPackage.Literals.INGREDIENTE__NAME);
+	            } else {
+	                nombres.add(nombre);
+	            }
+	        }
+	    } catch (Exception e) {
+	        error("Error al verificar nombres duplicados: " + e.getMessage(), CocinitaPackage.Literals.COCINA__LISTA_INGREDIENTES);
+	    }
+	}
+	
 }

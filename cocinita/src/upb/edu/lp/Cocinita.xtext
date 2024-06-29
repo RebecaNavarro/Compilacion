@@ -25,14 +25,18 @@ Bowl:
     '(' numero=INT ')'
 ;
 
+Expresion:
+    ingrediente=[Ingrediente] | bowl=Bowl
+;
+
 Instruccion: 
     'Batir' exp=Expresion 'en' 'el' bowl=Bowl |
     'Licuar' exp=Expresion 'en' 'el' bowl=Bowl |
     'Hornear' exp=Expresion 'en' 'el' bowl=Bowl |
     'Refrigerar' exp=Expresion 'en' 'el' bowl=Bowl |
-    'Agregar' ingrediente=[Ingrediente] 'en' 'el' bowl=Bowl
+    'Agregar' exp=Expresion 'en' 'el' bowl=Bowl |
+    'Tamizar' exp=Expresion 'en' 'el' bowl=Bowl |
+    'Vertir' bowl=Bowl 
+    
 ;
 
-Expresion:
-    ingrediente=[Ingrediente] | bowl=Bowl
-;

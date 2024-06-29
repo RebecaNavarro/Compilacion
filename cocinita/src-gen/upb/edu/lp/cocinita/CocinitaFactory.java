@@ -51,15 +51,6 @@ public interface CocinitaFactory extends EFactory
   Bowl createBowl();
 
   /**
-   * Returns a new object of class '<em>Instruccion</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Instruccion</em>'.
-   * @generated
-   */
-  Instruccion createInstruccion();
-
-  /**
    * Returns a new object of class '<em>Expresion</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -67,6 +58,15 @@ public interface CocinitaFactory extends EFactory
    * @generated
    */
   Expresion createExpresion();
+
+  /**
+   * Returns a new object of class '<em>Instruccion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Instruccion</em>'.
+   * @generated
+   */
+  Instruccion createInstruccion();
 
   /**
    * Returns the package supported by this factory.

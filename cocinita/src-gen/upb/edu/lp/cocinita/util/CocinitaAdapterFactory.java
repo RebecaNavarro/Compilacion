@@ -91,14 +91,14 @@ public class CocinitaAdapterFactory extends AdapterFactoryImpl
         return createBowlAdapter();
       }
       @Override
-      public Adapter caseInstruccion(Instruccion object)
-      {
-        return createInstruccionAdapter();
-      }
-      @Override
       public Adapter caseExpresion(Expresion object)
       {
         return createExpresionAdapter();
+      }
+      @Override
+      public Adapter caseInstruccion(Instruccion object)
+      {
+        return createInstruccionAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -168,21 +168,6 @@ public class CocinitaAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link upb.edu.lp.cocinita.Instruccion <em>Instruccion</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see upb.edu.lp.cocinita.Instruccion
-   * @generated
-   */
-  public Adapter createInstruccionAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link upb.edu.lp.cocinita.Expresion <em>Expresion</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -193,6 +178,21 @@ public class CocinitaAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExpresionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link upb.edu.lp.cocinita.Instruccion <em>Instruccion</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see upb.edu.lp.cocinita.Instruccion
+   * @generated
+   */
+  public Adapter createInstruccionAdapter()
   {
     return null;
   }

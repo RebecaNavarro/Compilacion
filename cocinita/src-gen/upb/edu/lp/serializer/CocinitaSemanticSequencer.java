@@ -136,7 +136,15 @@ public class CocinitaSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Instruccion returns Instruccion
 	 *
 	 * Constraint:
-	 *     ((exp=Expresion bowl=Bowl) | (exp=Expresion bowl=Bowl) | (exp=Expresion bowl=Bowl) | (exp=Expresion bowl=Bowl) | (ingrediente=[Ingrediente|ID] bowl=Bowl))
+	 *     (
+	 *         (exp=Expresion bowl=Bowl) | 
+	 *         (exp=Expresion bowl=Bowl) | 
+	 *         (exp=Expresion bowl=Bowl) | 
+	 *         (exp=Expresion bowl=Bowl) | 
+	 *         (exp=Expresion bowl=Bowl) | 
+	 *         (exp=Expresion bowl=Bowl) | 
+	 *         bowl=Bowl
+	 *     )
 	 * </pre>
 	 */
 	protected void sequence_Instruccion(ISerializationContext context, Instruccion semanticObject) {

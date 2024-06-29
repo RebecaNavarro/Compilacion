@@ -361,6 +361,58 @@ ruleBowl returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleExpresion
+entryRuleExpresion returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getExpresionRule()); }
+	iv_ruleExpresion=ruleExpresion
+	{ $current=$iv_ruleExpresion.current; }
+	EOF;
+
+// Rule Expresion
+ruleExpresion returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getExpresionRule());
+					}
+				}
+				otherlv_0=RULE_ID
+				{
+					newLeafNode(otherlv_0, grammarAccess.getExpresionAccess().getIngredienteIngredienteCrossReference_0_0());
+				}
+			)
+		)
+		    |
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getExpresionAccess().getBowlBowlParserRuleCall_1_0());
+				}
+				lv_bowl_1_0=ruleBowl
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getExpresionRule());
+					}
+					set(
+						$current,
+						"bowl",
+						lv_bowl_1_0,
+						"upb.edu.lp.Cocinita.Bowl");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+	)
+;
+
 // Entry rule entryRuleInstruccion
 entryRuleInstruccion returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getInstruccionRule()); }
@@ -597,13 +649,19 @@ ruleInstruccion returns [EObject current=null]
 			(
 				(
 					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getInstruccionRule());
-						}
+						newCompositeNode(grammarAccess.getInstruccionAccess().getExpExpresionParserRuleCall_4_1_0());
 					}
-					otherlv_21=RULE_ID
+					lv_exp_21_0=ruleExpresion
 					{
-						newLeafNode(otherlv_21, grammarAccess.getInstruccionAccess().getIngredienteIngredienteCrossReference_4_1_0());
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getInstruccionRule());
+						}
+						set(
+							$current,
+							"exp",
+							lv_exp_21_0,
+							"upb.edu.lp.Cocinita.Expresion");
+						afterParserOrEnumRuleCall();
 					}
 				)
 			)
@@ -635,56 +693,83 @@ ruleInstruccion returns [EObject current=null]
 				)
 			)
 		)
-	)
-;
-
-// Entry rule entryRuleExpresion
-entryRuleExpresion returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getExpresionRule()); }
-	iv_ruleExpresion=ruleExpresion
-	{ $current=$iv_ruleExpresion.current; }
-	EOF;
-
-// Rule Expresion
-ruleExpresion returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
+		    |
 		(
+			otherlv_25='Tamizar'
+			{
+				newLeafNode(otherlv_25, grammarAccess.getInstruccionAccess().getTamizarKeyword_5_0());
+			}
 			(
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getExpresionRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getInstruccionAccess().getExpExpresionParserRuleCall_5_1_0());
 					}
-				}
-				otherlv_0=RULE_ID
-				{
-					newLeafNode(otherlv_0, grammarAccess.getExpresionAccess().getIngredienteIngredienteCrossReference_0_0());
-				}
+					lv_exp_26_0=ruleExpresion
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getInstruccionRule());
+						}
+						set(
+							$current,
+							"exp",
+							lv_exp_26_0,
+							"upb.edu.lp.Cocinita.Expresion");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_27='en'
+			{
+				newLeafNode(otherlv_27, grammarAccess.getInstruccionAccess().getEnKeyword_5_2());
+			}
+			otherlv_28='el'
+			{
+				newLeafNode(otherlv_28, grammarAccess.getInstruccionAccess().getElKeyword_5_3());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_5_4_0());
+					}
+					lv_bowl_29_0=ruleBowl
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getInstruccionRule());
+						}
+						set(
+							$current,
+							"bowl",
+							lv_bowl_29_0,
+							"upb.edu.lp.Cocinita.Bowl");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
 		)
 		    |
 		(
+			otherlv_30='Vertir'
+			{
+				newLeafNode(otherlv_30, grammarAccess.getInstruccionAccess().getVertirKeyword_6_0());
+			}
 			(
-				{
-					newCompositeNode(grammarAccess.getExpresionAccess().getBowlBowlParserRuleCall_1_0());
-				}
-				lv_bowl_1_0=ruleBowl
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getExpresionRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_6_1_0());
 					}
-					set(
-						$current,
-						"bowl",
-						lv_bowl_1_0,
-						"upb.edu.lp.Cocinita.Bowl");
-					afterParserOrEnumRuleCall();
-				}
+					lv_bowl_31_0=ruleBowl
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getInstruccionRule());
+						}
+						set(
+							$current,
+							"bowl",
+							lv_bowl_31_0,
+							"upb.edu.lp.Cocinita.Bowl");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
 		)
 	)

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalCocinitaParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'[RECIPE]'", "'Ingredientes:'", "'Materiales:'", "'(_).'", "'Procedimiento:'", "'Servir'", "'.'", "'[-o]'", "'[cU]'", "'[-O]'", "'('", "')'", "'Batir'", "'en'", "'el'", "'Licuar'", "'Hornear'", "'Refrigerar'", "'Agregar'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'[RECIPE]'", "'Ingredientes:'", "'Materiales:'", "'(_).'", "'Procedimiento:'", "'Servir'", "'.'", "'[-o]'", "'[cU]'", "'[-O]'", "'('", "')'", "'Batir'", "'en'", "'el'", "'Licuar'", "'Hornear'", "'Refrigerar'", "'Agregar'", "'Tamizar'", "'Vertir'"
     };
     public static final int RULE_STRING=6;
     public static final int RULE_SL_COMMENT=8;
@@ -35,6 +35,8 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
@@ -284,7 +286,7 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==23||(LA2_0>=26 && LA2_0<=29)) ) {
+                if ( (LA2_0==23||(LA2_0>=26 && LA2_0<=31)) ) {
                     alt2=1;
                 }
 
@@ -820,569 +822,8 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleBowl"
 
 
-    // $ANTLR start "entryRuleInstruccion"
-    // InternalCocinita.g:365:1: entryRuleInstruccion returns [EObject current=null] : iv_ruleInstruccion= ruleInstruccion EOF ;
-    public final EObject entryRuleInstruccion() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleInstruccion = null;
-
-
-        try {
-            // InternalCocinita.g:365:52: (iv_ruleInstruccion= ruleInstruccion EOF )
-            // InternalCocinita.g:366:2: iv_ruleInstruccion= ruleInstruccion EOF
-            {
-             newCompositeNode(grammarAccess.getInstruccionRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleInstruccion=ruleInstruccion();
-
-            state._fsp--;
-
-             current =iv_ruleInstruccion; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleInstruccion"
-
-
-    // $ANTLR start "ruleInstruccion"
-    // InternalCocinita.g:372:1: ruleInstruccion returns [EObject current=null] : ( (otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) ) ) | (otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) ) ) | (otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) ) ) | (otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) ) ) | (otherlv_20= 'Agregar' ( (otherlv_21= RULE_ID ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) ) ) ) ;
-    public final EObject ruleInstruccion() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_0=null;
-        Token otherlv_2=null;
-        Token otherlv_3=null;
-        Token otherlv_5=null;
-        Token otherlv_7=null;
-        Token otherlv_8=null;
-        Token otherlv_10=null;
-        Token otherlv_12=null;
-        Token otherlv_13=null;
-        Token otherlv_15=null;
-        Token otherlv_17=null;
-        Token otherlv_18=null;
-        Token otherlv_20=null;
-        Token otherlv_21=null;
-        Token otherlv_22=null;
-        Token otherlv_23=null;
-        EObject lv_exp_1_0 = null;
-
-        EObject lv_bowl_4_0 = null;
-
-        EObject lv_exp_6_0 = null;
-
-        EObject lv_bowl_9_0 = null;
-
-        EObject lv_exp_11_0 = null;
-
-        EObject lv_bowl_14_0 = null;
-
-        EObject lv_exp_16_0 = null;
-
-        EObject lv_bowl_19_0 = null;
-
-        EObject lv_bowl_24_0 = null;
-
-
-
-        	enterRule();
-
-        try {
-            // InternalCocinita.g:378:2: ( ( (otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) ) ) | (otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) ) ) | (otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) ) ) | (otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) ) ) | (otherlv_20= 'Agregar' ( (otherlv_21= RULE_ID ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) ) ) ) )
-            // InternalCocinita.g:379:2: ( (otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) ) ) | (otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) ) ) | (otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) ) ) | (otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) ) ) | (otherlv_20= 'Agregar' ( (otherlv_21= RULE_ID ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) ) ) )
-            {
-            // InternalCocinita.g:379:2: ( (otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) ) ) | (otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) ) ) | (otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) ) ) | (otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) ) ) | (otherlv_20= 'Agregar' ( (otherlv_21= RULE_ID ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) ) ) )
-            int alt5=5;
-            switch ( input.LA(1) ) {
-            case 23:
-                {
-                alt5=1;
-                }
-                break;
-            case 26:
-                {
-                alt5=2;
-                }
-                break;
-            case 27:
-                {
-                alt5=3;
-                }
-                break;
-            case 28:
-                {
-                alt5=4;
-                }
-                break;
-            case 29:
-                {
-                alt5=5;
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
-
-                throw nvae;
-            }
-
-            switch (alt5) {
-                case 1 :
-                    // InternalCocinita.g:380:3: (otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) ) )
-                    {
-                    // InternalCocinita.g:380:3: (otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) ) )
-                    // InternalCocinita.g:381:4: otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) )
-                    {
-                    otherlv_0=(Token)match(input,23,FOLLOW_15); 
-
-                    				newLeafNode(otherlv_0, grammarAccess.getInstruccionAccess().getBatirKeyword_0_0());
-                    			
-                    // InternalCocinita.g:385:4: ( (lv_exp_1_0= ruleExpresion ) )
-                    // InternalCocinita.g:386:5: (lv_exp_1_0= ruleExpresion )
-                    {
-                    // InternalCocinita.g:386:5: (lv_exp_1_0= ruleExpresion )
-                    // InternalCocinita.g:387:6: lv_exp_1_0= ruleExpresion
-                    {
-
-                    						newCompositeNode(grammarAccess.getInstruccionAccess().getExpExpresionParserRuleCall_0_1_0());
-                    					
-                    pushFollow(FOLLOW_16);
-                    lv_exp_1_0=ruleExpresion();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
-                    						}
-                    						set(
-                    							current,
-                    							"exp",
-                    							lv_exp_1_0,
-                    							"upb.edu.lp.Cocinita.Expresion");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-                    otherlv_2=(Token)match(input,24,FOLLOW_17); 
-
-                    				newLeafNode(otherlv_2, grammarAccess.getInstruccionAccess().getEnKeyword_0_2());
-                    			
-                    otherlv_3=(Token)match(input,25,FOLLOW_10); 
-
-                    				newLeafNode(otherlv_3, grammarAccess.getInstruccionAccess().getElKeyword_0_3());
-                    			
-                    // InternalCocinita.g:412:4: ( (lv_bowl_4_0= ruleBowl ) )
-                    // InternalCocinita.g:413:5: (lv_bowl_4_0= ruleBowl )
-                    {
-                    // InternalCocinita.g:413:5: (lv_bowl_4_0= ruleBowl )
-                    // InternalCocinita.g:414:6: lv_bowl_4_0= ruleBowl
-                    {
-
-                    						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_0_4_0());
-                    					
-                    pushFollow(FOLLOW_2);
-                    lv_bowl_4_0=ruleBowl();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
-                    						}
-                    						set(
-                    							current,
-                    							"bowl",
-                    							lv_bowl_4_0,
-                    							"upb.edu.lp.Cocinita.Bowl");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // InternalCocinita.g:433:3: (otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) ) )
-                    {
-                    // InternalCocinita.g:433:3: (otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) ) )
-                    // InternalCocinita.g:434:4: otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) )
-                    {
-                    otherlv_5=(Token)match(input,26,FOLLOW_15); 
-
-                    				newLeafNode(otherlv_5, grammarAccess.getInstruccionAccess().getLicuarKeyword_1_0());
-                    			
-                    // InternalCocinita.g:438:4: ( (lv_exp_6_0= ruleExpresion ) )
-                    // InternalCocinita.g:439:5: (lv_exp_6_0= ruleExpresion )
-                    {
-                    // InternalCocinita.g:439:5: (lv_exp_6_0= ruleExpresion )
-                    // InternalCocinita.g:440:6: lv_exp_6_0= ruleExpresion
-                    {
-
-                    						newCompositeNode(grammarAccess.getInstruccionAccess().getExpExpresionParserRuleCall_1_1_0());
-                    					
-                    pushFollow(FOLLOW_16);
-                    lv_exp_6_0=ruleExpresion();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
-                    						}
-                    						set(
-                    							current,
-                    							"exp",
-                    							lv_exp_6_0,
-                    							"upb.edu.lp.Cocinita.Expresion");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-                    otherlv_7=(Token)match(input,24,FOLLOW_17); 
-
-                    				newLeafNode(otherlv_7, grammarAccess.getInstruccionAccess().getEnKeyword_1_2());
-                    			
-                    otherlv_8=(Token)match(input,25,FOLLOW_10); 
-
-                    				newLeafNode(otherlv_8, grammarAccess.getInstruccionAccess().getElKeyword_1_3());
-                    			
-                    // InternalCocinita.g:465:4: ( (lv_bowl_9_0= ruleBowl ) )
-                    // InternalCocinita.g:466:5: (lv_bowl_9_0= ruleBowl )
-                    {
-                    // InternalCocinita.g:466:5: (lv_bowl_9_0= ruleBowl )
-                    // InternalCocinita.g:467:6: lv_bowl_9_0= ruleBowl
-                    {
-
-                    						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_1_4_0());
-                    					
-                    pushFollow(FOLLOW_2);
-                    lv_bowl_9_0=ruleBowl();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
-                    						}
-                    						set(
-                    							current,
-                    							"bowl",
-                    							lv_bowl_9_0,
-                    							"upb.edu.lp.Cocinita.Bowl");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-                case 3 :
-                    // InternalCocinita.g:486:3: (otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) ) )
-                    {
-                    // InternalCocinita.g:486:3: (otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) ) )
-                    // InternalCocinita.g:487:4: otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) )
-                    {
-                    otherlv_10=(Token)match(input,27,FOLLOW_15); 
-
-                    				newLeafNode(otherlv_10, grammarAccess.getInstruccionAccess().getHornearKeyword_2_0());
-                    			
-                    // InternalCocinita.g:491:4: ( (lv_exp_11_0= ruleExpresion ) )
-                    // InternalCocinita.g:492:5: (lv_exp_11_0= ruleExpresion )
-                    {
-                    // InternalCocinita.g:492:5: (lv_exp_11_0= ruleExpresion )
-                    // InternalCocinita.g:493:6: lv_exp_11_0= ruleExpresion
-                    {
-
-                    						newCompositeNode(grammarAccess.getInstruccionAccess().getExpExpresionParserRuleCall_2_1_0());
-                    					
-                    pushFollow(FOLLOW_16);
-                    lv_exp_11_0=ruleExpresion();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
-                    						}
-                    						set(
-                    							current,
-                    							"exp",
-                    							lv_exp_11_0,
-                    							"upb.edu.lp.Cocinita.Expresion");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-                    otherlv_12=(Token)match(input,24,FOLLOW_17); 
-
-                    				newLeafNode(otherlv_12, grammarAccess.getInstruccionAccess().getEnKeyword_2_2());
-                    			
-                    otherlv_13=(Token)match(input,25,FOLLOW_10); 
-
-                    				newLeafNode(otherlv_13, grammarAccess.getInstruccionAccess().getElKeyword_2_3());
-                    			
-                    // InternalCocinita.g:518:4: ( (lv_bowl_14_0= ruleBowl ) )
-                    // InternalCocinita.g:519:5: (lv_bowl_14_0= ruleBowl )
-                    {
-                    // InternalCocinita.g:519:5: (lv_bowl_14_0= ruleBowl )
-                    // InternalCocinita.g:520:6: lv_bowl_14_0= ruleBowl
-                    {
-
-                    						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_2_4_0());
-                    					
-                    pushFollow(FOLLOW_2);
-                    lv_bowl_14_0=ruleBowl();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
-                    						}
-                    						set(
-                    							current,
-                    							"bowl",
-                    							lv_bowl_14_0,
-                    							"upb.edu.lp.Cocinita.Bowl");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-                case 4 :
-                    // InternalCocinita.g:539:3: (otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) ) )
-                    {
-                    // InternalCocinita.g:539:3: (otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) ) )
-                    // InternalCocinita.g:540:4: otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) )
-                    {
-                    otherlv_15=(Token)match(input,28,FOLLOW_15); 
-
-                    				newLeafNode(otherlv_15, grammarAccess.getInstruccionAccess().getRefrigerarKeyword_3_0());
-                    			
-                    // InternalCocinita.g:544:4: ( (lv_exp_16_0= ruleExpresion ) )
-                    // InternalCocinita.g:545:5: (lv_exp_16_0= ruleExpresion )
-                    {
-                    // InternalCocinita.g:545:5: (lv_exp_16_0= ruleExpresion )
-                    // InternalCocinita.g:546:6: lv_exp_16_0= ruleExpresion
-                    {
-
-                    						newCompositeNode(grammarAccess.getInstruccionAccess().getExpExpresionParserRuleCall_3_1_0());
-                    					
-                    pushFollow(FOLLOW_16);
-                    lv_exp_16_0=ruleExpresion();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
-                    						}
-                    						set(
-                    							current,
-                    							"exp",
-                    							lv_exp_16_0,
-                    							"upb.edu.lp.Cocinita.Expresion");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-                    otherlv_17=(Token)match(input,24,FOLLOW_17); 
-
-                    				newLeafNode(otherlv_17, grammarAccess.getInstruccionAccess().getEnKeyword_3_2());
-                    			
-                    otherlv_18=(Token)match(input,25,FOLLOW_10); 
-
-                    				newLeafNode(otherlv_18, grammarAccess.getInstruccionAccess().getElKeyword_3_3());
-                    			
-                    // InternalCocinita.g:571:4: ( (lv_bowl_19_0= ruleBowl ) )
-                    // InternalCocinita.g:572:5: (lv_bowl_19_0= ruleBowl )
-                    {
-                    // InternalCocinita.g:572:5: (lv_bowl_19_0= ruleBowl )
-                    // InternalCocinita.g:573:6: lv_bowl_19_0= ruleBowl
-                    {
-
-                    						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_3_4_0());
-                    					
-                    pushFollow(FOLLOW_2);
-                    lv_bowl_19_0=ruleBowl();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
-                    						}
-                    						set(
-                    							current,
-                    							"bowl",
-                    							lv_bowl_19_0,
-                    							"upb.edu.lp.Cocinita.Bowl");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-                case 5 :
-                    // InternalCocinita.g:592:3: (otherlv_20= 'Agregar' ( (otherlv_21= RULE_ID ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) ) )
-                    {
-                    // InternalCocinita.g:592:3: (otherlv_20= 'Agregar' ( (otherlv_21= RULE_ID ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) ) )
-                    // InternalCocinita.g:593:4: otherlv_20= 'Agregar' ( (otherlv_21= RULE_ID ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) )
-                    {
-                    otherlv_20=(Token)match(input,29,FOLLOW_3); 
-
-                    				newLeafNode(otherlv_20, grammarAccess.getInstruccionAccess().getAgregarKeyword_4_0());
-                    			
-                    // InternalCocinita.g:597:4: ( (otherlv_21= RULE_ID ) )
-                    // InternalCocinita.g:598:5: (otherlv_21= RULE_ID )
-                    {
-                    // InternalCocinita.g:598:5: (otherlv_21= RULE_ID )
-                    // InternalCocinita.g:599:6: otherlv_21= RULE_ID
-                    {
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getInstruccionRule());
-                    						}
-                    					
-                    otherlv_21=(Token)match(input,RULE_ID,FOLLOW_16); 
-
-                    						newLeafNode(otherlv_21, grammarAccess.getInstruccionAccess().getIngredienteIngredienteCrossReference_4_1_0());
-                    					
-
-                    }
-
-
-                    }
-
-                    otherlv_22=(Token)match(input,24,FOLLOW_17); 
-
-                    				newLeafNode(otherlv_22, grammarAccess.getInstruccionAccess().getEnKeyword_4_2());
-                    			
-                    otherlv_23=(Token)match(input,25,FOLLOW_10); 
-
-                    				newLeafNode(otherlv_23, grammarAccess.getInstruccionAccess().getElKeyword_4_3());
-                    			
-                    // InternalCocinita.g:618:4: ( (lv_bowl_24_0= ruleBowl ) )
-                    // InternalCocinita.g:619:5: (lv_bowl_24_0= ruleBowl )
-                    {
-                    // InternalCocinita.g:619:5: (lv_bowl_24_0= ruleBowl )
-                    // InternalCocinita.g:620:6: lv_bowl_24_0= ruleBowl
-                    {
-
-                    						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_4_4_0());
-                    					
-                    pushFollow(FOLLOW_2);
-                    lv_bowl_24_0=ruleBowl();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
-                    						}
-                    						set(
-                    							current,
-                    							"bowl",
-                    							lv_bowl_24_0,
-                    							"upb.edu.lp.Cocinita.Bowl");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleInstruccion"
-
-
     // $ANTLR start "entryRuleExpresion"
-    // InternalCocinita.g:642:1: entryRuleExpresion returns [EObject current=null] : iv_ruleExpresion= ruleExpresion EOF ;
+    // InternalCocinita.g:365:1: entryRuleExpresion returns [EObject current=null] : iv_ruleExpresion= ruleExpresion EOF ;
     public final EObject entryRuleExpresion() throws RecognitionException {
         EObject current = null;
 
@@ -1390,8 +831,8 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCocinita.g:642:50: (iv_ruleExpresion= ruleExpresion EOF )
-            // InternalCocinita.g:643:2: iv_ruleExpresion= ruleExpresion EOF
+            // InternalCocinita.g:365:50: (iv_ruleExpresion= ruleExpresion EOF )
+            // InternalCocinita.g:366:2: iv_ruleExpresion= ruleExpresion EOF
             {
              newCompositeNode(grammarAccess.getExpresionRule()); 
             pushFollow(FOLLOW_1);
@@ -1418,7 +859,7 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpresion"
-    // InternalCocinita.g:649:1: ruleExpresion returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) | ( (lv_bowl_1_0= ruleBowl ) ) ) ;
+    // InternalCocinita.g:372:1: ruleExpresion returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) | ( (lv_bowl_1_0= ruleBowl ) ) ) ;
     public final EObject ruleExpresion() throws RecognitionException {
         EObject current = null;
 
@@ -1430,34 +871,34 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCocinita.g:655:2: ( ( ( (otherlv_0= RULE_ID ) ) | ( (lv_bowl_1_0= ruleBowl ) ) ) )
-            // InternalCocinita.g:656:2: ( ( (otherlv_0= RULE_ID ) ) | ( (lv_bowl_1_0= ruleBowl ) ) )
+            // InternalCocinita.g:378:2: ( ( ( (otherlv_0= RULE_ID ) ) | ( (lv_bowl_1_0= ruleBowl ) ) ) )
+            // InternalCocinita.g:379:2: ( ( (otherlv_0= RULE_ID ) ) | ( (lv_bowl_1_0= ruleBowl ) ) )
             {
-            // InternalCocinita.g:656:2: ( ( (otherlv_0= RULE_ID ) ) | ( (lv_bowl_1_0= ruleBowl ) ) )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // InternalCocinita.g:379:2: ( ( (otherlv_0= RULE_ID ) ) | ( (lv_bowl_1_0= ruleBowl ) ) )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA6_0==RULE_ID) ) {
-                alt6=1;
+            if ( (LA5_0==RULE_ID) ) {
+                alt5=1;
             }
-            else if ( (LA6_0==21) ) {
-                alt6=2;
+            else if ( (LA5_0==21) ) {
+                alt5=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt6) {
+            switch (alt5) {
                 case 1 :
-                    // InternalCocinita.g:657:3: ( (otherlv_0= RULE_ID ) )
+                    // InternalCocinita.g:380:3: ( (otherlv_0= RULE_ID ) )
                     {
-                    // InternalCocinita.g:657:3: ( (otherlv_0= RULE_ID ) )
-                    // InternalCocinita.g:658:4: (otherlv_0= RULE_ID )
+                    // InternalCocinita.g:380:3: ( (otherlv_0= RULE_ID ) )
+                    // InternalCocinita.g:381:4: (otherlv_0= RULE_ID )
                     {
-                    // InternalCocinita.g:658:4: (otherlv_0= RULE_ID )
-                    // InternalCocinita.g:659:5: otherlv_0= RULE_ID
+                    // InternalCocinita.g:381:4: (otherlv_0= RULE_ID )
+                    // InternalCocinita.g:382:5: otherlv_0= RULE_ID
                     {
 
                     					if (current==null) {
@@ -1478,13 +919,13 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCocinita.g:671:3: ( (lv_bowl_1_0= ruleBowl ) )
+                    // InternalCocinita.g:394:3: ( (lv_bowl_1_0= ruleBowl ) )
                     {
-                    // InternalCocinita.g:671:3: ( (lv_bowl_1_0= ruleBowl ) )
-                    // InternalCocinita.g:672:4: (lv_bowl_1_0= ruleBowl )
+                    // InternalCocinita.g:394:3: ( (lv_bowl_1_0= ruleBowl ) )
+                    // InternalCocinita.g:395:4: (lv_bowl_1_0= ruleBowl )
                     {
-                    // InternalCocinita.g:672:4: (lv_bowl_1_0= ruleBowl )
-                    // InternalCocinita.g:673:5: lv_bowl_1_0= ruleBowl
+                    // InternalCocinita.g:395:4: (lv_bowl_1_0= ruleBowl )
+                    // InternalCocinita.g:396:5: lv_bowl_1_0= ruleBowl
                     {
 
                     					newCompositeNode(grammarAccess.getExpresionAccess().getBowlBowlParserRuleCall_1_0());
@@ -1535,6 +976,731 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end "ruleExpresion"
 
+
+    // $ANTLR start "entryRuleInstruccion"
+    // InternalCocinita.g:417:1: entryRuleInstruccion returns [EObject current=null] : iv_ruleInstruccion= ruleInstruccion EOF ;
+    public final EObject entryRuleInstruccion() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleInstruccion = null;
+
+
+        try {
+            // InternalCocinita.g:417:52: (iv_ruleInstruccion= ruleInstruccion EOF )
+            // InternalCocinita.g:418:2: iv_ruleInstruccion= ruleInstruccion EOF
+            {
+             newCompositeNode(grammarAccess.getInstruccionRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleInstruccion=ruleInstruccion();
+
+            state._fsp--;
+
+             current =iv_ruleInstruccion; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleInstruccion"
+
+
+    // $ANTLR start "ruleInstruccion"
+    // InternalCocinita.g:424:1: ruleInstruccion returns [EObject current=null] : ( (otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) ) ) | (otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) ) ) | (otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) ) ) | (otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) ) ) | (otherlv_20= 'Agregar' ( (lv_exp_21_0= ruleExpresion ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) ) ) | (otherlv_25= 'Tamizar' ( (lv_exp_26_0= ruleExpresion ) ) otherlv_27= 'en' otherlv_28= 'el' ( (lv_bowl_29_0= ruleBowl ) ) ) | (otherlv_30= 'Vertir' ( (lv_bowl_31_0= ruleBowl ) ) ) ) ;
+    public final EObject ruleInstruccion() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token otherlv_5=null;
+        Token otherlv_7=null;
+        Token otherlv_8=null;
+        Token otherlv_10=null;
+        Token otherlv_12=null;
+        Token otherlv_13=null;
+        Token otherlv_15=null;
+        Token otherlv_17=null;
+        Token otherlv_18=null;
+        Token otherlv_20=null;
+        Token otherlv_22=null;
+        Token otherlv_23=null;
+        Token otherlv_25=null;
+        Token otherlv_27=null;
+        Token otherlv_28=null;
+        Token otherlv_30=null;
+        EObject lv_exp_1_0 = null;
+
+        EObject lv_bowl_4_0 = null;
+
+        EObject lv_exp_6_0 = null;
+
+        EObject lv_bowl_9_0 = null;
+
+        EObject lv_exp_11_0 = null;
+
+        EObject lv_bowl_14_0 = null;
+
+        EObject lv_exp_16_0 = null;
+
+        EObject lv_bowl_19_0 = null;
+
+        EObject lv_exp_21_0 = null;
+
+        EObject lv_bowl_24_0 = null;
+
+        EObject lv_exp_26_0 = null;
+
+        EObject lv_bowl_29_0 = null;
+
+        EObject lv_bowl_31_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalCocinita.g:430:2: ( ( (otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) ) ) | (otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) ) ) | (otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) ) ) | (otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) ) ) | (otherlv_20= 'Agregar' ( (lv_exp_21_0= ruleExpresion ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) ) ) | (otherlv_25= 'Tamizar' ( (lv_exp_26_0= ruleExpresion ) ) otherlv_27= 'en' otherlv_28= 'el' ( (lv_bowl_29_0= ruleBowl ) ) ) | (otherlv_30= 'Vertir' ( (lv_bowl_31_0= ruleBowl ) ) ) ) )
+            // InternalCocinita.g:431:2: ( (otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) ) ) | (otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) ) ) | (otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) ) ) | (otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) ) ) | (otherlv_20= 'Agregar' ( (lv_exp_21_0= ruleExpresion ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) ) ) | (otherlv_25= 'Tamizar' ( (lv_exp_26_0= ruleExpresion ) ) otherlv_27= 'en' otherlv_28= 'el' ( (lv_bowl_29_0= ruleBowl ) ) ) | (otherlv_30= 'Vertir' ( (lv_bowl_31_0= ruleBowl ) ) ) )
+            {
+            // InternalCocinita.g:431:2: ( (otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) ) ) | (otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) ) ) | (otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) ) ) | (otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) ) ) | (otherlv_20= 'Agregar' ( (lv_exp_21_0= ruleExpresion ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) ) ) | (otherlv_25= 'Tamizar' ( (lv_exp_26_0= ruleExpresion ) ) otherlv_27= 'en' otherlv_28= 'el' ( (lv_bowl_29_0= ruleBowl ) ) ) | (otherlv_30= 'Vertir' ( (lv_bowl_31_0= ruleBowl ) ) ) )
+            int alt6=7;
+            switch ( input.LA(1) ) {
+            case 23:
+                {
+                alt6=1;
+                }
+                break;
+            case 26:
+                {
+                alt6=2;
+                }
+                break;
+            case 27:
+                {
+                alt6=3;
+                }
+                break;
+            case 28:
+                {
+                alt6=4;
+                }
+                break;
+            case 29:
+                {
+                alt6=5;
+                }
+                break;
+            case 30:
+                {
+                alt6=6;
+                }
+                break;
+            case 31:
+                {
+                alt6=7;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 6, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt6) {
+                case 1 :
+                    // InternalCocinita.g:432:3: (otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) ) )
+                    {
+                    // InternalCocinita.g:432:3: (otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) ) )
+                    // InternalCocinita.g:433:4: otherlv_0= 'Batir' ( (lv_exp_1_0= ruleExpresion ) ) otherlv_2= 'en' otherlv_3= 'el' ( (lv_bowl_4_0= ruleBowl ) )
+                    {
+                    otherlv_0=(Token)match(input,23,FOLLOW_15); 
+
+                    				newLeafNode(otherlv_0, grammarAccess.getInstruccionAccess().getBatirKeyword_0_0());
+                    			
+                    // InternalCocinita.g:437:4: ( (lv_exp_1_0= ruleExpresion ) )
+                    // InternalCocinita.g:438:5: (lv_exp_1_0= ruleExpresion )
+                    {
+                    // InternalCocinita.g:438:5: (lv_exp_1_0= ruleExpresion )
+                    // InternalCocinita.g:439:6: lv_exp_1_0= ruleExpresion
+                    {
+
+                    						newCompositeNode(grammarAccess.getInstruccionAccess().getExpExpresionParserRuleCall_0_1_0());
+                    					
+                    pushFollow(FOLLOW_16);
+                    lv_exp_1_0=ruleExpresion();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"exp",
+                    							lv_exp_1_0,
+                    							"upb.edu.lp.Cocinita.Expresion");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+                    otherlv_2=(Token)match(input,24,FOLLOW_17); 
+
+                    				newLeafNode(otherlv_2, grammarAccess.getInstruccionAccess().getEnKeyword_0_2());
+                    			
+                    otherlv_3=(Token)match(input,25,FOLLOW_10); 
+
+                    				newLeafNode(otherlv_3, grammarAccess.getInstruccionAccess().getElKeyword_0_3());
+                    			
+                    // InternalCocinita.g:464:4: ( (lv_bowl_4_0= ruleBowl ) )
+                    // InternalCocinita.g:465:5: (lv_bowl_4_0= ruleBowl )
+                    {
+                    // InternalCocinita.g:465:5: (lv_bowl_4_0= ruleBowl )
+                    // InternalCocinita.g:466:6: lv_bowl_4_0= ruleBowl
+                    {
+
+                    						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_0_4_0());
+                    					
+                    pushFollow(FOLLOW_2);
+                    lv_bowl_4_0=ruleBowl();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"bowl",
+                    							lv_bowl_4_0,
+                    							"upb.edu.lp.Cocinita.Bowl");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // InternalCocinita.g:485:3: (otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) ) )
+                    {
+                    // InternalCocinita.g:485:3: (otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) ) )
+                    // InternalCocinita.g:486:4: otherlv_5= 'Licuar' ( (lv_exp_6_0= ruleExpresion ) ) otherlv_7= 'en' otherlv_8= 'el' ( (lv_bowl_9_0= ruleBowl ) )
+                    {
+                    otherlv_5=(Token)match(input,26,FOLLOW_15); 
+
+                    				newLeafNode(otherlv_5, grammarAccess.getInstruccionAccess().getLicuarKeyword_1_0());
+                    			
+                    // InternalCocinita.g:490:4: ( (lv_exp_6_0= ruleExpresion ) )
+                    // InternalCocinita.g:491:5: (lv_exp_6_0= ruleExpresion )
+                    {
+                    // InternalCocinita.g:491:5: (lv_exp_6_0= ruleExpresion )
+                    // InternalCocinita.g:492:6: lv_exp_6_0= ruleExpresion
+                    {
+
+                    						newCompositeNode(grammarAccess.getInstruccionAccess().getExpExpresionParserRuleCall_1_1_0());
+                    					
+                    pushFollow(FOLLOW_16);
+                    lv_exp_6_0=ruleExpresion();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"exp",
+                    							lv_exp_6_0,
+                    							"upb.edu.lp.Cocinita.Expresion");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+                    otherlv_7=(Token)match(input,24,FOLLOW_17); 
+
+                    				newLeafNode(otherlv_7, grammarAccess.getInstruccionAccess().getEnKeyword_1_2());
+                    			
+                    otherlv_8=(Token)match(input,25,FOLLOW_10); 
+
+                    				newLeafNode(otherlv_8, grammarAccess.getInstruccionAccess().getElKeyword_1_3());
+                    			
+                    // InternalCocinita.g:517:4: ( (lv_bowl_9_0= ruleBowl ) )
+                    // InternalCocinita.g:518:5: (lv_bowl_9_0= ruleBowl )
+                    {
+                    // InternalCocinita.g:518:5: (lv_bowl_9_0= ruleBowl )
+                    // InternalCocinita.g:519:6: lv_bowl_9_0= ruleBowl
+                    {
+
+                    						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_1_4_0());
+                    					
+                    pushFollow(FOLLOW_2);
+                    lv_bowl_9_0=ruleBowl();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"bowl",
+                    							lv_bowl_9_0,
+                    							"upb.edu.lp.Cocinita.Bowl");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // InternalCocinita.g:538:3: (otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) ) )
+                    {
+                    // InternalCocinita.g:538:3: (otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) ) )
+                    // InternalCocinita.g:539:4: otherlv_10= 'Hornear' ( (lv_exp_11_0= ruleExpresion ) ) otherlv_12= 'en' otherlv_13= 'el' ( (lv_bowl_14_0= ruleBowl ) )
+                    {
+                    otherlv_10=(Token)match(input,27,FOLLOW_15); 
+
+                    				newLeafNode(otherlv_10, grammarAccess.getInstruccionAccess().getHornearKeyword_2_0());
+                    			
+                    // InternalCocinita.g:543:4: ( (lv_exp_11_0= ruleExpresion ) )
+                    // InternalCocinita.g:544:5: (lv_exp_11_0= ruleExpresion )
+                    {
+                    // InternalCocinita.g:544:5: (lv_exp_11_0= ruleExpresion )
+                    // InternalCocinita.g:545:6: lv_exp_11_0= ruleExpresion
+                    {
+
+                    						newCompositeNode(grammarAccess.getInstruccionAccess().getExpExpresionParserRuleCall_2_1_0());
+                    					
+                    pushFollow(FOLLOW_16);
+                    lv_exp_11_0=ruleExpresion();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"exp",
+                    							lv_exp_11_0,
+                    							"upb.edu.lp.Cocinita.Expresion");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+                    otherlv_12=(Token)match(input,24,FOLLOW_17); 
+
+                    				newLeafNode(otherlv_12, grammarAccess.getInstruccionAccess().getEnKeyword_2_2());
+                    			
+                    otherlv_13=(Token)match(input,25,FOLLOW_10); 
+
+                    				newLeafNode(otherlv_13, grammarAccess.getInstruccionAccess().getElKeyword_2_3());
+                    			
+                    // InternalCocinita.g:570:4: ( (lv_bowl_14_0= ruleBowl ) )
+                    // InternalCocinita.g:571:5: (lv_bowl_14_0= ruleBowl )
+                    {
+                    // InternalCocinita.g:571:5: (lv_bowl_14_0= ruleBowl )
+                    // InternalCocinita.g:572:6: lv_bowl_14_0= ruleBowl
+                    {
+
+                    						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_2_4_0());
+                    					
+                    pushFollow(FOLLOW_2);
+                    lv_bowl_14_0=ruleBowl();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"bowl",
+                    							lv_bowl_14_0,
+                    							"upb.edu.lp.Cocinita.Bowl");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // InternalCocinita.g:591:3: (otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) ) )
+                    {
+                    // InternalCocinita.g:591:3: (otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) ) )
+                    // InternalCocinita.g:592:4: otherlv_15= 'Refrigerar' ( (lv_exp_16_0= ruleExpresion ) ) otherlv_17= 'en' otherlv_18= 'el' ( (lv_bowl_19_0= ruleBowl ) )
+                    {
+                    otherlv_15=(Token)match(input,28,FOLLOW_15); 
+
+                    				newLeafNode(otherlv_15, grammarAccess.getInstruccionAccess().getRefrigerarKeyword_3_0());
+                    			
+                    // InternalCocinita.g:596:4: ( (lv_exp_16_0= ruleExpresion ) )
+                    // InternalCocinita.g:597:5: (lv_exp_16_0= ruleExpresion )
+                    {
+                    // InternalCocinita.g:597:5: (lv_exp_16_0= ruleExpresion )
+                    // InternalCocinita.g:598:6: lv_exp_16_0= ruleExpresion
+                    {
+
+                    						newCompositeNode(grammarAccess.getInstruccionAccess().getExpExpresionParserRuleCall_3_1_0());
+                    					
+                    pushFollow(FOLLOW_16);
+                    lv_exp_16_0=ruleExpresion();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"exp",
+                    							lv_exp_16_0,
+                    							"upb.edu.lp.Cocinita.Expresion");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+                    otherlv_17=(Token)match(input,24,FOLLOW_17); 
+
+                    				newLeafNode(otherlv_17, grammarAccess.getInstruccionAccess().getEnKeyword_3_2());
+                    			
+                    otherlv_18=(Token)match(input,25,FOLLOW_10); 
+
+                    				newLeafNode(otherlv_18, grammarAccess.getInstruccionAccess().getElKeyword_3_3());
+                    			
+                    // InternalCocinita.g:623:4: ( (lv_bowl_19_0= ruleBowl ) )
+                    // InternalCocinita.g:624:5: (lv_bowl_19_0= ruleBowl )
+                    {
+                    // InternalCocinita.g:624:5: (lv_bowl_19_0= ruleBowl )
+                    // InternalCocinita.g:625:6: lv_bowl_19_0= ruleBowl
+                    {
+
+                    						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_3_4_0());
+                    					
+                    pushFollow(FOLLOW_2);
+                    lv_bowl_19_0=ruleBowl();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"bowl",
+                    							lv_bowl_19_0,
+                    							"upb.edu.lp.Cocinita.Bowl");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // InternalCocinita.g:644:3: (otherlv_20= 'Agregar' ( (lv_exp_21_0= ruleExpresion ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) ) )
+                    {
+                    // InternalCocinita.g:644:3: (otherlv_20= 'Agregar' ( (lv_exp_21_0= ruleExpresion ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) ) )
+                    // InternalCocinita.g:645:4: otherlv_20= 'Agregar' ( (lv_exp_21_0= ruleExpresion ) ) otherlv_22= 'en' otherlv_23= 'el' ( (lv_bowl_24_0= ruleBowl ) )
+                    {
+                    otherlv_20=(Token)match(input,29,FOLLOW_15); 
+
+                    				newLeafNode(otherlv_20, grammarAccess.getInstruccionAccess().getAgregarKeyword_4_0());
+                    			
+                    // InternalCocinita.g:649:4: ( (lv_exp_21_0= ruleExpresion ) )
+                    // InternalCocinita.g:650:5: (lv_exp_21_0= ruleExpresion )
+                    {
+                    // InternalCocinita.g:650:5: (lv_exp_21_0= ruleExpresion )
+                    // InternalCocinita.g:651:6: lv_exp_21_0= ruleExpresion
+                    {
+
+                    						newCompositeNode(grammarAccess.getInstruccionAccess().getExpExpresionParserRuleCall_4_1_0());
+                    					
+                    pushFollow(FOLLOW_16);
+                    lv_exp_21_0=ruleExpresion();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"exp",
+                    							lv_exp_21_0,
+                    							"upb.edu.lp.Cocinita.Expresion");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+                    otherlv_22=(Token)match(input,24,FOLLOW_17); 
+
+                    				newLeafNode(otherlv_22, grammarAccess.getInstruccionAccess().getEnKeyword_4_2());
+                    			
+                    otherlv_23=(Token)match(input,25,FOLLOW_10); 
+
+                    				newLeafNode(otherlv_23, grammarAccess.getInstruccionAccess().getElKeyword_4_3());
+                    			
+                    // InternalCocinita.g:676:4: ( (lv_bowl_24_0= ruleBowl ) )
+                    // InternalCocinita.g:677:5: (lv_bowl_24_0= ruleBowl )
+                    {
+                    // InternalCocinita.g:677:5: (lv_bowl_24_0= ruleBowl )
+                    // InternalCocinita.g:678:6: lv_bowl_24_0= ruleBowl
+                    {
+
+                    						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_4_4_0());
+                    					
+                    pushFollow(FOLLOW_2);
+                    lv_bowl_24_0=ruleBowl();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"bowl",
+                    							lv_bowl_24_0,
+                    							"upb.edu.lp.Cocinita.Bowl");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 6 :
+                    // InternalCocinita.g:697:3: (otherlv_25= 'Tamizar' ( (lv_exp_26_0= ruleExpresion ) ) otherlv_27= 'en' otherlv_28= 'el' ( (lv_bowl_29_0= ruleBowl ) ) )
+                    {
+                    // InternalCocinita.g:697:3: (otherlv_25= 'Tamizar' ( (lv_exp_26_0= ruleExpresion ) ) otherlv_27= 'en' otherlv_28= 'el' ( (lv_bowl_29_0= ruleBowl ) ) )
+                    // InternalCocinita.g:698:4: otherlv_25= 'Tamizar' ( (lv_exp_26_0= ruleExpresion ) ) otherlv_27= 'en' otherlv_28= 'el' ( (lv_bowl_29_0= ruleBowl ) )
+                    {
+                    otherlv_25=(Token)match(input,30,FOLLOW_15); 
+
+                    				newLeafNode(otherlv_25, grammarAccess.getInstruccionAccess().getTamizarKeyword_5_0());
+                    			
+                    // InternalCocinita.g:702:4: ( (lv_exp_26_0= ruleExpresion ) )
+                    // InternalCocinita.g:703:5: (lv_exp_26_0= ruleExpresion )
+                    {
+                    // InternalCocinita.g:703:5: (lv_exp_26_0= ruleExpresion )
+                    // InternalCocinita.g:704:6: lv_exp_26_0= ruleExpresion
+                    {
+
+                    						newCompositeNode(grammarAccess.getInstruccionAccess().getExpExpresionParserRuleCall_5_1_0());
+                    					
+                    pushFollow(FOLLOW_16);
+                    lv_exp_26_0=ruleExpresion();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"exp",
+                    							lv_exp_26_0,
+                    							"upb.edu.lp.Cocinita.Expresion");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+                    otherlv_27=(Token)match(input,24,FOLLOW_17); 
+
+                    				newLeafNode(otherlv_27, grammarAccess.getInstruccionAccess().getEnKeyword_5_2());
+                    			
+                    otherlv_28=(Token)match(input,25,FOLLOW_10); 
+
+                    				newLeafNode(otherlv_28, grammarAccess.getInstruccionAccess().getElKeyword_5_3());
+                    			
+                    // InternalCocinita.g:729:4: ( (lv_bowl_29_0= ruleBowl ) )
+                    // InternalCocinita.g:730:5: (lv_bowl_29_0= ruleBowl )
+                    {
+                    // InternalCocinita.g:730:5: (lv_bowl_29_0= ruleBowl )
+                    // InternalCocinita.g:731:6: lv_bowl_29_0= ruleBowl
+                    {
+
+                    						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_5_4_0());
+                    					
+                    pushFollow(FOLLOW_2);
+                    lv_bowl_29_0=ruleBowl();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"bowl",
+                    							lv_bowl_29_0,
+                    							"upb.edu.lp.Cocinita.Bowl");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 7 :
+                    // InternalCocinita.g:750:3: (otherlv_30= 'Vertir' ( (lv_bowl_31_0= ruleBowl ) ) )
+                    {
+                    // InternalCocinita.g:750:3: (otherlv_30= 'Vertir' ( (lv_bowl_31_0= ruleBowl ) ) )
+                    // InternalCocinita.g:751:4: otherlv_30= 'Vertir' ( (lv_bowl_31_0= ruleBowl ) )
+                    {
+                    otherlv_30=(Token)match(input,31,FOLLOW_10); 
+
+                    				newLeafNode(otherlv_30, grammarAccess.getInstruccionAccess().getVertirKeyword_6_0());
+                    			
+                    // InternalCocinita.g:755:4: ( (lv_bowl_31_0= ruleBowl ) )
+                    // InternalCocinita.g:756:5: (lv_bowl_31_0= ruleBowl )
+                    {
+                    // InternalCocinita.g:756:5: (lv_bowl_31_0= ruleBowl )
+                    // InternalCocinita.g:757:6: lv_bowl_31_0= ruleBowl
+                    {
+
+                    						newCompositeNode(grammarAccess.getInstruccionAccess().getBowlBowlParserRuleCall_6_1_0());
+                    					
+                    pushFollow(FOLLOW_2);
+                    lv_bowl_31_0=ruleBowl();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInstruccionRule());
+                    						}
+                    						set(
+                    							current,
+                    							"bowl",
+                    							lv_bowl_31_0,
+                    							"upb.edu.lp.Cocinita.Bowl");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleInstruccion"
+
     // Delegated rules
 
 
@@ -1548,7 +1714,7 @@ public class InternalCocinitaParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x000000003C810002L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x00000000FC810002L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000020000L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000010002L});

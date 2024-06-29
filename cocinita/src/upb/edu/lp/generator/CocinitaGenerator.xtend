@@ -26,6 +26,44 @@ class CocinitaGenerator extends AbstractGenerator {
 
     private def String generateTypeScriptCode(Cocina cocina) {
         '''
+        class Stack<T> {
+            private items: T[] = [];
+        
+            // Agrega un elemento a la pila
+            push(element: T) {
+                this.items.push(element);
+            }
+        
+            // Elimina y devuelve el último elemento de la pila
+            pop(): T | undefined {
+                return this.items.pop();
+            }
+        
+            // Devuelve el último elemento de la pila sin eliminarlo
+            peek(): T | undefined {
+                return this.items[this.items.length - 1];
+            }
+        
+            // Devuelve true si la pila está vacía
+            isEmpty(): boolean {
+                return this.items.length === 0;
+            }
+        
+            // Devuelve el tamaño de la pila
+            size(): number {
+                return this.items.length;
+            }
+        
+            // Vacía la pila
+            clear() {
+                this.items = [];
+            }
+        
+            // Imprime todos los elementos de la pila
+            print() {
+                console.log(this.items.toString());
+            }
+        }
         class «capitalize(cocina.name)» {
             //Crear un array con los valores ASCII
             
@@ -35,11 +73,13 @@ class CocinitaGenerator extends AbstractGenerator {
                 asciiArray.push({char: String.fromCharCode(i) });
             }
 
-            private ingredients = {
+            public ingredients = {
                 «cocina.listaIngredientes.map[ingrediente | 
-                '''«ingrediente.name»: asciiArray[«ingrediente.ascii»-32]'''
+               '''«ingrediente.name»: «ingrediente.ascii»'''
                 ].join(",\n")»
             };
+            
+            for(i=0; 
 
             public execute() {
                 «cocina.listaInstrucciones.map[instruccion | 
@@ -78,7 +118,7 @@ class CocinitaGenerator extends AbstractGenerator {
                 tsInstruction.append("this.stack.push(value2 - value1);") // Restar value1 de value2
             }
             case "Agregar":
-                if (instruccion.ingrediente != null) {
+               if (instruccion.exp != null) {
                     tsInstruction.append("this.stack.push(this.ingredients['${instruccion.ingrediente.name}']);")
                 } else if (instruccion.exp != null) {
                     // Chequeamos si la expresión es un ingrediente o un bowl
@@ -87,7 +127,7 @@ class CocinitaGenerator extends AbstractGenerator {
                     } else if (instruccion.exp.bowl != null) {
                         tsInstruction.append("this.stack.push(this.stack[${instruccion.exp.bowl.numero - 1}]);")
                     }
-                }
+               }
         }
 
         tsInstruction.toString
@@ -118,4 +158,4 @@ class CocinitaGenerator extends AbstractGenerator {
         val normalized = name.replaceAll("[^a-zA-Z0-9_\\-]", "").toLowerCase
         capitalize(normalized)
     }
-}
+ }

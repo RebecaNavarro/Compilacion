@@ -213,6 +213,38 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//')'
 		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
 	}
+	public class ExpresionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "upb.edu.lp.Cocinita.Expresion");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Assignment cIngredienteAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final CrossReference cIngredienteIngredienteCrossReference_0_0 = (CrossReference)cIngredienteAssignment_0.eContents().get(0);
+		private final RuleCall cIngredienteIngredienteIDTerminalRuleCall_0_0_1 = (RuleCall)cIngredienteIngredienteCrossReference_0_0.eContents().get(1);
+		private final Assignment cBowlAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final RuleCall cBowlBowlParserRuleCall_1_0 = (RuleCall)cBowlAssignment_1.eContents().get(0);
+		
+		//Expresion:
+		//    ingrediente=[Ingrediente] | bowl=Bowl
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//ingrediente=[Ingrediente] | bowl=Bowl
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//ingrediente=[Ingrediente]
+		public Assignment getIngredienteAssignment_0() { return cIngredienteAssignment_0; }
+		
+		//[Ingrediente]
+		public CrossReference getIngredienteIngredienteCrossReference_0_0() { return cIngredienteIngredienteCrossReference_0_0; }
+		
+		//ID
+		public RuleCall getIngredienteIngredienteIDTerminalRuleCall_0_0_1() { return cIngredienteIngredienteIDTerminalRuleCall_0_0_1; }
+		
+		//bowl=Bowl
+		public Assignment getBowlAssignment_1() { return cBowlAssignment_1; }
+		
+		//Bowl
+		public RuleCall getBowlBowlParserRuleCall_1_0() { return cBowlBowlParserRuleCall_1_0; }
+	}
 	public class InstruccionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "upb.edu.lp.Cocinita.Instruccion");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -250,20 +282,33 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final RuleCall cBowlBowlParserRuleCall_3_4_0 = (RuleCall)cBowlAssignment_3_4.eContents().get(0);
 		private final Group cGroup_4 = (Group)cAlternatives.eContents().get(4);
 		private final Keyword cAgregarKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cIngredienteAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cIngredienteIngredienteCrossReference_4_1_0 = (CrossReference)cIngredienteAssignment_4_1.eContents().get(0);
-		private final RuleCall cIngredienteIngredienteIDTerminalRuleCall_4_1_0_1 = (RuleCall)cIngredienteIngredienteCrossReference_4_1_0.eContents().get(1);
+		private final Assignment cExpAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cExpExpresionParserRuleCall_4_1_0 = (RuleCall)cExpAssignment_4_1.eContents().get(0);
 		private final Keyword cEnKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
 		private final Keyword cElKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
 		private final Assignment cBowlAssignment_4_4 = (Assignment)cGroup_4.eContents().get(4);
 		private final RuleCall cBowlBowlParserRuleCall_4_4_0 = (RuleCall)cBowlAssignment_4_4.eContents().get(0);
+		private final Group cGroup_5 = (Group)cAlternatives.eContents().get(5);
+		private final Keyword cTamizarKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cExpAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cExpExpresionParserRuleCall_5_1_0 = (RuleCall)cExpAssignment_5_1.eContents().get(0);
+		private final Keyword cEnKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
+		private final Keyword cElKeyword_5_3 = (Keyword)cGroup_5.eContents().get(3);
+		private final Assignment cBowlAssignment_5_4 = (Assignment)cGroup_5.eContents().get(4);
+		private final RuleCall cBowlBowlParserRuleCall_5_4_0 = (RuleCall)cBowlAssignment_5_4.eContents().get(0);
+		private final Group cGroup_6 = (Group)cAlternatives.eContents().get(6);
+		private final Keyword cVertirKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cBowlAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cBowlBowlParserRuleCall_6_1_0 = (RuleCall)cBowlAssignment_6_1.eContents().get(0);
 		
 		//Instruccion:
 		//    'Batir' exp=Expresion 'en' 'el' bowl=Bowl |
 		//    'Licuar' exp=Expresion 'en' 'el' bowl=Bowl |
 		//    'Hornear' exp=Expresion 'en' 'el' bowl=Bowl |
 		//    'Refrigerar' exp=Expresion 'en' 'el' bowl=Bowl |
-		//    'Agregar' ingrediente=[Ingrediente] 'en' 'el' bowl=Bowl
+		//    'Agregar' exp=Expresion 'en' 'el' bowl=Bowl |
+		//    'Tamizar' exp=Expresion 'en' 'el' bowl=Bowl |
+		//    'Vertir' bowl=Bowl
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -271,7 +316,9 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'Licuar' exp=Expresion 'en' 'el' bowl=Bowl |
 		//'Hornear' exp=Expresion 'en' 'el' bowl=Bowl |
 		//'Refrigerar' exp=Expresion 'en' 'el' bowl=Bowl |
-		//'Agregar' ingrediente=[Ingrediente] 'en' 'el' bowl=Bowl
+		//'Agregar' exp=Expresion 'en' 'el' bowl=Bowl |
+		//'Tamizar' exp=Expresion 'en' 'el' bowl=Bowl |
+		//'Vertir' bowl=Bowl
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//'Batir' exp=Expresion 'en' 'el' bowl=Bowl
@@ -370,20 +417,17 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//Bowl
 		public RuleCall getBowlBowlParserRuleCall_3_4_0() { return cBowlBowlParserRuleCall_3_4_0; }
 		
-		//'Agregar' ingrediente=[Ingrediente] 'en' 'el' bowl=Bowl
+		//'Agregar' exp=Expresion 'en' 'el' bowl=Bowl
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//'Agregar'
 		public Keyword getAgregarKeyword_4_0() { return cAgregarKeyword_4_0; }
 		
-		//ingrediente=[Ingrediente]
-		public Assignment getIngredienteAssignment_4_1() { return cIngredienteAssignment_4_1; }
+		//exp=Expresion
+		public Assignment getExpAssignment_4_1() { return cExpAssignment_4_1; }
 		
-		//[Ingrediente]
-		public CrossReference getIngredienteIngredienteCrossReference_4_1_0() { return cIngredienteIngredienteCrossReference_4_1_0; }
-		
-		//ID
-		public RuleCall getIngredienteIngredienteIDTerminalRuleCall_4_1_0_1() { return cIngredienteIngredienteIDTerminalRuleCall_4_1_0_1; }
+		//Expresion
+		public RuleCall getExpExpresionParserRuleCall_4_1_0() { return cExpExpresionParserRuleCall_4_1_0; }
 		
 		//'en'
 		public Keyword getEnKeyword_4_2() { return cEnKeyword_4_2; }
@@ -396,38 +440,42 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//Bowl
 		public RuleCall getBowlBowlParserRuleCall_4_4_0() { return cBowlBowlParserRuleCall_4_4_0; }
-	}
-	public class ExpresionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "upb.edu.lp.Cocinita.Expresion");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cIngredienteAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final CrossReference cIngredienteIngredienteCrossReference_0_0 = (CrossReference)cIngredienteAssignment_0.eContents().get(0);
-		private final RuleCall cIngredienteIngredienteIDTerminalRuleCall_0_0_1 = (RuleCall)cIngredienteIngredienteCrossReference_0_0.eContents().get(1);
-		private final Assignment cBowlAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cBowlBowlParserRuleCall_1_0 = (RuleCall)cBowlAssignment_1.eContents().get(0);
 		
-		//Expresion:
-		//    ingrediente=[Ingrediente] | bowl=Bowl
-		//;
-		@Override public ParserRule getRule() { return rule; }
+		//'Tamizar' exp=Expresion 'en' 'el' bowl=Bowl
+		public Group getGroup_5() { return cGroup_5; }
 		
-		//ingrediente=[Ingrediente] | bowl=Bowl
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//'Tamizar'
+		public Keyword getTamizarKeyword_5_0() { return cTamizarKeyword_5_0; }
 		
-		//ingrediente=[Ingrediente]
-		public Assignment getIngredienteAssignment_0() { return cIngredienteAssignment_0; }
+		//exp=Expresion
+		public Assignment getExpAssignment_5_1() { return cExpAssignment_5_1; }
 		
-		//[Ingrediente]
-		public CrossReference getIngredienteIngredienteCrossReference_0_0() { return cIngredienteIngredienteCrossReference_0_0; }
+		//Expresion
+		public RuleCall getExpExpresionParserRuleCall_5_1_0() { return cExpExpresionParserRuleCall_5_1_0; }
 		
-		//ID
-		public RuleCall getIngredienteIngredienteIDTerminalRuleCall_0_0_1() { return cIngredienteIngredienteIDTerminalRuleCall_0_0_1; }
+		//'en'
+		public Keyword getEnKeyword_5_2() { return cEnKeyword_5_2; }
+		
+		//'el'
+		public Keyword getElKeyword_5_3() { return cElKeyword_5_3; }
 		
 		//bowl=Bowl
-		public Assignment getBowlAssignment_1() { return cBowlAssignment_1; }
+		public Assignment getBowlAssignment_5_4() { return cBowlAssignment_5_4; }
 		
 		//Bowl
-		public RuleCall getBowlBowlParserRuleCall_1_0() { return cBowlBowlParserRuleCall_1_0; }
+		public RuleCall getBowlBowlParserRuleCall_5_4_0() { return cBowlBowlParserRuleCall_5_4_0; }
+		
+		//'Vertir' bowl=Bowl
+		public Group getGroup_6() { return cGroup_6; }
+		
+		//'Vertir'
+		public Keyword getVertirKeyword_6_0() { return cVertirKeyword_6_0; }
+		
+		//bowl=Bowl
+		public Assignment getBowlAssignment_6_1() { return cBowlAssignment_6_1; }
+		
+		//Bowl
+		public RuleCall getBowlBowlParserRuleCall_6_1_0() { return cBowlBowlParserRuleCall_6_1_0; }
 	}
 	
 	
@@ -435,8 +483,8 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	private final IngredienteElements pIngrediente;
 	private final TipoVariableElements pTipoVariable;
 	private final BowlElements pBowl;
-	private final InstruccionElements pInstruccion;
 	private final ExpresionElements pExpresion;
+	private final InstruccionElements pInstruccion;
 	
 	private final Grammar grammar;
 	
@@ -451,8 +499,8 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.pIngrediente = new IngredienteElements();
 		this.pTipoVariable = new TipoVariableElements();
 		this.pBowl = new BowlElements();
-		this.pInstruccion = new InstruccionElements();
 		this.pExpresion = new ExpresionElements();
+		this.pInstruccion = new InstruccionElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -533,21 +581,6 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getBowlAccess().getRule();
 	}
 	
-	//Instruccion:
-	//    'Batir' exp=Expresion 'en' 'el' bowl=Bowl |
-	//    'Licuar' exp=Expresion 'en' 'el' bowl=Bowl |
-	//    'Hornear' exp=Expresion 'en' 'el' bowl=Bowl |
-	//    'Refrigerar' exp=Expresion 'en' 'el' bowl=Bowl |
-	//    'Agregar' ingrediente=[Ingrediente] 'en' 'el' bowl=Bowl
-	//;
-	public InstruccionElements getInstruccionAccess() {
-		return pInstruccion;
-	}
-	
-	public ParserRule getInstruccionRule() {
-		return getInstruccionAccess().getRule();
-	}
-	
 	//Expresion:
 	//    ingrediente=[Ingrediente] | bowl=Bowl
 	//;
@@ -557,6 +590,23 @@ public class CocinitaGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	public ParserRule getExpresionRule() {
 		return getExpresionAccess().getRule();
+	}
+	
+	//Instruccion:
+	//    'Batir' exp=Expresion 'en' 'el' bowl=Bowl |
+	//    'Licuar' exp=Expresion 'en' 'el' bowl=Bowl |
+	//    'Hornear' exp=Expresion 'en' 'el' bowl=Bowl |
+	//    'Refrigerar' exp=Expresion 'en' 'el' bowl=Bowl |
+	//    'Agregar' exp=Expresion 'en' 'el' bowl=Bowl |
+	//    'Tamizar' exp=Expresion 'en' 'el' bowl=Bowl |
+	//    'Vertir' bowl=Bowl
+	//;
+	public InstruccionElements getInstruccionAccess() {
+		return pInstruccion;
+	}
+	
+	public ParserRule getInstruccionRule() {
+		return getInstruccionAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

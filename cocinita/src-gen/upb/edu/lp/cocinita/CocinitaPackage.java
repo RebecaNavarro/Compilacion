@@ -196,52 +196,6 @@ public interface CocinitaPackage extends EPackage
   int BOWL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link upb.edu.lp.cocinita.impl.InstruccionImpl <em>Instruccion</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see upb.edu.lp.cocinita.impl.InstruccionImpl
-   * @see upb.edu.lp.cocinita.impl.CocinitaPackageImpl#getInstruccion()
-   * @generated
-   */
-  int INSTRUCCION = 3;
-
-  /**
-   * The feature id for the '<em><b>Exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INSTRUCCION__EXP = 0;
-
-  /**
-   * The feature id for the '<em><b>Bowl</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INSTRUCCION__BOWL = 1;
-
-  /**
-   * The feature id for the '<em><b>Ingrediente</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INSTRUCCION__INGREDIENTE = 2;
-
-  /**
-   * The number of structural features of the '<em>Instruccion</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INSTRUCCION_FEATURE_COUNT = 3;
-
-  /**
    * The meta object id for the '{@link upb.edu.lp.cocinita.impl.ExpresionImpl <em>Expresion</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -249,7 +203,7 @@ public interface CocinitaPackage extends EPackage
    * @see upb.edu.lp.cocinita.impl.CocinitaPackageImpl#getExpresion()
    * @generated
    */
-  int EXPRESION = 4;
+  int EXPRESION = 3;
 
   /**
    * The feature id for the '<em><b>Ingrediente</b></em>' reference.
@@ -277,6 +231,43 @@ public interface CocinitaPackage extends EPackage
    * @ordered
    */
   int EXPRESION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link upb.edu.lp.cocinita.impl.InstruccionImpl <em>Instruccion</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see upb.edu.lp.cocinita.impl.InstruccionImpl
+   * @see upb.edu.lp.cocinita.impl.CocinitaPackageImpl#getInstruccion()
+   * @generated
+   */
+  int INSTRUCCION = 4;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTRUCCION__EXP = 0;
+
+  /**
+   * The feature id for the '<em><b>Bowl</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTRUCCION__BOWL = 1;
+
+  /**
+   * The number of structural features of the '<em>Instruccion</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTRUCCION_FEATURE_COUNT = 2;
 
 
   /**
@@ -409,49 +400,6 @@ public interface CocinitaPackage extends EPackage
   EAttribute getBowl_Numero();
 
   /**
-   * Returns the meta object for class '{@link upb.edu.lp.cocinita.Instruccion <em>Instruccion</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Instruccion</em>'.
-   * @see upb.edu.lp.cocinita.Instruccion
-   * @generated
-   */
-  EClass getInstruccion();
-
-  /**
-   * Returns the meta object for the containment reference '{@link upb.edu.lp.cocinita.Instruccion#getExp <em>Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Exp</em>'.
-   * @see upb.edu.lp.cocinita.Instruccion#getExp()
-   * @see #getInstruccion()
-   * @generated
-   */
-  EReference getInstruccion_Exp();
-
-  /**
-   * Returns the meta object for the containment reference '{@link upb.edu.lp.cocinita.Instruccion#getBowl <em>Bowl</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Bowl</em>'.
-   * @see upb.edu.lp.cocinita.Instruccion#getBowl()
-   * @see #getInstruccion()
-   * @generated
-   */
-  EReference getInstruccion_Bowl();
-
-  /**
-   * Returns the meta object for the reference '{@link upb.edu.lp.cocinita.Instruccion#getIngrediente <em>Ingrediente</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Ingrediente</em>'.
-   * @see upb.edu.lp.cocinita.Instruccion#getIngrediente()
-   * @see #getInstruccion()
-   * @generated
-   */
-  EReference getInstruccion_Ingrediente();
-
-  /**
    * Returns the meta object for class '{@link upb.edu.lp.cocinita.Expresion <em>Expresion</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -482,6 +430,38 @@ public interface CocinitaPackage extends EPackage
    * @generated
    */
   EReference getExpresion_Bowl();
+
+  /**
+   * Returns the meta object for class '{@link upb.edu.lp.cocinita.Instruccion <em>Instruccion</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Instruccion</em>'.
+   * @see upb.edu.lp.cocinita.Instruccion
+   * @generated
+   */
+  EClass getInstruccion();
+
+  /**
+   * Returns the meta object for the containment reference '{@link upb.edu.lp.cocinita.Instruccion#getExp <em>Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp</em>'.
+   * @see upb.edu.lp.cocinita.Instruccion#getExp()
+   * @see #getInstruccion()
+   * @generated
+   */
+  EReference getInstruccion_Exp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link upb.edu.lp.cocinita.Instruccion#getBowl <em>Bowl</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Bowl</em>'.
+   * @see upb.edu.lp.cocinita.Instruccion#getBowl()
+   * @see #getInstruccion()
+   * @generated
+   */
+  EReference getInstruccion_Bowl();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -609,40 +589,6 @@ public interface CocinitaPackage extends EPackage
     EAttribute BOWL__NUMERO = eINSTANCE.getBowl_Numero();
 
     /**
-     * The meta object literal for the '{@link upb.edu.lp.cocinita.impl.InstruccionImpl <em>Instruccion</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see upb.edu.lp.cocinita.impl.InstruccionImpl
-     * @see upb.edu.lp.cocinita.impl.CocinitaPackageImpl#getInstruccion()
-     * @generated
-     */
-    EClass INSTRUCCION = eINSTANCE.getInstruccion();
-
-    /**
-     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference INSTRUCCION__EXP = eINSTANCE.getInstruccion_Exp();
-
-    /**
-     * The meta object literal for the '<em><b>Bowl</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference INSTRUCCION__BOWL = eINSTANCE.getInstruccion_Bowl();
-
-    /**
-     * The meta object literal for the '<em><b>Ingrediente</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference INSTRUCCION__INGREDIENTE = eINSTANCE.getInstruccion_Ingrediente();
-
-    /**
      * The meta object literal for the '{@link upb.edu.lp.cocinita.impl.ExpresionImpl <em>Expresion</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -667,6 +613,32 @@ public interface CocinitaPackage extends EPackage
      * @generated
      */
     EReference EXPRESION__BOWL = eINSTANCE.getExpresion_Bowl();
+
+    /**
+     * The meta object literal for the '{@link upb.edu.lp.cocinita.impl.InstruccionImpl <em>Instruccion</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see upb.edu.lp.cocinita.impl.InstruccionImpl
+     * @see upb.edu.lp.cocinita.impl.CocinitaPackageImpl#getInstruccion()
+     * @generated
+     */
+    EClass INSTRUCCION = eINSTANCE.getInstruccion();
+
+    /**
+     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INSTRUCCION__EXP = eINSTANCE.getInstruccion_Exp();
+
+    /**
+     * The meta object literal for the '<em><b>Bowl</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INSTRUCCION__BOWL = eINSTANCE.getInstruccion_Bowl();
 
   }
 

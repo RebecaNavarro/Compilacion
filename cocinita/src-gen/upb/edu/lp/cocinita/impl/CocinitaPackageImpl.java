@@ -52,14 +52,14 @@ public class CocinitaPackageImpl extends EPackageImpl implements CocinitaPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass instruccionEClass = null;
+  private EClass expresionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass expresionEClass = null;
+  private EClass instruccionEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -261,50 +261,6 @@ public class CocinitaPackageImpl extends EPackageImpl implements CocinitaPackage
    * @generated
    */
   @Override
-  public EClass getInstruccion()
-  {
-    return instruccionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getInstruccion_Exp()
-  {
-    return (EReference)instruccionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getInstruccion_Bowl()
-  {
-    return (EReference)instruccionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getInstruccion_Ingrediente()
-  {
-    return (EReference)instruccionEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getExpresion()
   {
     return expresionEClass;
@@ -330,6 +286,39 @@ public class CocinitaPackageImpl extends EPackageImpl implements CocinitaPackage
   public EReference getExpresion_Bowl()
   {
     return (EReference)expresionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getInstruccion()
+  {
+    return instruccionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getInstruccion_Exp()
+  {
+    return (EReference)instruccionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getInstruccion_Bowl()
+  {
+    return (EReference)instruccionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -378,14 +367,13 @@ public class CocinitaPackageImpl extends EPackageImpl implements CocinitaPackage
     bowlEClass = createEClass(BOWL);
     createEAttribute(bowlEClass, BOWL__NUMERO);
 
-    instruccionEClass = createEClass(INSTRUCCION);
-    createEReference(instruccionEClass, INSTRUCCION__EXP);
-    createEReference(instruccionEClass, INSTRUCCION__BOWL);
-    createEReference(instruccionEClass, INSTRUCCION__INGREDIENTE);
-
     expresionEClass = createEClass(EXPRESION);
     createEReference(expresionEClass, EXPRESION__INGREDIENTE);
     createEReference(expresionEClass, EXPRESION__BOWL);
+
+    instruccionEClass = createEClass(INSTRUCCION);
+    createEReference(instruccionEClass, INSTRUCCION__EXP);
+    createEReference(instruccionEClass, INSTRUCCION__BOWL);
   }
 
   /**
@@ -434,14 +422,13 @@ public class CocinitaPackageImpl extends EPackageImpl implements CocinitaPackage
     initEClass(bowlEClass, Bowl.class, "Bowl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBowl_Numero(), ecorePackage.getEInt(), "numero", null, 0, 1, Bowl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(instruccionEClass, Instruccion.class, "Instruccion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruccion_Exp(), this.getExpresion(), null, "exp", null, 0, 1, Instruccion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruccion_Bowl(), this.getBowl(), null, "bowl", null, 0, 1, Instruccion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruccion_Ingrediente(), this.getIngrediente(), null, "ingrediente", null, 0, 1, Instruccion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(expresionEClass, Expresion.class, "Expresion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getExpresion_Ingrediente(), this.getIngrediente(), null, "ingrediente", null, 0, 1, Expresion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpresion_Bowl(), this.getBowl(), null, "bowl", null, 0, 1, Expresion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(instruccionEClass, Instruccion.class, "Instruccion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getInstruccion_Exp(), this.getExpresion(), null, "exp", null, 0, 1, Instruccion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInstruccion_Bowl(), this.getBowl(), null, "bowl", null, 0, 1, Instruccion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);
